@@ -23,7 +23,7 @@ en réduisant ainsi le temps d'attente au restaurant.
 -Loader d'accueil animé
 -Responsive design (Mobile-first)
 
-#Instatllation
+#Installation
 1.Clonez le repository:
 '''bash
  git clone https://github.com/adelbonn/Ohmyfood_p4_oc.git
