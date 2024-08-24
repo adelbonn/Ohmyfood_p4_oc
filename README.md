@@ -3,6 +3,7 @@ Ce projet consiste à développer un site web mobile-first pour Ohmyfood,
 une start-up qui répertorie les menus de restaurants gastronomiques.
 Le site permet aux utilisateurs de composer leur menu à l'avance, 
 en réduisant ainsi le temps d'attente au restaurant.
+Ce projet est un projet de la formation openclassroom d'intégrateur web
 
 ##Techonologies utilisées
 -HTML
