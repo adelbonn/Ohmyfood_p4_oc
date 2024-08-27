@@ -1,3 +1,34 @@
+/**variables**/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+ul, ol {
+  list-style: none;
+}
+
+html, body {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*components*/
+/*layout*/
+/*pages*/
 
 /*# sourceMappingURL=main.css.map */

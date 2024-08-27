@@ -1,0 +1,24 @@
+/**variables**/
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/typo';
+
+/*components*/
+
+@import 'components/animations';
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/hearts';
+@import 'components/cards/cards.scss';
+
+/*layout*/
+
+@import 'layout/header';
+@import 'layout/navigatio';
+@import 'layout/grids';
+@import 'layout/footer';
+
+/*pages*/
+
+@import 'pages/home.scss';
+@import 'pages/restaurants.scss';

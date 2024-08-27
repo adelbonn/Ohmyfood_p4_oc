@@ -4,7 +4,7 @@ une start-up qui répertorie les menus de restaurants gastronomiques.
 Le site permet aux utilisateurs de composer leur menu à l'avance, 
 en réduisant ainsi le temps d'attente au restaurant.
 
-##Techonologies utilisées
+#Techonologies utilisées
 -HTML
 -CSS
 -Sass
