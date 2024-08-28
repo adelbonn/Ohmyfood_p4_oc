@@ -2,7 +2,33 @@
 //colors
 
 $primary-color: #9356DC;
+$secondary-color: #FCA311;
+$primary-color2: #c5e2f8;
 $secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$background-color:#f6f6f6;
 
+$green-color-bagde: #99E2D0;
+$green-font-badge: #008766;
+
+$background-color:#f6f6f6;
+$background-color2: #89c8fa;
+$color-black: #101010;
+$color-white: #fff;
+$color-grey2: #EAEAEA;
+$color-grey: #353535;
+$grey-tint4: #7E7E7E;
+
+
+//gradient
+//$buttonGradient: //stops: 0% #9356DC  100%FF79DA;
+
+/* ***shadows*** */
+
+$shadow-primary: 0 2px 4px 0 rgba(0, 0, 0, 0.15); //shadow header +badge
+$shadow-secondary: 0 4 15 0 rgba(0, 0, 0, 0.10);
+$shadow-tertiary: 0 4 10 0 rgba(0, 0, 0, 0.25);
+$shadow-instruction: 0 4 15 0 rgba(0, 0, 0, 0.15);
+$shadow-location: 0 4 4 0 rgba(0, 0, 0, 0.25);
+//shadow-card: x0 y4 blur15 spread0 opacity 10%
+//shadow-button: x0 y4 blur10 spread0 opacity 25%
+//shadow-instruction: x0 y4 blur15 spread0 opacity15%
+//shadow-location: x0 y4 blur4 spread0 opacity 25%

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="shortcut icon" href="assets/images/logo/ohmyfood.png" type="image/x-icon"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,37 +20,49 @@
 </head>
 
 <body>
-  <div class=main_wrapper>
+  <div class="main-wrapper">
+
+    <!--header-->
       <header>
         <!--div du loader (revoir comment le mettre sur toute la page)-->
-        <!--header-->
           <a class="arrow_return" href="#"></a><!--find arrow return mettre en transparent-->
-          <a hre="#">
-           <img class="logo_header" src="assets/images/logo/ohmyfood.png" alt="logo de l'entreprise ohmyfood"/>
+          <a href="#">
+           <img class="logo_header" src="assets/images/logo/ohmyfood@2x.svg" alt="logo de l'entreprise ohmyfood"/>
           </a>
+        </header>
+
+    <main>
+
         <!--formulaire de recherche header-->
+
         <div class="location">
           <form class="location_form">
             <span class="location_icon-search"><i class="fa-solid fa-location-dot"></i></span>
             <input class="location_input-search" type="search" placeholder="Paris, Belleville"> 
           </form>
         </div>  
+
         <!--section info du header-->
+
             <section class="info">
-                <h1>Réservez le menu qui vous convient</h1>
+                <h1>Réservez le menu qui<br>vous convient</h1>
                 <p>Découvrez des restaurants d'exception,
                     sélectionner par nos soins.
                 </p>
+                <a href="#restaurants">
                 <button class="btn btn_primary">
                     Explorer nos restaurants
                 </button>
+              </a>
             </section>
-      </header>
-    <main>
+      
         <!--section fonctionnement-->
+
         <section class="functioning">
           <h2 class="funtioning_title">Fonctionnement</h2>
+
             <!--liste 3 boutons section functioning-->
+
             <ol class="functioning_list">
               <li class="functioning_item">
                 <a class="functioning-list_links" href="#">
@@ -84,12 +96,15 @@
         </section>
 
         <!--section restaurants-->
-        <section class="restaurants">
+
+        <section id="restaurants" class="restaurants">
             <h2 id="restaurants_title">Restaurants</h2>
 
             <div class="restaurants-cards_background">
                 <article class="cards-restaurants">
+
                     <!--cartes restaurants La palette du goût-->
+
                   <a href="restaurants/Lapalettedugout-menu.html">
                     <figure>
                         <img class="cards-restaurants_img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" 
@@ -171,21 +186,21 @@
         <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood"/>
         <div class="footer-content">
             <a class="footer-content_link" href="#">
-                <i class="fas fa-ustensils footer-content_icon">
-                <h3><strong>Proposer un restaurant</strong></h3>
+                <i class="fas fa-ustensils footer-content_icon"></i>
+                <p><strong>Proposer un restaurant</strong></p>
             </a>
 
             <a class="footer-content_link" href="#">
-                <i class="fas fa-hands-helping footer-content_icon">
-                <h3><strong>Devenir partenaire</strong></h3>
+                <i class="fas fa-hands-helping footer-content_icon"></i>
+                <p><strong>Devenir partenaire</strong></p>
             </a>
 
             <a class="footer-content_link" href="#">
-                <h3>Mentions légales</h3>
+                <p>Mentions légales</p>
             </a>
 
             <a class="footer-content_link" href="#"><!--lien vers email à insérer-->
-                <h3>Contact</h3>
+                <p>Contact</p>
             </a>
         </div>
       </footer>
