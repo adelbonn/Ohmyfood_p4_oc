@@ -1,5 +1,6 @@
 
-.location {
+.location { 
+    position:relative;
     min-width: 18.75rem;
     height: 3.9rem;
     display: flex;
@@ -18,7 +19,7 @@
     }
 }
     .location_icon-search {
-        width: 40px;
+        width: 2.5rem;
         height: auto;
         font-weight: 700;
         color: $color-grey;
@@ -33,12 +34,28 @@
         font-weight: 700;
 
         &:hover {
+            border: 1px solid $secondary-color;
+            border-radius: 1.2rem;
+            transition: 0.3s ease-in-out;
+            padding: 0.5rem;
             cursor: pointer;
+            opacity: 40%;
+           
         }
           &::placeholder {
-            color: black;
+            color: $color-grey;
             font-size: 1rem;
             font-weight: 600;
+            border: none;
+            outline: none;
+           }
+           &:focus {
+            background: lighten($primary-color, 30%);
+            opacity: 40%;
+            border: none;
+            outline: none;
+            border-radius: 1.56rem;
+            
            }
     }
 

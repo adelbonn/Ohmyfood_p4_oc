@@ -5,6 +5,7 @@ header {
     justify-content: center;
     align-items: center;
     position: sticky;
+    width: 100%;
     z-index: 10;
     box-shadow: $shadow-primary;
    
@@ -12,9 +13,9 @@ header {
 
 .logo_header {
     display: block;
-   height: auto;
-   min-width: 12rem;
-   padding: 1rem;
+    height: auto;
+    min-width: 12rem;
+    padding: 1.5rem;
     background: $color-white;
     
 }

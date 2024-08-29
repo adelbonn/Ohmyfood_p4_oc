@@ -1,0 +1,16 @@
+/**button gradient**/
+
+.btn  {
+    width: 100%;
+    padding: .937rem 1.25rem;
+    color: $color-white;
+    border: none;
+    border-radius: 3.125rem;
+    background: linear-gradient( $secondary-color, $primary-color 85%);
+    font-size: $font-size-medium;
+    box-shadow: $shadow-primary;
+    &:hover {
+        opacity: 80%;
+    }
+}
+

@@ -18,17 +18,17 @@ $color-grey: #353535;
 $grey-tint4: #7E7E7E;
 
 
-//gradient
+//linear gradient 
 //$buttonGradient: //stops: 0% #9356DC  100%FF79DA;
 
 /* ***shadows*** */
-
-$shadow-primary: 0 2px 4px 0 rgba(0, 0, 0, 0.15); //shadow header +badge
-$shadow-secondary: 0 4 15 0 rgba(0, 0, 0, 0.10);
-$shadow-tertiary: 0 4 10 0 rgba(0, 0, 0, 0.25);
+//shadow header +badge
+$shadow-primary: 0 2px 4px 0 rgba(0, 0, 0, 0.15); 
+ /*shadow card*/
+$shadow-secondary: 0 4 15 0 rgba(0, 0, 0, 0.10); 
+ /*buttonshadow-button*/
+$shadow-tertiary: 0 4 10 0 rgba(0, 0, 0, 0.25); 
+ /*shadowInstructions*/
 $shadow-instruction: 0 4 15 0 rgba(0, 0, 0, 0.15);
-$shadow-location: 0 4 4 0 rgba(0, 0, 0, 0.25);
-//shadow-card: x0 y4 blur15 spread0 opacity 10%
-//shadow-button: x0 y4 blur10 spread0 opacity 25%
-//shadow-instruction: x0 y4 blur15 spread0 opacity15%
-//shadow-location: x0 y4 blur4 spread0 opacity 25%
+/**shadow-location**/ 
+$shadow-location: 0 4 4 0 rgba(0, 0, 0, 0.25);  

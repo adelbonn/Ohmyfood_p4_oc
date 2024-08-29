@@ -1,13 +1,60 @@
+/***section info**/
+
 .info {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    background: $color-grey2;
+    padding-top: 2.43rem;
+    padding: 2.4rem 1.875rem;
 
-
-
-h2 {
+    h1 {
+        color: $color-black;
         font-family: $primary-font;
-        
+        font-size: 1.5rem;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        padding-bottom: 0.5rem;
+    }
+
+    p {
+        font-family: $primary-font;
+        font-weight: $font-weight-light;
+        font-size: 1.125rem;
+        margin-bottom: 1.68rem;
+    }
+
+    a {
+        list-style-type: none;
+        border-style: none;
+        border-radius: 0.31rem;
+    }
 }
+
+
+
+/**section functioning**/
+
+ .functioning {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    
+    &title {
+        margin-top: 3rem;
+    } 
+
+ }
+
+ .functioning_list {
+    display: flex;
+    margin-top: 1.26rem;
+
+ }
+
+ .functioning-list_links {
+    padding: 1rem;
+    margin: auto;
+ }
