@@ -9,7 +9,8 @@
     background: linear-gradient( $secondary-color, $primary-color 85%);
     font-size: $font-size-medium;
     box-shadow: $shadow-primary;
-    &:hover {
+
+      &:hover {
         opacity: 80%;
     }
 }
