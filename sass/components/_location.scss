@@ -1,0 +1,49 @@
+
+.location {
+    min-width: 18.75rem;
+    height: 3.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $shadow-primary;
+    background: $color-grey2;
+    box-shadow: $shadow-tertiary;
+    gap: 1.25rem;
+
+    &form {
+        background: $color-grey2;
+        padding: 0.875rem;
+        margin: auto;
+        gap: 0.875rem;
+    }
+}
+    .location_icon-search {
+        width: 40px;
+        height: auto;
+        font-weight: 700;
+        color: $color-grey;
+    }
+
+    .location_input-search {
+        outline: none;
+        border: none;
+        background: transparent;
+        padding-left: 1rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+
+        &:hover {
+            cursor: pointer;
+        }
+          &::placeholder {
+            color: black;
+            font-size: 1rem;
+            font-weight: 600;
+           }
+    }
+
+
+.location_form {
+    outline: none;
+    background: $color-grey2;
+}

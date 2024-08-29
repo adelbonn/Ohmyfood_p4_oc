@@ -1,0 +1,32 @@
+
+$primary-font: 'Roboto', 'sans-serif';
+$logo-font: 'shrikhand', 'cursive';
+
+body {
+    font-family: $primary-font;
+    font-size: 1rem;
+}
+/* **font-size*
+//$font-large: 24px bold
+//$font-medium: 
+
+/* ***Home Fonts** */
+h1 {
+    font-family: $primary-font;
+    color: $color-black;
+}
+
+h2 {
+    font-family: $primary-font;
+    
+}
+
+a {
+    text-decoration: none;
+    color: $color-black;
+}
+
+
+/* **Pages Menu Fonts** */
+
+

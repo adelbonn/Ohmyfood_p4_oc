@@ -1,0 +1,20 @@
+header {
+    background: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 10;
+    box-shadow: $shadow-primary;
+   
+}
+
+.logo_header {
+    display: block;
+   height: auto;
+   min-width: 12rem;
+   padding: 1rem;
+    background: $color-white;
+    
+}
