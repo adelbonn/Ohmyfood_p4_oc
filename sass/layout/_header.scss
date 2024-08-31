@@ -1,21 +1,21 @@
+
+
 header {
+    @include shadow-primary;
     background: $color-white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+   @include flex-center(row);
     align-items: center;
     position: sticky;
     width: 100%;
-    z-index: 10;
-    box-shadow: $shadow-primary;
-   
+    z-index: 1;
+
 }
 
 .logo_header {
     display: block;
     height: auto;
-    min-width: 12rem;
-    padding: 1.5rem;
+    min-width: rem(192);
+    padding: rem(24);
     background: $color-white;
     
 }

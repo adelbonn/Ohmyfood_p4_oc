@@ -1,8 +1,9 @@
-/**variables**/
+/**bases**/
 @import 'base/variables';
 @import 'base/reset';
 @import 'base/typo';
-
+@import 'base/mixins';
+@import 'base/functions';
 /*components*/
 
 @import 'components/animations';
@@ -22,3 +23,6 @@
 
 @import 'pages/home.scss';
 @import 'pages/restaurants.scss';
+
+/*mixins*/
+@import 'base/mixins'

@@ -1,10 +1,5 @@
 @charset "UTF-8";
-/**variables**/
-/* ***shadows*** */
-/*shadow card*/
-/*buttonshadow-button*/
-/*shadowInstructions*/
-/**shadow-location**/
+/**bases**/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,6 +22,11 @@ ul, ol {
 img {
   max-width: 100%;
   height: auto;
+}
+
+button {
+  border: none;
+  outline: none;
 }
 
 /* ****font-weight**** */
@@ -61,43 +61,46 @@ a {
 }
 
 /* **Pages Menu Fonts** */
+/*shadow card*/
 /*components*/
 /**button gradient**/
 .btn {
-  width: 100%;
-  padding: 0.937rem 1.25rem;
+  width: 70%;
+  min-width: 13.625rem;
+  min-height: 3.125rem;
+  padding: 0.937rem 1.25rem; /*15px, 20px*/
   color: #fff;
-  border: none;
-  border-radius: 3.125rem;
+  border-radius: 3.125rem; /*50px*/
   background: linear-gradient(#FF79DA, #9356DC 85%);
   font-size: 1rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .btn:hover {
   opacity: 80%;
+  transition: 0.3s;
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
 .location {
   position: relative;
   min-width: 18.75rem;
-  height: 3.9rem;
+  height: 3.90625rem;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   background: #EAEAEA;
-  box-shadow: 0 4 10 0 rgba(0, 0, 0, 0.25);
-  gap: 1.25rem;
+  gap: 1.06rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
-.locationform {
-  background: #EAEAEA;
+.location .location_form {
   padding: 0.875rem;
   margin: auto;
-  gap: 0.875rem;
 }
 
 .location_icon-search {
-  width: 2.5rem;
+  width: 2.34375rem;
   height: auto;
   font-weight: 700;
   color: #353535;
@@ -107,13 +110,13 @@ a {
   outline: none;
   border: none;
   background: transparent;
-  padding-left: 1rem;
+  padding-left: 1.0625rem;
   font-size: 0.875rem;
   font-weight: 700;
 }
 .location_input-search:hover {
   border: 1px solid #FF79DA;
-  border-radius: 1.2rem;
+  border-radius: 1.1875rem;
   transition: 0.3s ease-in-out;
   padding: 0.5rem;
   cursor: pointer;
@@ -131,7 +134,7 @@ a {
   opacity: 40%;
   border: none;
   outline: none;
-  border-radius: 1.56rem;
+  border-radius: 1.5625rem;
 }
 
 .location_form {
@@ -141,15 +144,15 @@ a {
 
 /*layout*/
 header {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   background: #fff;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
   position: sticky;
   width: 100%;
-  z-index: 10;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }
 
 .logo_header {
@@ -165,12 +168,12 @@ header {
 .info {
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   background: #f7f7f7;
-  padding-top: 2.43rem;
-  padding: 2.4rem 1.875rem;
+  padding-top: 2.375rem;
+  padding: 2.4rem 1.875rem; /*38,4px 30px*/
 }
 .info h1 {
   color: #101010;
@@ -178,38 +181,100 @@ header {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.5rem; /*8px*/
 }
 .info p {
   font-family: "Roboto", "sans-serif";
   font-weight: 300;
   font-size: 1.125rem;
-  margin-bottom: 1.68rem;
+  margin-bottom: 0.5rem;
+  align-self: center;
 }
-.info a {
-  list-style-type: none;
-  border-style: none;
-  border-radius: 0.31rem;
+.info .btn_primary {
+  min-width: 13.625rem;
+  max-width: 13.625rem;
+  min-height: 3.125rem;
+  max-height: 3.125rem;
 }
 
 /**section functioning**/
 .functioning {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   padding: 1.25rem;
-}
-.functioningtitle {
-  margin-top: 3rem;
+  background: #fff;
 }
 
-.functioning_list {
+/*  & title {               /*trouver pourquoi je n'arrive pas a 
+                              l'appliquer a mon code ici, alors que j'y arrive sur codepen, revoir les spécificité!!!
+  align-self: flex-start;
+  text-align: start;
+  margin: 3rem 0 1.625rem 0;
+  font-size: $font-size-xxlarge;
+  font-weight: $font-weight-bold;
+  }
+
+ & item {
+      @include flex-center(row);
+      width: rem(335, 16);
+      height: rem(72.38, 16);
+      background: $background-color;
+      border-radius: 5px;
+
+      padding: rem(16, 16);
+      position: relative;
+      text-align: left;
+      margin-bottom: rem(15, 16);
+       } 
+
+       &__icon {
+          color: $grey-tint4;
+          margin-right: rem(27, 16);
+       }
+
+       &_text {
+          font-size: $font-size-xlarge;
+          color: $color-black;
+       }
+ }*/
+.funtioning_title {
+  align-self: flex-start;
+  margin: 3rem 0 1.625rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.functioning-list {
   display: flex;
-  margin-top: 1.26rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.functioning-list_links {
-  padding: 1rem;
-  margin: auto;
+.functioning_item {
+  background: #f6f6f6;
+  border-radius: 0.3125rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+  /*
+
+     /* @include flex-center(row);
+      align-items: center;
+      margin: 25px 0;
+      border-radius: 5px;
+      @include shadow-instructions;
+      padding: 28px 38px;
+      width: rem(335, 16);
+      height: rem(72.38, 16);
+  }*/
 }
+/*mixins*/
+/*shadow card*/
 
 /*# sourceMappingURL=main.css.map */

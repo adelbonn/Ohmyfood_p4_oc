@@ -1,0 +1,62 @@
+//shadows
+
+//shadow header +badge
+@mixin shadow-primary {box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15); } 
+
+ /*shadow card*/
+@mixin shadow-card {box-shadow:  0 4px 15px 0 rgba(0, 0, 0, 0.10);}
+
+ //*buttonshadow-button
+ @mixin shadow-button {box-shadow: 0 4pxx 10px 0 rgba(0, 0, 0, 0.25);}
+
+//shadowInstructions
+@mixin shadow-instructions {box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.15) ;}
+
+//shadow-location
+@mixin shadow-location {box-shadow:  0 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+//buttons functioning
+
+@mixin button-style-functioning {
+    background: $background-color;
+    border-radius: rem(5);
+    border: none;
+    padding: rem(8) rem(16);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+}
+
+
+@mixin circle-number {
+   background: $primary-color;
+   width: $size;
+   height: $size;
+   color: $color-white;
+   border-radius: 50%;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   left: -($size / 2); // pour deplacer à cheval sur bordure left
+   top: 50%;
+   transform: translateY(50%);
+}
+
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    flex-direction: ($direction);
+}
+
+
+
+
+
+
+

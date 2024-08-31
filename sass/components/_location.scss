@@ -1,27 +1,24 @@
 
 .location { 
-    position:relative;
-    min-width: 18.75rem;
-    height: 3.9rem;
-    display: flex;
-    justify-content: center;
+    position: relative;
+    min-width: rem(300);
+    height: rem(62.5);
+   @include flex-center(column);
     align-items: center;
-    box-shadow: $shadow-primary;
     background: $color-grey2;
-    box-shadow: $shadow-tertiary;
-    gap: 1.25rem;
+    gap: 1.06rem;
+    @include shadow-location;
 
-    &form {
-        background: $color-grey2;
-        padding: 0.875rem;
+    .location_form {
+        padding: rem(14);   
         margin: auto;
-        gap: 0.875rem;
+       
     }
 }
     .location_icon-search {
-        width: 2.5rem;
+        width: rem(37.5);      
         height: auto;
-        font-weight: 700;
+        font-weight:  $font-weight-bold;
         color: $color-grey;
     }
 
@@ -29,22 +26,22 @@
         outline: none;
         border: none;
         background: transparent;
-        padding-left: 1rem;
-        font-size: 0.875rem;
-        font-weight: 700;
+        padding-left: rem(17);
+        font-size: rem(14);
+        font-weight: $font-weight-bold;
 
         &:hover {
             border: 1px solid $secondary-color;
-            border-radius: 1.2rem;
+            border-radius: rem(19);
             transition: 0.3s ease-in-out;
-            padding: 0.5rem;
+            padding: rem(8);
             cursor: pointer;
             opacity: 40%;
            
         }
           &::placeholder {
             color: $color-grey;
-            font-size: 1rem;
+            font-size: rem(16);
             font-weight: 600;
             border: none;
             outline: none;
@@ -54,7 +51,7 @@
             opacity: 40%;
             border: none;
             outline: none;
-            border-radius: 1.56rem;
+            border-radius: rem(25);
             
            }
     }
