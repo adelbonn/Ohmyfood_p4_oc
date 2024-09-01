@@ -7,44 +7,57 @@
 @mixin shadow-card {box-shadow:  0 4px 15px 0 rgba(0, 0, 0, 0.10);}
 
  //*buttonshadow-button
- @mixin shadow-button {box-shadow: 0 4pxx 10px 0 rgba(0, 0, 0, 0.25);}
+ @mixin shadow-button {box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);}
 
 //shadowInstructions
-@mixin shadow-instructions {box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.15) ;}
+@mixin shadow-instructions {box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.15);}
+@mixin shadow-instructions-hover {box-shadow:0 2px 5px rgba(147, 86, 220, 0.25);}
 
 //shadow-location
-@mixin shadow-location {box-shadow:  0 4px 4px rgba(0, 0, 0, 0.25);
+@mixin shadow-location {box-shadow:  0 4px 4px rgba(0, 0, 0, 0.25);}
 
+
+
+//button header
+@mixin btn-primary {
+    width: 70%;
+    min-height: rem(50);
+    padding: rem(15) rem(20);
+    color: $color-white;
+    border-radius: rem(50);  
+    background: linear-gradient( $secondary-color, $primary-color 85%);
+    font-size: $font-size-medium;
 }
-
 
 //buttons functioning
 
 @mixin button-style-functioning {
     background: $background-color;
-    border-radius: rem(5);
+    border-radius: rem(20);
     border: none;
-    padding: rem(8) rem(16);
+    padding: rem(28) rem(38);
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     text-align: center;
+    font-weight: $font-weight-medium;
+
 }
 
 
 @mixin circle-number {
    background: $primary-color;
-   width: $size;
-   height: $size;
+   width: rem(24);
+   height: rem(24);
    color: $color-white;
    border-radius: 50%;
-   align-items: center;
-   justify-content: center;
+   @include flex-center(row);
+   font-size: $font-size-x-small;
    position: absolute;
-   left: -($size / 2); // pour deplacer à cheval sur bordure left
-   top: 50%;
-   transform: translateY(50%);
+   left: -10px;
+   top: 25%;
+   transform: translateY(40%);
 }
 
 

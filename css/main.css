@@ -31,14 +31,6 @@ button {
 
 /* ****font-weight**** */
 /* **** font-size**** */
-/**30px**/ /*logoMenu*/
-/**28px**/ /*h1 menu**/
-/**24px**/ /*h2*/
-/**18px**/ /*p home*/ /*title plat menu*/
-/**17px**/ /**/
-/*16px**/
-/*15px*/ /*sstitre carte menu+prix*/
-/**14px**/
 /* ****général**** */
 body {
   font-family: "Roboto", "sans-serif";
@@ -66,20 +58,21 @@ a {
 /**button gradient**/
 .btn {
   width: 70%;
-  min-width: 13.625rem;
   min-height: 3.125rem;
-  padding: 0.937rem 1.25rem; /*15px, 20px*/
+  padding: 0.9375rem 1.25rem;
   color: #fff;
-  border-radius: 3.125rem; /*50px*/
-  background: linear-gradient(#FF79DA, #9356DC 85%);
+  border-radius: 3.125rem;
+  background: linear-gradient(#FF79DA, #9356dc 85%);
   font-size: 1rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  min-width: 13.625rem;
 }
 .btn:hover {
   opacity: 80%;
   transition: 0.3s;
   cursor: pointer;
   transform: scale(1.02);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .location {
@@ -97,13 +90,15 @@ a {
 .location .location_form {
   padding: 0.875rem;
   margin: auto;
+  outline: none;
+  background: #EAEAEA;
 }
 
 .location_icon-search {
   width: 2.34375rem;
   height: auto;
   font-weight: 700;
-  color: #353535;
+  color: #bebebe;
 }
 
 .location_input-search {
@@ -132,14 +127,7 @@ a {
 .location_input-search:focus {
   background: #e4d5f6;
   opacity: 40%;
-  border: none;
-  outline: none;
   border-radius: 1.5625rem;
-}
-
-.location_form {
-  outline: none;
-  background: #EAEAEA;
 }
 
 /*layout*/
@@ -173,7 +161,7 @@ header {
   align-items: center;
   background: #f7f7f7;
   padding-top: 2.375rem;
-  padding: 2.4rem 1.875rem; /*38,4px 30px*/
+  padding: 2.4rem 1.875rem;
 }
 .info h1 {
   color: #101010;
@@ -181,20 +169,14 @@ header {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  padding-bottom: 0.5rem; /*8px*/
+  padding-bottom: 0.5rem;
 }
 .info p {
   font-family: "Roboto", "sans-serif";
   font-weight: 300;
   font-size: 1.125rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.6875rem;
   align-self: center;
-}
-.info .btn_primary {
-  min-width: 13.625rem;
-  max-width: 13.625rem;
-  min-height: 3.125rem;
-  max-height: 3.125rem;
 }
 
 /**section functioning**/
@@ -206,38 +188,6 @@ header {
   background: #fff;
 }
 
-/*  & title {               /*trouver pourquoi je n'arrive pas a 
-                              l'appliquer a mon code ici, alors que j'y arrive sur codepen, revoir les spécificité!!!
-  align-self: flex-start;
-  text-align: start;
-  margin: 3rem 0 1.625rem 0;
-  font-size: $font-size-xxlarge;
-  font-weight: $font-weight-bold;
-  }
-
- & item {
-      @include flex-center(row);
-      width: rem(335, 16);
-      height: rem(72.38, 16);
-      background: $background-color;
-      border-radius: 5px;
-
-      padding: rem(16, 16);
-      position: relative;
-      text-align: left;
-      margin-bottom: rem(15, 16);
-       } 
-
-       &__icon {
-          color: $grey-tint4;
-          margin-right: rem(27, 16);
-       }
-
-       &_text {
-          font-size: $font-size-xlarge;
-          color: $color-black;
-       }
- }*/
 .funtioning_title {
   align-self: flex-start;
   margin: 3rem 0 1.625rem 0;
@@ -251,29 +201,72 @@ header {
   flex-direction: column;
   align-items: center;
 }
-
-.functioning_item {
+.functioning-list .functioning_item {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   background: #f6f6f6;
-  border-radius: 0.3125rem;
+  border-radius: 1.25rem;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 1.75rem 2.375rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   text-align: center;
-  /*
-
-     /* @include flex-center(row);
-      align-items: center;
-      margin: 25px 0;
-      border-radius: 5px;
-      @include shadow-instructions;
-      padding: 28px 38px;
-      width: rem(335, 16);
-      height: rem(72.38, 16);
-  }*/
+  font-weight: 500;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  margin: 1.5625rem 0;
+  width: 20.9375rem;
+  height: 4.52375rem;
 }
+.functioning-list .functioning_item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 5px rgba(147, 86, 220, 0.25);
+}
+.functioning-list .fonctioning-list_circle {
+  background: #9356dc;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 0.875rem;
+  position: absolute;
+  left: -10px;
+  top: 25%;
+  transform: translateY(40%);
+}
+.functioning-list .functioning-list_number {
+  margin-top: 0.375rem;
+}
+.functioning-list .functioning-list_icon {
+  color: #7E7E7E;
+  margin-right: 1.6875rem;
+}
+.functioning-list .functioning-list_icon:hover {
+  color: #9356dc;
+  transform: scale(1.2);
+}
+.functioning-list .functioning-list_links {
+  display: flex;
+}
+
+.eateries {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.25rem;
+  background: #f6f6f6;
+}
+.eateries h2 {
+  margin: 3.375rem 0 1.25rem 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 /*mixins*/
 /*shadow card*/
 

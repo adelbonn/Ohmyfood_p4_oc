@@ -12,14 +12,16 @@
     .location_form {
         padding: rem(14);   
         margin: auto;
-       
+       outline: none;
+       background: $color-grey2;
     }
 }
     .location_icon-search {
         width: rem(37.5);      
         height: auto;
         font-weight:  $font-weight-bold;
-        color: $color-grey;
+        
+        color:lighten($grey-tint4, 25%);
     }
 
     .location_input-search {
@@ -49,15 +51,8 @@
            &:focus {
             background: lighten($primary-color, 30%);
             opacity: 40%;
-            border: none;
-            outline: none;
             border-radius: rem(25);
             
            }
     }
 
-
-.location_form {
-    outline: none;
-    background: $color-grey2;
-}
