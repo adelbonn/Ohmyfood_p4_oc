@@ -1,0 +1,84 @@
+//*restaurants (eateries)*/
+
+.eateries {
+    @include flex-center(column);
+    padding: rem(50) rem(20);
+    background: $background-color;
+ 
+       h2 {
+        margin: rem(4) 0 rem(20) 0;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-xxlarge;
+     
+       }
+
+      figure {
+        background: $color-white;
+        border-radius: rem(15);
+        height: rem(251);
+        width: 100%;
+        margin-bottom: rem(18);
+        position: relative;
+        @include shadow-card
+    
+       }
+
+       img {
+        border-top-left-radius: rem(15);
+        border-top-right-radius: rem(15);
+        object-fit: cover;
+        height: rem(175);
+        width: 100%;
+       }
+       
+       figcaption {
+        display: flex;
+        justify-content: space-between;
+        padding: rem(10) rem(15); 
+        width: 100%;      
+       }
+
+
+       .cards-eateries_txt-new {
+        display: inline-block;
+        padding: rem(7) rem(10);
+        color: $green-font-badge;
+        background: $green-color-bagde;
+        border-radius: rem(2);
+        font-weight: $font-weight-medium;
+        font-size: $font-size-x-small;
+        min-width: rem(80);
+        min-height: rem(29);
+        position: absolute;
+        top: 5%;
+        right: 3%;
+    }
+
+      .cards-eateries-txt {
+      @include flex-center(column);
+      align-items: start;
+     
+
+        h3 {
+            font-size: $font-size-xlarge;
+            font-weight: $font-weight-bold;
+            margin: rem(7);
+        }
+
+        p {
+            font-size: $font-size-l;
+            font-weight: $font-weight-light;
+        }
+      }
+
+ }
+
+.eateries-cards_bg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0 rem(18);
+    justify-content: center;
+    align-items: center;
+    background: $background-color;
+}

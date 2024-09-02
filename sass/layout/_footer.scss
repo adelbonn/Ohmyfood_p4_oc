@@ -1,0 +1,21 @@
+footer {
+    background: $color-grey;
+    padding: rem(25);
+    font-size: $font-size-medium;
+    
+
+    img {
+        width: rem(139);
+        height: rem(27);
+    }
+
+    p {
+        color: $color-white;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-medium;
+        margin-bottom: rem(7);
+    }
+    i {
+        color: $color-white;
+    }
+}
