@@ -131,6 +131,20 @@ a {
   flex-direction: column;
   padding: 3.125rem 1.25rem;
   background: #f6f6f6;
+  /*.cards-eateries_txt-new {
+      display: inline-block;
+      padding: rem(7) rem(10);
+      color: $green-font-badge;
+      background: $green-color-bagde;
+      border-radius: rem(2);
+      font-weight: $font-weight-medium;
+      font-size: $font-size-x-small;
+      min-width: rem(80);
+      min-height: rem(29);
+      position: absolute;
+      top: 5%;
+      right: 3%;
+  }*/
 }
 .eateries h2 {
   margin: 0.25rem 0 1.25rem 0;
@@ -142,7 +156,6 @@ a {
   border-radius: 0.9375rem;
   height: 15.6875rem;
   width: 100%;
-  max-width: 21.25rem;
   margin-bottom: 1.125rem;
   position: relative;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
@@ -161,39 +174,44 @@ a {
   width: 100%;
   height: auto;
 }
-.eateries .cards-eateries_txt-new {
-  display: inline-block;
-  padding: 0.4375rem 0.625rem;
-  color: #008766;
-  background: #99E2D0;
-  border-radius: 0.125rem;
-  font-weight: 500;
-  font-size: 0.875rem;
-  min-width: 5rem;
-  min-height: 1.8125rem;
+.eateries .text-new {
+  position: relative;
+}
+.eateries .text-new::before {
   position: absolute;
+  content: "Nouveau";
+  min-height: 1.8125rem;
+  min-width: 5rem;
+  background: #99E2D0;
+  border-radius: 0.1875rem;
+  display: grid;
+  place-content: center;
   top: 5%;
   right: 3%;
+  font-size: 0.875rem;
+  color: #008766;
 }
-.eateries .cards-eateries-txt {
+.eateries .cards-eateries__txt {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: start;
 }
-.eateries .cards-eateries-txt h3 {
+.eateries .cards-eateries__txt h3 {
   font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 0.4375rem;
 }
-.eateries .cards-eateries-txt p {
+.eateries .cards-eateries__txt p {
   font-size: 1.06rem;
   font-weight: 300;
 }
 .eateries .heart-empty::before {
   display: inline-block;
-  font-weight: 600;
-  transition: transform 0.3s ease-in-out;
+  font-weight: 500;
+  width: 1.375rem;
+  height: 1.3125rem;
+  position: absolute;
 }
 .eateries .heart-full-of::after {
   display: inline-block;
