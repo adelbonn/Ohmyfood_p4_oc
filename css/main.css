@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**bases**/
 * {
   box-sizing: border-box;
@@ -29,15 +28,11 @@ button {
   outline: none;
 }
 
-/* ****font-weight**** */
-/* **** font-size**** */
-/* ****général**** */
 body {
   font-family: "Roboto", "sans-serif";
   font-size: 1rem;
 }
 
-/* ****Home Fonts**** */
 h1 {
   font-family: "Roboto", "sans-serif";
   color: #101010;
@@ -52,7 +47,6 @@ a {
   color: #101010;
 }
 
-/* **Pages Menu Fonts** */
 /*shadow card*/
 /*components*/
 /**button gradient**/
@@ -66,6 +60,7 @@ a {
   font-size: 1rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   min-width: 13.625rem;
+  transition: transform 0.3s ease-in-out;
 }
 .btn:hover {
   opacity: 80%;
@@ -147,6 +142,7 @@ a {
   border-radius: 0.9375rem;
   height: 15.6875rem;
   width: 100%;
+  max-width: 21.25rem;
   margin-bottom: 1.125rem;
   position: relative;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
@@ -163,6 +159,7 @@ a {
   justify-content: space-between;
   padding: 0.625rem 0.9375rem;
   width: 100%;
+  height: auto;
 }
 .eateries .cards-eateries_txt-new {
   display: inline-block;
@@ -187,11 +184,19 @@ a {
 .eateries .cards-eateries-txt h3 {
   font-size: 1.125rem;
   font-weight: 700;
-  margin: 0.4375rem;
+  margin-bottom: 0.4375rem;
 }
 .eateries .cards-eateries-txt p {
   font-size: 1.06rem;
   font-weight: 300;
+}
+.eateries .heart-empty::before {
+  display: inline-block;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+.eateries .heart-full-of::after {
+  display: inline-block;
 }
 
 .eateries-cards_bg {
@@ -202,6 +207,16 @@ a {
   justify-content: center;
   align-items: center;
   background: #f6f6f6;
+}
+@media screen and (min-width: 767.98px) {
+  .eateries-cards_bg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3.125rem 6.25rem;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /*layout*/
@@ -227,12 +242,16 @@ header {
 
 footer {
   background: #353535;
-  padding: 1.5625rem;
+  padding: 1.375rem 1.5625rem;
   font-size: 1rem;
 }
-footer img {
-  width: 8.6875rem;
-  height: 1.6875rem;
+footer h2 {
+  font-family: "shrikhand", "cursive";
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.025rem;
+  margin-bottom: 1rem;
 }
 footer p {
   color: #fff;
@@ -243,8 +262,32 @@ footer p {
 footer i {
   color: #fff;
 }
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.4375rem;
+}
+footer .footer-content__link {
+  font-weight: 300;
+}
+footer .footer-content__link--icon {
+  display: flex;
+  justify-content: start;
+}
+footer .footer-content__link--icon .fa-hands-helping,
+footer .footer-content__link--icon .fa-utensils {
+  margin-right: 0.6875rem;
+}
 
 /*pages*/
+.main-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0;
+  margin: 0 auto;
+}
+
 /***section info**/
 .info {
   width: 100%;
@@ -280,21 +323,13 @@ footer i {
   padding: 1.25rem;
   background: #fff;
 }
-
-.funtioning_title {
+.functioning h2 {
   align-self: flex-start;
   margin: 3rem 0 1.625rem 0;
   font-size: 1.5rem;
   font-weight: 700;
 }
-
-.functioning-list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.functioning-list .functioning_item {
+.functioning .functioning__item {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -312,12 +347,20 @@ footer i {
   margin: 1.5625rem 0;
   max-width: 20.9375rem;
   height: auto;
+  transition: transform 0.3s;
 }
-.functioning-list .functioning_item:hover {
-  transform: scale(1.02);
+.functioning .functioning__item:hover {
+  cursor: pointer;
+  transform: scale(0.95);
   box-shadow: 0 2px 5px rgba(147, 86, 220, 0.25);
 }
-.functioning-list .fonctioning-list_circle {
+.functioning .functioning-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.functioning .fonctioning-list__circle {
   background: #9356dc;
   width: 1.5rem;
   height: 1.5rem;
@@ -332,21 +375,21 @@ footer i {
   top: 25%;
   transform: translateY(40%);
 }
-.functioning-list .functioning-list_number {
+.functioning .functioning-list__number {
   margin-top: 0.25rem;
 }
-.functioning-list .functioning-list_icon {
+.functioning .functioning-list_icon {
   color: #7E7E7E;
   margin-right: 1.6875rem;
+  transition: transform 0.3s;
 }
-.functioning-list .functioning-list_icon:hover {
+.functioning .functioning-list_icon:hover {
   color: #9356dc;
-  transform: scale(1.2);
 }
-.functioning-list .functioning-list_links {
+.functioning .functioning-list_links {
   display: flex;
 }
-.functioning-list p {
+.functioning p {
   font-size: 1rem;
   font-weight: 500;
 }

@@ -1,13 +1,17 @@
 footer {
     background: $color-grey;
-    padding: rem(25);
+    padding: rem(22) rem(25);
     font-size: $font-size-medium;
     
-
-    img {
-        width: rem(139);
-        height: rem(27);
+    h2 {
+        font-family: $logo-font;
+        color: $color-white;
+        font-size: $font-size-xlarge;
+        font-weight: 500;
+        letter-spacing: rem(0.4);//vérifier
+        margin-bottom: rem(16);
     }
+
 
     p {
         color: $color-white;
@@ -17,5 +21,28 @@ footer {
     }
     i {
         color: $color-white;
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: rem(7);
+
+          &__link {
+            font-weight: $font-weight-light;
+            
+          }
+
+          &__link--icon {
+            display: flex;
+            justify-content: start;
+              
+            .fa-hands-helping, 
+            .fa-utensils {
+                margin-right: rem(11);
+            }
+          }
+            
     }
 }

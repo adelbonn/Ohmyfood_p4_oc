@@ -1,3 +1,10 @@
+.main-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0;
+    margin: 0 auto;
+}
+
 /***section info**/
 
 .info {
@@ -35,50 +42,55 @@
    @include flex-center(column);
     padding: rem(20);
     background: $color-white;
- }
+ 
      
- .funtioning_title {
+    h2 {
         align-self: flex-start;
         margin: 3rem 0 1.625rem 0;
         font-size: $font-size-xxlarge;
         font-weight: $font-weight-bold;
 
-        }
+    }
 
-.functioning-list {
-    @include flex-center(column);
-    align-items: center;
-    
-
-    .functioning_item {
+    .functioning__item {
         @include flex-center(row);
-       @include button-style-functioning;      
+        @include button-style-functioning;      
         @include shadow-instructions;
         margin: rem(25) 0;
         max-width: rem(335);
         height: auto;
+        transition: transform 0.3s;
 
             &:hover {
-                transform: scale(1.02);
+                cursor: pointer;
+                transform: scale(0.95);
                 @include shadow-instructions-hover; 
+
             }
+ }
+ 
+.functioning-list {
+    @include flex-center(column);
+    align-items: center;
+   
     }
-    .fonctioning-list_circle  {
+    .fonctioning-list__circle  {
         @include circle-number;
     }
 
-    .functioning-list_number {
+    .functioning-list__number {
         margin-top: rem(4);
     }
 
     .functioning-list_icon {
         color: $grey-tint4;
         margin-right: rem(27);
+        transition: transform 0.3s;
         //outline: $grey-tint4;/*rechercher comment enlever la bordure reste avec none et ne change pas de couleur voir txt*/
            
         &:hover {
               color: $primary-color;  //l'icone doit devenir en primary color quand la souri passe sur tout l'étiquette, pas que qd elle passe sur l'icone
-              transform: scale(1.2);
+
           }
     }
     
@@ -87,7 +99,7 @@
     }
 
     p {
-        font-size: $font-size-medium;  //voir si je ne peux pas faire une mixin pour letitre des cartes et une pour le ss titre des cards, le code se répète trop
+        font-size: $font-size-medium;  //voir si je ne peux pas faire une mixin pour les titres des cartes et une pour le ss titre des cards, le code se répète trop
         font-weight: $font-weight-medium;
     }
 }    

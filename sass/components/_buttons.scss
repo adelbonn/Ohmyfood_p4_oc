@@ -4,8 +4,10 @@
    @include btn-primary;
     @include shadow-primary;
     min-width: rem(218);
+    transition: transform 0.3s ease-in-out;
+
       &:hover {
-        opacity: 80%;
+        opacity: 80%;  //mettre ligthen revoir le fonctionnement, voir si plus pertinenet que opacity
         transition: 0.3s;
         cursor: pointer;
         transform: scale(1.02);
