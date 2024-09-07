@@ -108,3 +108,15 @@
     }
 
 }
+
+
+.eateries .cards-eateries__heart {
+    position: relative;
+    width: func.rem(23);
+    height: func.rem(22);
+    right: func.rem(8);
+    top: func.rem(18);
+   
+    @include mix.heart-icon(func.rem(22), func.rem(21), var.$primary-color, var.$secondary-color);
+    
+}

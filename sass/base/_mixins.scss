@@ -26,7 +26,7 @@
 
 
 
-//button header
+/*button header*/
 @mixin btn-primary {
     width: 70%;
     min-height: func.rem(50);
@@ -37,7 +37,7 @@
     font-size: typo.$font-size-medium;
 }
 
-//buttons functioning
+/*buttons functioning*/
 
 @mixin button-style-functioning {
     background: var.$background-color;
@@ -88,6 +88,43 @@
     right: -10px;
 }
 
+/*hearts*/
 
+@mixin heart-icon($width, $height, $primary-color, $secondary-color) {
+
+.heart-empty,
+.heart-full-of
+ {
+    position: absolute;
+    top: 0;
+    font-size: func.rem(22);
+    display: inline-block;
+    transition: color 0.3s ease;
+    /*left: 0;
+    right: 0;*/
+}
+
+.heart-empty {
+    opacity: 1;
+}
+.heart-empty:hover {
+    opacity: 0;
+}
+
+.heart-full-of {
+    opacity: 0;
+    background: linear-gradient(var.$primary-color, var.$secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: func.rem(22)
+    
+    
+}
+.heart-full-of:hover {
+    opacity: 1;
+    
+}
+}
 
 

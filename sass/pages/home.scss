@@ -9,7 +9,6 @@
 
 .main-wrapper {
     width: 100%;
-    max-width: 1700px;
     padding: 0;
     margin: 0 auto;
 }
@@ -67,11 +66,11 @@
         margin: func.rem(25) 0;
         max-width: func.rem(335);
         height: auto;
-        transition: transform 0.3s;
+       
 
             &:hover {
                 cursor: pointer;
-                transform: scale(0.95);
+            
                 @include mix.shadow-instructions-hover; 
 
             }
@@ -81,15 +80,12 @@
     @include mix.flex-center(column);
     align-items: center;
 
-    /*@media screen and (min-width: 768px)
+    @media screen and (min-width: 768px)
     {
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        flex-shrink: 1;
         gap: func.rem(1);
         
-    }*/
+    }
 
     
    
@@ -106,10 +102,10 @@
         color: var.$grey-tint4;
         margin-right: func.rem(27);
         transition: transform 0.3s;
-        //outline: $grey-tint4;/*rechercher comment enlever la bordure reste avec none et ne change pas de couleur voir txt*/
+    
            
         &:hover {
-              color: var.$primary-color;  //l'icone doit devenir en primary color quand la souris passe sur tout l'étiquette, pas que qd elle passe sur l'icone
+              color: var.$primary-color; 
 
           }
     }
