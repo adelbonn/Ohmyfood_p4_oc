@@ -1,17 +1,22 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+@use '../base/typo' as typo;
+
 /**button gradient**/
 
 .btn  {
-   @include btn-primary;
-    @include shadow-primary;
-    min-width: rem(218);
+   @include mix.btn-primary;
+    @include mix.shadow-primary;
+    min-width: func.rem(218);
     transition: transform 0.3s ease-in-out;
 
       &:hover {
-        opacity: 80%;  //mettre ligthen revoir le fonctionnement, voir si plus pertinenet que opacity
+        opacity: 80%;  //tester mettre ligthen revoir le fonctionnement, voir si plus pertinent que opacity
         transition: 0.3s;
         cursor: pointer;
         transform: scale(1.02);
-        @include shadow-button;
+        @include mix.shadow-button;
     }
 }
 

@@ -1,34 +1,42 @@
+@use '../base/index' as base;
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+@use '../base/reset' as res;
+@use '../base/typo' as typo;
+
+
+
 .main-wrapper {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1700px;
     padding: 0;
     margin: 0 auto;
 }
-
 /***section info**/
 
 .info {
     width: 100%;
-    @include flex-center(column);
+    @include mix.flex-center(column);
     align-items: center;
-    background: lighten($color-grey2, 5%);
-    padding-top: rem(38);
-    padding: rem(38.4) rem(30);  
+    background: lighten(var.$color-grey2, 5%);
+    padding-top: func.rem(38);
+    padding: func.rem(38.4) func.rem(30);  
 
     h1 {
-        color: $color-black;
-        font-family: $primary-font;
-        font-size: rem(24);
-        font-weight: $font-weight-bold;
+        color: var.$color-black;
+        font-family: typo.$primary-font;
+        font-size: func.rem(24);
+        font-weight: typo.$font-weight-bold;
         text-align: center;
-        padding-bottom: rem(8); 
+        padding-bottom: func.rem(8); 
     }
 
     p {
-        font-family: $primary-font;
-        font-weight: $font-weight-light;
-        font-size: rem(18);
-        margin-bottom: rem(27);
+        font-family: typo.$primary-font;
+        font-weight: typo.$font-weight-light;
+        font-size: func.rem(18);
+        margin-bottom: func.rem(27);
         align-self: center; 
     }
 
@@ -39,57 +47,68 @@
 /**section functioning**/
 
  .functioning {
-   @include flex-center(column);
-    padding: rem(20);
-    background: $color-white;
+   @include mix.flex-center(column);
+    padding: func.rem(20);
+    background: var.$color-white;
  
      
     h2 {
         align-self: flex-start;
-        margin: 3rem 0 1.625rem 0;
-        font-size: $font-size-xxlarge;
-        font-weight: $font-weight-bold;
+        margin: func.rem(48) 0 1.625rem 0;
+        font-size: typo.$font-size-xxlarge;
+        font-weight: typo.$font-weight-bold;
 
     }
 
     .functioning__item {
-        @include flex-center(row);
-        @include button-style-functioning;      
-        @include shadow-instructions;
-        margin: rem(25) 0;
-        max-width: rem(335);
+        @include mix.flex-center(row);
+        @include mix.button-style-functioning;      
+        @include mix.shadow-instructions;
+        margin: func.rem(25) 0;
+        max-width: func.rem(335);
         height: auto;
         transition: transform 0.3s;
 
             &:hover {
                 cursor: pointer;
                 transform: scale(0.95);
-                @include shadow-instructions-hover; 
+                @include mix.shadow-instructions-hover; 
 
             }
  }
  
 .functioning-list {
-    @include flex-center(column);
+    @include mix.flex-center(column);
     align-items: center;
+
+   /* @media screen and (min-width: 768px)
+    {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        
+    }*/
+
+    
    
     }
     .fonctioning-list__circle  {
-        @include circle-number;
+        @include mix.circle-number;
     }
 
     .functioning-list__number {
-        margin-top: rem(4);
+        margin-top: func.rem(4);
     }
 
     .functioning-list_icon {
-        color: $grey-tint4;
-        margin-right: rem(27);
+        color: var.$grey-tint4;
+        margin-right: func.rem(27);
         transition: transform 0.3s;
         //outline: $grey-tint4;/*rechercher comment enlever la bordure reste avec none et ne change pas de couleur voir txt*/
            
         &:hover {
-              color: $primary-color;  //l'icone doit devenir en primary color quand la souris passe sur tout l'étiquette, pas que qd elle passe sur l'icone
+              color: var.$primary-color;  //l'icone doit devenir en primary color quand la souris passe sur tout l'étiquette, pas que qd elle passe sur l'icone
 
           }
     }
@@ -99,8 +118,8 @@
     }
 
     p {
-        font-size: $font-size-medium;  //voir si je ne peux pas faire une mixin pour les titres des cartes et une pour le ss titre des cards, le code se répète trop
-        font-weight: $font-weight-medium;
+        font-size: typo.$font-size-medium;  //voir si je ne peux pas faire une mixin pour les titres des cartes et une pour le ss titre des cards, le code se répète trop
+        font-weight: typo.$font-weight-medium;
     }
 }    
 

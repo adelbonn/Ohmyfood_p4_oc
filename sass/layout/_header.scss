@@ -1,9 +1,14 @@
-
+@use '../base/index' as base;
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+@use '../base/reset';
+@use '../base/typo' as typo;
 
 header {
-    @include shadow-primary;
-    background: $color-white;
-   @include flex-center(row);
+    @include mix.shadow-primary;
+    background: var.$color-white;
+   @include mix.flex-center(row);
     align-items: center;
     position: sticky;
     width: 100%;
@@ -14,8 +19,8 @@ header {
 .logo_header {
     display: block;
     height: auto;
-    min-width: rem(192);
-    padding: rem(24);
-    background: $color-white;
+    min-width: func.rem(192);
+    padding: func.rem(24);
+    background: var.$color-white;
     
 }

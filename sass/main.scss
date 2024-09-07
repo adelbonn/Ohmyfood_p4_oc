@@ -1,29 +1,35 @@
+
+@use '../sass/base/index' as base;
+@use 'components/index' as components;
+@use 'layout/index-layout' as layout;
+
 /**bases**/
-@import 'base/variables';
-@import 'base/reset';
-@import 'base/typo';
-@import 'base/mixins';
-@import 'base/functions';
+@use '../sass/base/variables' as var;
+@use '../sass/base/reset' as res;
+@use '../sass/base/typo' as typo;
+@use '../sass/base/functions' as func;
+
+/*mixins*/
+@use 'base/mixins' as mix;
+
 /*components*/
 
-@import 'components/animations';
-@import 'components/buttons';
-@import 'components/location';
-@import 'components/hearts';
-@import 'components/cards/cardsMenu';
-@import 'components/cards/cardsRestaurants';
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/location';
+@use 'components/hearts';
+@use 'components/cards/cardsMenu';
+@use 'components/cards/cardsRestaurants';
 
 /*layout*/
 
-@import 'layout/header';
-@import 'layout/navigatio';
-@import 'layout/grids';
-@import 'layout/footer';
+@use 'layout/header' as head;
+@use '../sass/layout/navigation' as nav;
+@use 'layout/grids';
+@use 'layout/footer' as foo;
 
 /*pages*/
 
-@import 'pages/home.scss';
-@import 'pages/restaurants.scss';
+@use 'pages/home.scss';
+@use 'pages/restaurants.scss';
 
-/*mixins*/
-@import 'base/mixins'

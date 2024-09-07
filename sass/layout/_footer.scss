@@ -1,36 +1,43 @@
+@use '../../sass/base/index' as base;
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+@use '../base/reset';
+@use '../base/typo' as typo;
+
 footer {
-    background: $color-grey;
-    padding: rem(22) rem(25);
-    font-size: $font-size-medium;
+    background: var.$color-grey;
+    padding: func.rem(22) func.rem(25);
+    font-size: typo.$font-size-medium;
     
     h2 {
-        font-family: $logo-font;
-        color: $color-white;
-        font-size: $font-size-xlarge;
+        font-family: typo.$logo-font;
+        color: var.$color-white;
+        font-size: typo.$font-size-xlarge;
         font-weight: 500;
-        letter-spacing: rem(0.4);//vérifier
-        margin-bottom: rem(16);
+        letter-spacing: func.rem(0.4);//vérifier
+        margin-bottom: func.rem(16);
     }
 
 
     p {
-        color: $color-white;
-        font-size: $font-size-medium;
-        font-weight: $font-weight-medium;
-        margin-bottom: rem(7);
+        color: var.$color-white;
+        font-size: typo.$font-size-medium;
+        font-weight: typo.$font-weight-medium;
+        margin-bottom: func.rem(7);
     }
     i {
-        color: $color-white;
+        color: var.$color-white;
     }
     
     .footer-content {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: rem(7);
+        gap: func.rem(7);
 
           &__link {
-            font-weight: $font-weight-light;
+            font-weight: typo.$font-weight-light;
             
           }
 
@@ -40,7 +47,7 @@ footer {
               
             .fa-hands-helping, 
             .fa-utensils {
-                margin-right: rem(11);
+                margin-right: func.rem(11);
             }
           }
             

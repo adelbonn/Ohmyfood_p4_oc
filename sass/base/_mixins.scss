@@ -1,3 +1,11 @@
+@use 'variables' as var;
+@use 'functions' as func;
+@use 'reset';
+@use 'typo' as typo;
+
+
+
+
 //shadows
 
 //shadow header +badge
@@ -21,39 +29,39 @@
 //button header
 @mixin btn-primary {
     width: 70%;
-    min-height: rem(50);
-    padding: rem(15) rem(20);
-    color: $color-white;
-    border-radius: rem(50);  
-    background: linear-gradient( $secondary-color, $primary-color 85%);
-    font-size: $font-size-medium;
+    min-height: func.rem(50);
+    padding: func.rem(15) func.rem(20);
+    color: var.$color-white;
+    border-radius: func.rem(50);  
+    background: linear-gradient( var.$secondary-color, var.$primary-color 85%);
+    font-size: typo.$font-size-medium;
 }
 
 //buttons functioning
 
 @mixin button-style-functioning {
-    background: $background-color;
-    border-radius: rem(20);
+    background: var.$background-color;
+    border-radius: func.rem(20);
     border: none;
-    padding: rem(28) rem(38);
+    padding: func.rem(28) func.rem(38);
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     text-align: center;
-    font-weight: $font-weight-medium;
+    font-weight: typo.$font-weight-medium;
 
 }
 
 
 @mixin circle-number {
-   background: $primary-color;
-   width: rem(24);
-   height: rem(24);
-   color: $color-white;
+   background: var.$primary-color;
+   width: func.rem(24);
+   height: func.rem(24);
+   color: var.$color-white;
    border-radius: 50%;
    @include flex-center(row);
-   font-size: $font-size-x-small;
+   font-size: typo.$font-size-x-small;
    position: absolute;
    left: -10px;
    top: 25%;
@@ -67,8 +75,18 @@
     flex-direction: ($direction);
 }
 
+//badge new
 
-
+@mixin badge-new {
+    background: var.$primary-color;
+    color: var.$color-white;
+    padding: func.rem(5) func.rem(10);
+    border-radius: func.rem(20);
+    font-size: typo.$font-size-x-small;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
 
 
 

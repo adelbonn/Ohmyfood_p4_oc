@@ -1,3 +1,42 @@
-@mixin heart {
-    
+@use '../base/variables' as var;
+
+
+
+/**heart animation**/// _hearts.scss
+
+
+
+.heart {
+    position: relative;
+    width: 20px;
+    height: 20px; 
+    background-color: var.$primary-color;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    transition: background 1s;
+    display: inline-block;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 20px; 
+        height: 20px; 
+        background-color: var.$primary-color;
+        border-radius: 50%;
+    }
+
+    &::before {
+        top: -25px;
+        left: 0;
+    }
+
+    &::after {
+        left: 25px; 
+        top: 0;
+    }
+
+    &:hover {
+        background: linear-gradient(to right, var.$primary-color, var.$secondary-color);
+    }
 }
