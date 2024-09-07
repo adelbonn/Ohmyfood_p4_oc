@@ -19,25 +19,26 @@
 
 //shadowInstructions
 @mixin shadow-instructions {box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.15);}
-@mixin shadow-instructions-hover {box-shadow:0 2px 5px rgba(147, 86, 220, 0.25);}
+@mixin shadow-instructions-hover {box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.15);}
 
 //shadow-location
 @mixin shadow-location {box-shadow:  0 4px 4px rgba(0, 0, 0, 0.25);}
 
 
 
-/*button header*/
-@mixin btn-primary {
-    width: 70%;
-    min-height: func.rem(50);
-    padding: func.rem(15) func.rem(20);
+/*button header*///mixin du buton de la page home (btn de base)
+@mixin btn-primary($width: func.rem(218), $min-height: func.rem(50), $padding:func.rem(15) func.rem(20)) {
+    width: $width;
+    min-height: $min-height;
+    padding: $padding;
     color: var.$color-white;
     border-radius: func.rem(50);  
     background: linear-gradient( var.$secondary-color, var.$primary-color 85%);
     font-size: typo.$font-size-medium;
 }
 
-/*buttons functioning*/
+
+/*buttons functioning*///button de la section functionning
 
 @mixin button-style-functioning {
     background: var.$background-color;
@@ -53,7 +54,7 @@
 
 }
 
-
+//mixin pour les cercles des bouton de la section fonctionnement
 @mixin circle-number {
    background: var.$primary-color;
    width: func.rem(24);
@@ -68,14 +69,14 @@
    transform: translateY(40%);
 }
 
-
+// mixin pour placer les éléments avec flex
 @mixin flex-center($direction: row) {
     display: flex;
     justify-content: center;
     flex-direction: ($direction);
 }
 
-//badge new
+//badge new, mixin du bage new
 
 @mixin badge-new {
     background: var.$primary-color;
@@ -88,7 +89,7 @@
     right: -10px;
 }
 
-/*hearts*/
+/*hearts*///mixin des coeurs, (revoir comment faire pour que le coeur en gradient couvre mieux le coeur du dessous qui ne devrait pas apparaitre au hover, trouver pourquoi
 
 @mixin heart-icon($width, $height, $primary-color, $secondary-color) {
 
@@ -97,15 +98,19 @@
  {
     position: absolute;
     top: 0;
-    font-size: func.rem(22);
+    left: 0;
+    font-size: $width;
+    width: $width;
+    height: $height;
     display: inline-block;
     transition: color 0.3s ease;
-    /*left: 0;
-    right: 0;*/
+    
+    
 }
 
 .heart-empty {
     opacity: 1;
+    z-index: 1;/*revoir comment ne plus voir le contour quand le coeur est en hover*/
 }
 .heart-empty:hover {
     opacity: 0;
@@ -113,11 +118,12 @@
 
 .heart-full-of {
     opacity: 0;
+    z-index: 2;
     background: linear-gradient(var.$primary-color, var.$secondary-color);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: func.rem(22)
+    font-size: $width;
     
     
 }

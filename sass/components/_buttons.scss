@@ -12,13 +12,15 @@
     transition: transform 0.3s ease-in-out;
 
       &:hover {
-        opacity: 80%;  //tester mettre ligthen revoir le fonctionnement, voir si plus pertinent que opacity
+        opacity: 80%; 
         transition: 0.3s;
         cursor: pointer;
-        transform: scale(1.02);
         @include mix.shadow-button;
     }
 }
 
 
 
+.btn-order {
+ @include mix.btn-primary(func.rem(186), func.rem(50));
+}

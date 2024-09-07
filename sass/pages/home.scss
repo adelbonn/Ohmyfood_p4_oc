@@ -66,13 +66,13 @@
         margin: func.rem(25) 0;
         max-width: func.rem(335);
         height: auto;
+        transition: transform 0.3s;
        
 
             &:hover {
                 cursor: pointer;
-            
-                @include mix.shadow-instructions-hover; 
-
+                @include mix.shadow-instructions; 
+                transform: scale(0.95)
             }
  }
  

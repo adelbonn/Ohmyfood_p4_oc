@@ -47,7 +47,7 @@ h2 {
 /*hearts*/
 /**button gradient**/
 .btn {
-  width: 70%;
+  width: 13.625rem;
   min-height: 3.125rem;
   padding: 0.9375rem 1.25rem;
   color: #fff;
@@ -62,8 +62,17 @@ h2 {
   opacity: 80%;
   transition: 0.3s;
   cursor: pointer;
-  transform: scale(1.02);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-order {
+  width: 11.625rem;
+  min-height: 3.125rem;
+  padding: 0.9375rem 1.25rem;
+  color: #fff;
+  border-radius: 3.125rem;
+  background: linear-gradient(#FF79DA, #9356dc 85%);
+  font-size: 1rem;
 }
 
 .location {
@@ -219,25 +228,28 @@ h2 {
 .eateries .cards-eateries__heart .heart-full-of {
   position: absolute;
   top: 0;
-  font-size: 1.375rem;
+  left: 0;
+  font-size: 1.4375rem;
+  width: 1.4375rem;
+  height: 1.375rem;
   display: inline-block;
   transition: color 0.3s ease;
-  /*left: 0;
-  right: 0;*/
 }
 .eateries .cards-eateries__heart .heart-empty {
   opacity: 1;
+  z-index: 1; /*revoir comment ne plus voir le contour quand le coeur est en hover*/
 }
 .eateries .cards-eateries__heart .heart-empty:hover {
   opacity: 0;
 }
 .eateries .cards-eateries__heart .heart-full-of {
   opacity: 0;
+  z-index: 2;
   background: linear-gradient(#9356dc, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.375rem;
+  font-size: 1.4375rem;
 }
 .eateries .cards-eateries__heart .heart-full-of:hover {
   opacity: 1;
@@ -373,10 +385,12 @@ footer .footer-content__link--icon .fa-utensils {
   margin: 1.5625rem 0;
   max-width: 20.9375rem;
   height: auto;
+  transition: transform 0.3s;
 }
 .functioning .functioning__item:hover {
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(147, 86, 220, 0.25);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  transform: scale(0.95);
 }
 .functioning .functioning-list {
   display: flex;
