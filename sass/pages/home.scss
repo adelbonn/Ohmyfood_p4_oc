@@ -117,7 +117,7 @@ body {
     }
 
     p {
-        font-size: typo.$font-size-medium;  //voir si je ne peux pas faire une mixin pour les titres des cartes et une pour le ss titre des cards, le code se répète trop
+        font-size: typo.$font-size-medium;  //voir si je ne peux pas faire une mixin pour les titres des cartes et une pour le ss titre des cards, le code se répète trop ou texter peut être plutôt extend
         font-weight: typo.$font-weight-medium;
     }
 }    
