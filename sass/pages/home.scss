@@ -5,7 +5,9 @@
 @use '../base/reset' as res;
 @use '../base/typo' as typo;
 
-
+body {
+    height: 100vh;
+}
 
 .main-wrapper {
     width: 100%;

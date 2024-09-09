@@ -69,7 +69,7 @@
    transform: translateY(40%);
 }
 
-// mixin pour placer les éléments avec flex
+// mixin pour placer les éléments avec flex centrer
 @mixin flex-center($direction: row) {
     display: flex;
     justify-content: center;

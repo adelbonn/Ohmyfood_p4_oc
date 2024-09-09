@@ -1,0 +1,43 @@
+@use '../base/mixins' as mix;
+@use '../base/variables' as var;
+@use '../base/functions' as func;
+@use '../base/reset' as reset;
+@use '../base/typo' as typo;    
+@use '../layout/header';
+@use '../base/index';
+
+
+.menu-container {
+    
+    width: 100%;
+    background: var.$background-color;
+    border-radius: func.rem(35); 
+    transform: translateY(-15%);
+}
+
+
+#menu__title {
+    font-family: typo.$logo-font;
+}
+.img__header {
+    width: 100%;
+    background: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") cover no-repeat; //trouver comment mieux dapter l'image pour enlever le blanc a droite
+}
+.nav__arrow {
+    display: inline-block;
+    width: func.rem(30);
+    height: func.rem(30);
+    font-size: var(--font-size-logo);
+    font-weight: var(--font-weight-medium);
+}
+
+
+.menu-container {
+    z-index: 2;
+    width: 100%;
+    border: 2px solid red;
+    background: var(background-color);
+    border-radius: func.rem(35); 
+}
+
+

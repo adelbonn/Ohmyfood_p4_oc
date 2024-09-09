@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content="Site de réservation de menus de restaurants"/>
     <title>Ohmyfood</title>
     
     <link rel="stylesheet" href="css/main.css"/>
@@ -26,7 +28,10 @@
     <!--header-->
       <header>
         <!--div du loader (revoir comment le mettre sur toute la page entière)-->
-          <a class="arrow_return" href="#"></a><!--find arrow return mettre en hidden (en transparent elle reste cliquable sinon!!!)-->
+        <a href="./index.html">
+          <i class="fas fa-arrow-left nav__arrow">
+          </i>
+        </a>
           <a href="#">
            <img class="logo_header" src="assets/images/logo/ohmyfood@2x.svg" alt="logo de l'entreprise ohmyfood"/>
           </a>
@@ -50,11 +55,13 @@
                 <p>Découvrez des restaurants d'exception,
                     sélectionner par nos soins.
                 </p>
-                <a href="#eateries">
+              
                 <button class="btn" aria-label="explorer nos restaurants">
+                  <a href="#eateries">
                     Explorer nos restaurants
+                  </a>
                 </button>
-              </a>
+             
             </section>
       
         <!--section fonctionnement-->

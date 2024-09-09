@@ -2,7 +2,7 @@
 @use '../base/variables' as var;
 @use '../base/mixins' as mix;
 @use '../base/functions' as func;
-@use '../base/reset';
+@use '../base/reset' as reset;
 @use '../base/typo' as typo;
 
 header {
@@ -23,4 +23,5 @@ header {
     padding: func.rem(24);
     background: var.$color-white;
     
+
 }
