@@ -1,14 +1,16 @@
+@use '../base/index' as base;
 @use 'variables' as var;
 @use 'functions' as func;
-@use 'reset';
-@use 'typo' as typo;
+@use '../base/typo' as typo;
+//@use '../base/mixins' as mix;
+
 
 
 
 
 //shadows
 
-//shadow header +badge
+//shadow header +badge;
 @mixin shadow-primary {box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15); } 
 
  /*shadow card*/
@@ -27,7 +29,7 @@
 
 
 /*button header*///mixin du buton de la page home (btn de base)
-@mixin btn-primary($width: func.rem(218), $min-height: func.rem(50), $padding:func.rem(15) func.rem(20)) {
+@mixin btn-primary($width: func.rem(218), $min-height: func.rem(50), $padding: func.rem(15) func.rem(20)) {
     width: $width;
     min-height: $min-height;
     padding: $padding;
@@ -82,7 +84,7 @@
     background: var.$primary-color;
     color: var.$color-white;
     padding: func.rem(5) func.rem(10);
-    border-radius: func.rem(20);
+    border-radius: base.rem(20);
     font-size: typo.$font-size-x-small;
     position: absolute;
     top: -10px;
@@ -100,6 +102,7 @@
     top: 0;
     left: 0;
     font-size: $width;
+    
     width: $width;
     height: $height;
     display: inline-block;
@@ -124,7 +127,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: $width;
-    
+    transform: translate scale(1.2);
     
 }
 .heart-full-of:hover {
@@ -133,4 +136,20 @@
 }
 }
 
+
+//mixin soulignement titre des plats menu
+
+@mixin partial-underline($length, $color, $thickness) {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: base.rem(-10);
+        width: $length;
+        height: $thickness;
+        background: $color;
+
+    }
+}
 

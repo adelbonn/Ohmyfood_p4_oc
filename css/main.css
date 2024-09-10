@@ -1,32 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  font-size: 16px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-button {
-  border: none;
-  outline: none;
-}
-
 body {
   font-family: "Roboto", "sans-serif";
   font-size: 1rem;
@@ -129,6 +100,125 @@ h2 {
   border-radius: 1.5625rem;
 }
 
+.entrance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meals-entrance {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid blue;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+footer {
+  background: #353535;
+  padding: 1.375rem 1.5625rem;
+  font-size: 1rem;
+}
+footer h2 {
+  font-family: "shrikhand", "cursive";
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.025rem;
+  margin-bottom: 1rem;
+}
+footer p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.4375rem;
+}
+footer i {
+  color: #fff;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.4375rem;
+}
+footer .footer-content__link {
+  font-weight: 300;
+}
+footer .footer-content__link--icon {
+  display: flex;
+  justify-content: start;
+}
+footer .footer-content__link--icon .fa-hands-helping,
+footer .footer-content__link--icon .fa-utensils {
+  margin-right: 0.6875rem;
+}
+
+header {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo_header {
+  display: block;
+  height: auto;
+  min-width: 12rem;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.nav__resto {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 2.625rem;
+}
+.nav__resto .nav__arrow {
+  color: rgb(233, 7, 7);
+  margin: 2.625rem;
+  font-size: base(--font-size-logo);
+  font-weight: base(--font-weight-medium);
+}
+
+/*mixins*/
+/*components*/
 .eateries {
   display: flex;
   justify-content: center;
@@ -250,88 +340,12 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.4375rem;
+  transform: translate scale(1.2);
 }
 .eateries .cards-eateries__heart .heart-full-of:hover {
   opacity: 1;
 }
 
-footer {
-  background: #353535;
-  padding: 1.375rem 1.5625rem;
-  font-size: 1rem;
-}
-footer h2 {
-  font-family: "shrikhand", "cursive";
-  color: #fff;
-  font-size: 1.125rem;
-  font-weight: 500;
-  letter-spacing: 0.025rem;
-  margin-bottom: 1rem;
-}
-footer p {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.4375rem;
-}
-footer i {
-  color: #fff;
-}
-footer .footer-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.4375rem;
-}
-footer .footer-content__link {
-  font-weight: 300;
-}
-footer .footer-content__link--icon {
-  display: flex;
-  justify-content: start;
-}
-footer .footer-content__link--icon .fa-hands-helping,
-footer .footer-content__link--icon .fa-utensils {
-  margin-right: 0.6875rem;
-}
-
-header {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  position: sticky;
-  width: 100%;
-  z-index: 1;
-}
-
-.logo_header {
-  display: block;
-  height: auto;
-  min-width: 12rem;
-  padding: 1.5rem;
-  background: #fff;
-}
-
-.nav__resto {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  padding-right: 2.625rem;
-  background: 0;
-}
-.nav__resto .nav__arrow {
-  color: rgb(233, 7, 7);
-  margin: 2.625rem;
-  font-size: var(--font-size-logo);
-  font-weight: var(--font-weight-medium);
-}
-
-/**bases**/
-/*mixins*/
-/*components*/
 /*layout*/
 /*pages*/
 body {
@@ -465,10 +479,14 @@ body {
 
 #menu__title {
   font-family: "shrikhand", "cursive";
+  font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .img__header {
   width: 100%;
+  height: 50vh;
+  object-fit: cover;
   background: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") cover no-repeat;
 }
 
@@ -480,12 +498,72 @@ body {
   font-weight: var(--font-weight-medium);
 }
 
-.menu-container {
-  z-index: 2;
+.title-container {
   width: 100%;
-  border: 2px solid red;
-  background: var(background-color);
-  border-radius: 2.1875rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.875rem;
+}
+.title-container .heart-empty,
+.title-container .heart-full-of {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.title-container .heart-empty {
+  opacity: 1;
+  z-index: 1; /*revoir comment ne plus voir le contour quand le coeur est en hover*/
+}
+.title-container .heart-empty:hover {
+  opacity: 0;
+}
+.title-container .heart-full-of {
+  opacity: 0;
+  z-index: 2;
+  background: linear-gradient(#9356dc, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.25rem;
+  transform: translate scale(1.2);
+}
+.title-container .heart-full-of:hover {
+  opacity: 1;
+}
+
+.entrances {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.meals-entrance {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.meals__title {
+  font-family: "Roboto", "sans-serif";
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1.25rem;
+  position: relative;
+}
+.meals__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.625rem;
+  width: 2.5rem;
+  height: 0.1875rem;
+  background: #99E2D0;
 }
 
 /*# sourceMappingURL=main.css.map */

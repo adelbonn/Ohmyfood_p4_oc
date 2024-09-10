@@ -1,4 +1,7 @@
+@use 'functions' as func;
+//@use '../base/index' as base;
 @debug 'Variables file loaded';
+
 //colors
 
 $primary-color: #9356dc;
@@ -18,9 +21,12 @@ $color-grey: #353535;
 $grey-tint4: #7E7E7E;
 
 
-//main-gradient (btn) background: linear-gradient( $secondary-color, $primary-color 85%)
+//main-gradient:  $linear-gradient( $secondary-color, $primary-color 85%)
 
 //size
 $size: 1rem;
 
-
+//soulignement titre
+$underline-color: #99E2D0;
+$underline-thickness: func.rem(3);
+$underline-length: 50%;

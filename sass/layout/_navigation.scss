@@ -1,21 +1,22 @@
-@use '../base/variables' as var;
+//@use '../base/variables' as var;
 @use '../base/mixins' as mix;
 @use '../base/functions' as func;
-
+@use '../base/index' as base;
 
 
 
 .nav__resto {
     
   @include mix.flex-center(row);
+  justify-content: space-between;
     padding-right: func.rem(42);
-    background: red($color: #000000);
+    
 
     .nav__arrow {
         color: rgb(233, 7, 7);
         margin: func.rem(42);
-        font-size: var(--font-size-logo);
-        font-weight: var(--font-weight-medium);
+        font-size: base(--font-size-logo);
+        font-weight: base(--font-weight-medium);
     }
  
 }

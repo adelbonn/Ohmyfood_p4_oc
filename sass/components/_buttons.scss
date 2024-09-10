@@ -1,7 +1,9 @@
-@use '../base/variables' as var;
+//@use '../base/variables' as var;
 @use '../base/mixins' as mix;
 @use '../base/functions' as func;
-@use '../base/typo' as typo;
+//@use '../base/typo' as typo;
+@use '../base/index' as base;
+
 
 /**button gradient**/
 
@@ -24,3 +26,4 @@
 .btn-order {
  @include mix.btn-primary(func.rem(186), func.rem(50));
 }
+

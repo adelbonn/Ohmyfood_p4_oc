@@ -1,5 +1,6 @@
+//@use '../base/index' as base;   
 @use '../base/variables' as var;
-@use '../base/functions' as func;
+//@use '../base/functions' as func;
 @debug 'Typo file loaded';
 
 $primary-font: 'Roboto', 'sans-serif';

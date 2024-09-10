@@ -1,8 +1,8 @@
 @use '../../sass/base/index' as base;
 @use '../base/variables' as var;
-@use '../base/mixins' as mix;
+//@use '../base/mixins' as mix;
 @use '../base/functions' as func;
-@use '../base/reset';
+//@use '../base/reset';
 @use '../base/typo' as typo;
 
 footer {
@@ -15,7 +15,7 @@ footer {
         color: var.$color-white;
         font-size: typo.$font-size-xlarge;
         font-weight: 500;
-        letter-spacing: func.rem(0.4);//vérifier
+        letter-spacing: func.rem(0.4);
         margin-bottom: func.rem(16);
     }
 
@@ -47,7 +47,7 @@ footer {
               
             .fa-hands-helping, 
             .fa-utensils {
-                margin-right: func.rem(11);
+                margin-right:func.rem(11);
             }
           }
             

@@ -1,19 +1,19 @@
 
 @use '../sass/base/index' as base;
 @use 'components/index' as components;
-@use 'layout/index-layout' as layout;
+@use 'layout/index-layout';
 
-/**bases**/
-@use '../sass/base/variables' as var;
-@use '../sass/base/reset' as res;
-@use '../sass/base/typo' as typo;
-@use '../sass/base/functions' as func;
+
+@use '../sass/base/variables';
+@use '../sass/base/reset';
+@use '../sass/base/typo';
+@use '../sass/base/functions';
 
 /*mixins*/
-@use 'base/mixins' as mix;
+@use 'base/mixins' ;
 
 /*components*/
-
+@use 'components/index';
 @use 'components/animations';
 @use 'components/buttons';
 @use 'components/location';
@@ -22,10 +22,10 @@
 
 /*layout*/
 
-@use 'layout/header' as head;
-@use '../sass/layout/navigation' as nav;
+@use 'layout/header';
+@use '../sass/layout/navigation';
 @use 'layout/grids';
-@use 'layout/footer' as foo;
+@use 'layout/footer' ;
 
 /*pages*/
 

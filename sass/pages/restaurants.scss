@@ -1,10 +1,9 @@
 @use '../base/mixins' as mix;
 @use '../base/variables' as var;
 @use '../base/functions' as func;
-@use '../base/reset' as reset;
 @use '../base/typo' as typo;    
-@use '../layout/header';
-@use '../base/index';
+//@use '../layout/header';
+@use '../base/index' as base;
 
 
 .menu-container {
@@ -18,9 +17,13 @@
 
 #menu__title {
     font-family: typo.$logo-font;
+    font-size: typo.$font-size-xxlarge;
+    font-size: typo.$font-size-xxlarge;
 }
 .img__header {
     width: 100%;
+    height: 50vh;
+    object-fit: cover;
     background: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") cover no-repeat; //trouver comment mieux dapter l'image pour enlever le blanc a droite
 }
 .nav__arrow {
@@ -32,12 +35,50 @@
 }
 
 
-.menu-container {
-    z-index: 2;
+.title-container {
+
     width: 100%;
-    border: 2px solid red;
-    background: var(background-color);
-    border-radius: func.rem(35); 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: func.rem(30);
+
+     @include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
+    
+    
 }
 
 
+.entrances {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.meals-entrance {
+   @include mix.flex-center(column);
+}
+
+.meals__title {
+    font-family: typo.$primary-font;
+    font-size: typo.$font-size-medium;
+    font-weight: typo.$font-weight-light;
+    margin: func.rem(20);
+    position: relative;
+    &::after {
+        content:'';
+        position: absolute;
+        left: 0;
+        bottom: func.rem(-10);
+        width: func.rem(40);
+        height: func.rem(3);
+        background: var.$green-color-bagde;
+
+    }
+    //*text-decoration: underline solid var.$green-color-bagde 3px;
+    //text-underline-offset: base.rem(1);
+    //text-decoration-thickness: func.rem(0.5);*/
+    //*@include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*/
+    
+
+    
+}

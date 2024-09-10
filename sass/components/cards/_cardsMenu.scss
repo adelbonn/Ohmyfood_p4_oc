@@ -1,0 +1,21 @@
+
+@use '../../base/variables' as var;
+@use '../../base/functions' as func;
+@use '../../base/mixins' as mix;
+@use '../../base/typo' as typo;
+
+
+.entrance {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.meals-entrance {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    border: 2px solid blue
+}
