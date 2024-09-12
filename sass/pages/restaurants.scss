@@ -9,6 +9,7 @@
 .menu-container {
     
     width: 100%;
+    padding: func.rem(13);
     background: var.$background-color;
     border-radius: func.rem(35); 
     transform: translateY(-15%);
@@ -19,13 +20,16 @@
     font-family: typo.$logo-font;
     font-size: typo.$font-size-xxlarge;
     font-size: typo.$font-size-xxlarge;
+
 }
+
 .img__header {
     width: 100%;
     height: 50vh;
     object-fit: cover;
     background: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") cover no-repeat; //trouver comment mieux dapter l'image pour enlever le blanc a droite
 }
+
 .nav__arrow {
     display: inline-block;
     width: func.rem(30);
@@ -56,15 +60,18 @@
 }
 .meals-entrance {
    @include mix.flex-center(column);
+   padding: func.rem(15);
 }
 
 .meals__title {
     font-family: typo.$primary-font;
     font-size: typo.$font-size-medium;
     font-weight: typo.$font-weight-light;
-    margin: func.rem(20);
+    text-transform: uppercase;
+    margin: func.rem(20) 0 func.rem(40);
     position: relative;
     &::after {
+/*@include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*///voir pourquoi la mixin ne fonctionne pas
         content:'';
         position: absolute;
         left: 0;
@@ -74,10 +81,8 @@
         background: var.$green-color-bagde;
 
     }
-    //*text-decoration: underline solid var.$green-color-bagde 3px;
-    //text-underline-offset: base.rem(1);
-    //text-decoration-thickness: func.rem(0.5);*/
-    //*@include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*/
+ 
+   
     
 
     

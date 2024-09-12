@@ -5,17 +5,26 @@
 @use '../../base/typo' as typo;
 
 
+
+
 .entrance {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+  @include mix.flex-center(column);
+  gap: func.rem(40);
+
+}
+
+
+
+
+.meals-meal {
+    @extend %cards-menus;
 }
 
 .meals-entrance {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @extend %cards-menus;
+}
+
+.desserts__dessert {
+    @extend %cards-menus;
     
-    border: 2px solid blue
 }

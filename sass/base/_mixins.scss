@@ -41,7 +41,7 @@
 
 
 /*buttons functioning*///button de la section functionning
-
+//changer son nom car aussi utiliser pour les cards menu faire des variables
 @mixin button-style-functioning {
     background: var.$background-color;
     border-radius: func.rem(20);
@@ -79,8 +79,8 @@
 }
 
 //badge new, mixin du bage new
-
-@mixin badge-new {
+//faire un place holder************
+/*@mixin badge-new {
     background: var.$primary-color;
     color: var.$color-white;
     padding: func.rem(5) func.rem(10);
@@ -89,7 +89,7 @@
     position: absolute;
     top: -10px;
     right: -10px;
-}
+}*/
 
 /*hearts*///mixin des coeurs, (revoir comment faire pour que le coeur en gradient couvre mieux le coeur du dessous qui ne devrait pas apparaitre au hover, trouver pourquoi
 
@@ -145,7 +145,7 @@
         content: '';
         position: absolute;
         left: 0;
-        bottom: base.rem(-10);
+        bottom: func.rem(-10);
         width: $length;
         height: $thickness;
         background: $color;
