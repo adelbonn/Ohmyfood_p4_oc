@@ -1,3 +1,41 @@
+/*.loader__container {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     display: flex;
+
+    .dot {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: var.$primary-color;
+        margin: 0 10px;
+       // animation: loader infinite 0.3s alternate;
+    }
+
+.d1 {
+    animation: loader infinite 0.3s alternate;
+    background: var.$primary-color;
+}
+
+.d2 {
+    animation: loader infinite 0.3s 0.05s alternate;
+    background: var.$green-color-bagde;
+}
+
+.d3 {
+    animation: loader infinite 0.3s 0.1s alternate;
+    background: var.$secondary-color;
+}
+
+    @keyframes loader {
+        100% {
+            transform : translateY(-30px)
+
+        }
+    }
+}*/
 body {
   font-family: "Roboto", "sans-serif";
   font-size: 1rem;
@@ -26,6 +64,53 @@ h2 {
     right: -10px;
 }*/
 /*hearts*/
+/*
+.title-container {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: func.rem(30);
+   position: relative;
+    //@include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
+}
+.heart-empty,
+.heart-full-of
+ {
+    position: absolute;
+    top: 40%;
+
+    font-size: $width;
+    margin: 20px;
+    width: $width;
+    height: $height;
+    transition: color 0.3s ease;
+}
+
+.heart-empty {
+    opacity: 1;
+    z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover
+}
+.heart-empty:hover {
+    opacity: 0;
+}
+
+.heart-full-of {
+    opacity: 0;
+    background: linear-gradient(var.$primary-color, var.$secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: $width;
+    transform: translate scale(1.2);
+
+}
+.heart-full-of:hover {
+    opacity: 1;
+
+}
+}*/
 /**button gradient**/
 .btn {
   width: 13.625rem;
@@ -103,15 +188,6 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-.fa-check-circle {
-  opacity: 0;
-}
-.fa-check-circle:hover {
-  opacity: 1;
-  background: #99E2D0;
-  color: #fff;
-}
-
 .menu__card {
   display: flex;
   flex-direction: column;
@@ -138,6 +214,11 @@ h2 {
                transform: scalex(1.5);
                opacity: 1;*/
 }
+@media screen and (min-width: 768px) {
+  .menu__items {
+    width: 80%;
+  }
+}
 .menu__items .menu__meal {
   display: flex;
   justify-content: center;
@@ -150,7 +231,18 @@ h2 {
   align-items: flex-end;
   overflow: hidden;
 }
-.menu__items .menu__checkWrap {
+.menu__items .fa-check-circle {
+  opacity: 0;
+}
+.menu__items .fa-check-circle:hover {
+  opacity: 1;
+  background: #99E2D0;
+  color: #fff;
+}
+.menu__items .fa-check-circle + .menu__checkWrap {
+  transform: rotate(0.5turn);
+}
+.menu__items .fa-check-circle .menu__checkWrap {
   height: 4.625rem;
   width: 3.75rem;
   font-weight: 700;
@@ -163,7 +255,7 @@ h2 {
   transition-duration: 1s ease-in-out;
   transform-origin: rotate(-0.5turn);
 }
-.menu__items .menu__check {
+.menu__items .fa-check-circle .menu__check {
   position: relative;
   overflow: hidden;
   width: 3.75rem;
@@ -172,18 +264,17 @@ h2 {
   justify-content: center;
   flex-direction: row;
 }
-.menu__items .menu__check i {
+.menu__items .fa-check-circle .menu__check .fa-check-circle {
   position: absolute;
   top: 0;
   right: 0;
   width: 20%;
   height: 100%;
   color: #99E2D0;
-  transform: translateX(100%);
-  animation: reveal-check 1s forwards;
+  transform: translateX(20%);
 }
-.menu__items .menu__check .menu__card:hover .menu__check i {
-  transform: translateX(100%);
+.menu__items .fa-check-circle .menu__check .menu__check:hover .menu__check i {
+  transform: translateX(20%);
 }
 @keyframes reveal-check {
   from {
@@ -193,7 +284,7 @@ h2 {
     transform: translateX(0);
   }
 }
-.menu__items .meals__title {
+.menu__items .fa-check-circle .menu__title {
   font-family: "Roboto", "sans-serif";
   font-size: 1rem;
   font-weight: 300;
@@ -201,7 +292,7 @@ h2 {
   margin: 1.25rem 0 2.5rem;
   position: relative;
 }
-.menu__items .meals__title::after {
+.menu__items .fa-check-circle .menu__title::after {
   /*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*/
   content: "";
   position: absolute;
@@ -210,6 +301,11 @@ h2 {
   width: 2.5rem;
   height: 0.1875rem;
   background: #99E2D0;
+}
+.menu__items .main-wrapper {
+  width: 80%;
+  padding: 0;
+  margin: 0;
 }
 
 * {
@@ -311,9 +407,8 @@ footer .footer-content__link--icon .fa-utensils {
 header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   background: #fff;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   position: sticky;
   width: 100%;
@@ -445,6 +540,14 @@ header {
   right: 0.5rem;
   top: 1.125rem;
 }
+.eateries .cards-eateries__heart .title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.875rem;
+  position: relative;
+}
 .eateries .cards-eateries__heart .heart-empty,
 .eateries .cards-eateries__heart .heart-full-of {
   position: absolute;
@@ -486,7 +589,7 @@ body {
 .main-wrapper {
   width: 100%;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /***section info**/
@@ -610,7 +713,23 @@ body {
   border-radius: 2.1875rem;
   transform: translateY(-15%);
 }
+@media screen and (min-width: 768px) {
+  .menu-container {
+    padding: 3.125rem;
+  }
+}
 
+/*.section {
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: func.rem(80);
+    @media screen and (min-width: 768px) {
+       width:80%;
+        padding: 0 func.rem(50);
+    }
+}*/
 #menu__title {
   font-family: "shrikhand", "cursive";
   font-size: 1.5rem;
@@ -638,6 +757,15 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 1.875rem;
+  position: relative;
+}
+.title-container .title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.875rem;
+  position: relative;
 }
 .title-container .heart-empty,
 .title-container .heart-full-of {

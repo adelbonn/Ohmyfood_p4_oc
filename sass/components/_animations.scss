@@ -1,0 +1,40 @@
+@use '../base/variables' as var;
+
+/*.loader__container {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     display: flex;
+
+    .dot {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: var.$primary-color;
+        margin: 0 10px;
+       // animation: loader infinite 0.3s alternate;
+    }
+
+.d1 {
+    animation: loader infinite 0.3s alternate;
+    background: var.$primary-color;
+}
+
+.d2 {
+    animation: loader infinite 0.3s 0.05s alternate;
+    background: var.$green-color-bagde;
+}
+
+.d3 {
+    animation: loader infinite 0.3s 0.1s alternate;
+    background: var.$secondary-color;
+}
+
+    @keyframes loader {
+        100% {
+            transform : translateY(-30px)
+    
+        }
+    }
+}*/

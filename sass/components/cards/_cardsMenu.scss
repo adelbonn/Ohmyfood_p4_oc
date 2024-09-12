@@ -14,27 +14,10 @@
    margin-bottom: func.rem(12) ;
 }
 
-
-
-
-
-
-
-.fa-check-circle {
-   opacity: 0;
-    &:hover
-         {
-          opacity: 1;
-          background: var.$green-color-bagde;
-          color: var.$color-white;
-           
-            }
-    }
     .menu__card {
         display:flex;
         flex-direction: column;
-        justify-content: flex-start;
-       
+        justify-content: flex-start; 
     }
     
     .menu__items {
@@ -42,6 +25,11 @@
        justify-content: space-between;
        padding: func.rem(15);
        @extend %cards-menus;
+
+       @media screen and (min-width: 768px) {
+        width: 80%;
+       }
+
 
        .menu__meal {
         @include mix.flex-center(column);
@@ -70,11 +58,23 @@
                     transform: scalex(1.5);
                     opacity: 1;*/
        
-    
-    
+   
+.fa-check-circle {
+    opacity: 0;
+     &:hover
+          {
+           opacity: 1;
+           background: var.$green-color-bagde;
+           color: var.$color-white;
+            
+             }
+             + .menu__checkWrap {
+                 transform: rotate(0.5turn);
+             } 
+   
 .menu__checkWrap {
-            height: func.rem(74);
-              width: func.rem(60);
+             height: func.rem(74);
+             width: func.rem(60);
              font-weight: typo.$font-weight-bold;
              color: var.$color-white;
           @include mix.flex-center(row);
@@ -95,18 +95,17 @@
 @include mix.flex-center(row);
    
 
-i {
+.fa-check-circle {
     position: absolute;
     top: 0;
     right:0;
     width: 20%;
     height: 100%;
     color: var.$green-color-bagde;
-    transform: translateX(100%);
-    animation: reveal-check 1s forwards;
+    transform: translateX(20%);
 }
-.menu__card:hover .menu__check i {
-    transform: translateX(100%);
+.menu__check:hover .menu__check i {
+    transform: translateX(20%);
 }
 
 
@@ -122,7 +121,7 @@ i {
         }
 
 
-    .meals__title {
+    .menu__title {
         font-family: typo.$primary-font;
         font-size: typo.$font-size-medium;
         font-weight: typo.$font-weight-light;
@@ -130,7 +129,7 @@ i {
         margin: func.rem(20) 0 func.rem(40);
         position: relative;
         &::after {
-    /*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*///voir pourquoi la mixin ne fonctionne pas
+    /*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*///*voir pourquoi la mixin ne fonctionne pas*/
             content:'';
             position: absolute;
             left: 0;
@@ -142,3 +141,9 @@ i {
         }
     }
 }
+
+.main-wrapper {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+}}

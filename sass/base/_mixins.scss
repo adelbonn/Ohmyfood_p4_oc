@@ -95,6 +95,16 @@
 
 @mixin heart-icon($width, $height, $primary-color, $secondary-color) {
 
+.title-container {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: func.rem(30);
+   position: relative;
+    //@include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
+}
 .heart-empty,
 .heart-full-of
  {
@@ -135,21 +145,51 @@
     
 }
 }
+/*
+.title-container {
 
-
-//mixin soulignement titre des plats menu
-
-@mixin partial-underline($length, $color, $thickness) {
-    position: relative;
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: func.rem(-10);
-        width: $length;
-        height: $thickness;
-        background: $color;
-
-    }
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: func.rem(30);
+   position: relative;
+    //@include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
 }
+.heart-empty,
+.heart-full-of
+ {
+    position: absolute;
+    top: 40%;
+    
+    font-size: $width;
+    margin: 20px;
+    width: $width;
+    height: $height;
+    transition: color 0.3s ease;
+}
+
+.heart-empty {
+    opacity: 1;
+    z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover
+}
+.heart-empty:hover {
+    opacity: 0;
+}
+
+.heart-full-of {
+    opacity: 0;
+    background: linear-gradient(var.$primary-color, var.$secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: $width;
+    transform: translate scale(1.2);
+    
+}
+.heart-full-of:hover {
+    opacity: 1;
+    
+}
+}*/
 
