@@ -46,44 +46,11 @@
     justify-content: space-around;
     align-items: center;
     padding: func.rem(30);
-
+   
      @include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
     
     
 }
 
 
-.entrances {
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-.meals-entrance {
-   @include mix.flex-center(column);
-   padding: func.rem(15);
-}
 
-.meals__title {
-    font-family: typo.$primary-font;
-    font-size: typo.$font-size-medium;
-    font-weight: typo.$font-weight-light;
-    text-transform: uppercase;
-    margin: func.rem(20) 0 func.rem(40);
-    position: relative;
-    &::after {
-/*@include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*///voir pourquoi la mixin ne fonctionne pas
-        content:'';
-        position: absolute;
-        left: 0;
-        bottom: func.rem(-10);
-        width: func.rem(40);
-        height: func.rem(3);
-        background: var.$green-color-bagde;
-
-    }
- 
-   
-    
-
-    
-}

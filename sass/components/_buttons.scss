@@ -22,7 +22,12 @@
 }
 
 
-
+.button-order {
+  padding: func.rem(40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .btn-order {
  @include mix.btn-primary(func.rem(186), func.rem(50));
 }

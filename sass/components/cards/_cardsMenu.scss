@@ -7,24 +7,138 @@
 
 
 
-.entrance {
-  @include mix.flex-center(column);
-  gap: func.rem(40);
-
+%cards-menus {
+    background: var.$color-white;
+  border-radius: func.rem(15);
+    @include mix.shadow-card;
+   margin-bottom: func.rem(12) ;
 }
 
 
 
 
-.meals-meal {
-    @extend %cards-menus;
-}
 
-.meals-entrance {
-    @extend %cards-menus;
-}
 
-.desserts__dessert {
-    @extend %cards-menus;
+
+.fa-check-circle {
+   opacity: 0;
+    &:hover
+         {
+          opacity: 1;
+          background: var.$green-color-bagde;
+          color: var.$color-white;
+           
+            }
+    }
+    .menu__card {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+       
+    }
     
+    .menu__items {
+       @include mix.flex-center(row);
+       justify-content: space-between;
+       padding: func.rem(15);
+       @extend %cards-menus;
+
+       .menu__meal {
+        @include mix.flex-center(column);
+        gap: func.rem(10);
+       }
+    
+       .price {
+        font-weight: typo.$font-weight-bold;
+        display:flex;
+        align-items: flex-end;
+        overflow: hidden;
+             
+       }
+    
+       /*.menu__check{
+        background: var.$green-color-bagde;
+        margin: func.rem(-16) func.rem(-76) func.rem(-16) func.rem(16);
+        width: func.rem(60);
+        height: func.rem(74);
+        border-top-right-radius: func.rem(15);
+        border-bottom-right-radius: func.rem(15);
+       @include mix.flex-center(row);
+    
+        transition: all 0.5s ease-in-out;
+                &:hover {
+                    transform: scalex(1.5);
+                    opacity: 1;*/
+       
+    
+    
+.menu__checkWrap {
+            height: func.rem(74);
+              width: func.rem(60);
+             font-weight: typo.$font-weight-bold;
+             color: var.$color-white;
+          @include mix.flex-center(row);
+            border-radius: 50%;
+            background: var.$green-color-bagde;
+            transition-duration: 1s ease-in-out;
+            transform-origin: rotate(-0.5turn);
+        }
+       
+    
+    
+   
+.menu__check {
+    position: relative;
+    overflow: hidden;
+    width: func.rem(60);
+    height: func.rem(74);
+@include mix.flex-center(row);
+   
+
+i {
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 20%;
+    height: 100%;
+    color: var.$green-color-bagde;
+    transform: translateX(100%);
+    animation: reveal-check 1s forwards;
+}
+.menu__card:hover .menu__check i {
+    transform: translateX(100%);
+}
+
+
+}
+@keyframes reveal-check {
+    from {
+        transform: translateX(100%);
+         }
+
+    to {
+        transform: translateX(0);
+    }
+        }
+
+
+    .meals__title {
+        font-family: typo.$primary-font;
+        font-size: typo.$font-size-medium;
+        font-weight: typo.$font-weight-light;
+        text-transform: uppercase;
+        margin: func.rem(20) 0 func.rem(40);
+        position: relative;
+        &::after {
+    /*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*///voir pourquoi la mixin ne fonctionne pas
+            content:'';
+            position: absolute;
+            left: 0;
+            bottom: func.rem(-10);
+            width: func.rem(40);
+            height: func.rem(3);
+            background: var.$green-color-bagde;
+    
+        }
+    }
 }

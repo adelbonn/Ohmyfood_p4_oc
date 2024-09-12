@@ -105,10 +105,12 @@
         gap: func.rem(50) func.rem(100);
         justify-content: center;
         width: 100%;
+        padding: func.rem(30) func.rem(50);
     }
-
+    @media screen and (min-width: 1440px) {
+     padding: func.rem(30) func.rem(180);
 }
-
+}
 
 .eateries .cards-eateries__heart {
     position: relative;

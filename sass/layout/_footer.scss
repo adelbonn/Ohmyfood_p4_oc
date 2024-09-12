@@ -10,7 +10,7 @@ footer {
     padding: func.rem(22) func.rem(25);
     font-size: typo.$font-size-medium;
     
-    h2 {
+    .logo-footer {
         font-family: typo.$logo-font;
         color: var.$color-white;
         font-size: typo.$font-size-xlarge;
@@ -51,5 +51,32 @@ footer {
             }
           }
             
+    }
+}
+@media screen and (min-width: 768px) {
+    footer {
+        height: func.rem(114);
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        align-items: end;
+        padding: func.rem(22) func.rem(60);
+        font-size: typo.$font-size-medium;
+        .footer-content {
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+            gap: func.rem(7);
+        }
+        .mentions {
+            font-weight: typo.$font-weight-light;
+            margin-left: func.rem(20)
+        }
+        .logo-footer {
+            margin:func.rem(0) func.rem(0) func.rem(0) func.rem(100);
+        }
+        p {
+            margin: 0;
+        }
     }
 }

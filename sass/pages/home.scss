@@ -84,7 +84,9 @@ body {
     @media screen and (min-width: 768px)
     {
         display: flex;
-        gap: func.rem(1);
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: func.rem(40);
         
     }
 

@@ -1,3 +1,5 @@
+@use '../base/variables' as var; 
+
 /*%badge-new {
     background: var.$primary-color;
     color: var.$color-white;
@@ -9,9 +11,9 @@
     right: -10px;
 }*/
 
-%cards-menus {
+/*%cards-menus {
     background: var.$color-white;
   border-radius: func.rem(15);
     @include mix.shadow-card;
    margin-bottom: func.rem(12) ;
-}
+}*/
