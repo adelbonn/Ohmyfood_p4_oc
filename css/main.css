@@ -181,6 +181,11 @@ h2 {
   font-weight: 700;
 }
 
+/*@mixin underline($length) {
+    padding-bottom: 2px;
+    border-bottom: 3px solid var.$green-color-bagde;
+    width: $length;
+}*/
 .menu__items {
   background: #fff;
   border-radius: 0.9375rem;
@@ -188,10 +193,33 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-.menu__card {
+.menu__cards {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
+  /* @media screen and (min-width: 768px) {
+       display: grid;
+       grid-template-columns: repeat(1, 1fr);
+   }*/
+}
+
+.menu__title {
+  display: inline-block;
+  font-family: "Roboto", "sans-serif";
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 1.25rem 0 2.5rem;
+  align-self: flex-start;
+  padding-bottom: 0.625rem;
+}
+.menu__title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  background: #99E2D0;
+  height: 0.1875rem;
 }
 
 .menu__items {
@@ -200,19 +228,6 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   padding: 0.9375rem;
-  /*.menu__check{
-   background: var.$green-color-bagde;
-   margin: func.rem(-16) func.rem(-76) func.rem(-16) func.rem(16);
-   width: func.rem(60);
-   height: func.rem(74);
-   border-top-right-radius: func.rem(15);
-   border-bottom-right-radius: func.rem(15);
-  @include mix.flex-center(row);
-
-   transition: all 0.5s ease-in-out;
-           &:hover {
-               transform: scalex(1.5);
-               opacity: 1;*/
 }
 @media screen and (min-width: 768px) {
   .menu__items {
@@ -225,24 +240,47 @@ h2 {
   flex-direction: column;
   gap: 0.625rem;
 }
-.menu__items .price {
-  font-weight: 700;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-}
-.menu__items .fa-check-circle {
+
+/*
+
+   .menu__meal {
+    @include mix.flex-center(column);
+    gap: func.rem(10);
+   }
+
+   .price {
+    font-weight: typo.$font-weight-bold;
+    display:flex;
+    align-items: flex-end;
+    overflow: hidden;
+
+   }
+
+   /*.menu__check{
+    background: var.$green-color-bagde;
+    margin: func.rem(-16) func.rem(-76) func.rem(-16) func.rem(16);
+    width: func.rem(60);
+    height: func.rem(74);
+    border-top-right-radius: func.rem(15);
+    border-bottom-right-radius: func.rem(15);
+   @include mix.flex-center(row);
+
+    transition: all 0.5s ease-in-out;
+            &:hover {
+                transform: scalex(1.5);
+                opacity: 1;*/
+.fa-check-circle {
   opacity: 0;
 }
-.menu__items .fa-check-circle:hover {
+.fa-check-circle:hover {
   opacity: 1;
   background: #99E2D0;
   color: #fff;
 }
-.menu__items .fa-check-circle + .menu__checkWrap {
+.fa-check-circle + .menu__checkWrap {
   transform: rotate(0.5turn);
 }
-.menu__items .fa-check-circle .menu__checkWrap {
+.fa-check-circle .menu__checkWrap {
   height: 4.625rem;
   width: 3.75rem;
   font-weight: 700;
@@ -255,7 +293,7 @@ h2 {
   transition-duration: 1s ease-in-out;
   transform-origin: rotate(-0.5turn);
 }
-.menu__items .fa-check-circle .menu__check {
+.fa-check-circle .menu__check {
   position: relative;
   overflow: hidden;
   width: 3.75rem;
@@ -264,7 +302,7 @@ h2 {
   justify-content: center;
   flex-direction: row;
 }
-.menu__items .fa-check-circle .menu__check .fa-check-circle {
+.fa-check-circle .menu__check .fa-check-circle {
   position: absolute;
   top: 0;
   right: 0;
@@ -273,7 +311,7 @@ h2 {
   color: #99E2D0;
   transform: translateX(20%);
 }
-.menu__items .fa-check-circle .menu__check .menu__check:hover .menu__check i {
+.fa-check-circle .menu__check .menu__check:hover .menu__check i {
   transform: translateX(20%);
 }
 @keyframes reveal-check {
@@ -284,28 +322,26 @@ h2 {
     transform: translateX(0);
   }
 }
-.menu__items .fa-check-circle .menu__title {
+.fa-check-circle .menu__title {
   font-family: "Roboto", "sans-serif";
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   margin: 1.25rem 0 2.5rem;
-  position: relative;
-}
-.menu__items .fa-check-circle .menu__title::after {
-  /*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*/
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.625rem;
-  width: 2.5rem;
-  height: 0.1875rem;
-  background: #99E2D0;
-}
-.menu__items .main-wrapper {
-  width: 80%;
-  padding: 0;
-  margin: 0;
+  padding-bottom: 1.25rem;
+  /* position: relative;
+   &::after {*/
+  /*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);
+  voir pourquoi la mixin ne fonctionne pas
+          content:'';
+          position: absolute;
+          left: 0;
+          bottom: func.rem(-10);
+          width: func.rem(40);
+          height: func.rem(3);
+          background: var.$green-color-bagde;
+
+      }*/
 }
 
 * {
@@ -376,6 +412,10 @@ footer .footer-content__link--icon .fa-hands-helping,
 footer .footer-content__link--icon .fa-utensils {
   margin-right: 0.6875rem;
 }
+footer .footer-content .font__footer-light {
+  font-weight: 300;
+  margin-left: 1.25rem;
+}
 
 @media screen and (min-width: 768px) {
   footer {
@@ -392,10 +432,6 @@ footer .footer-content__link--icon .fa-utensils {
     justify-content: center;
     align-items: end;
     gap: 0.4375rem;
-  }
-  footer .mentions {
-    font-weight: 300;
-    margin-left: 1.25rem;
   }
   footer .logo-footer {
     margin: 0rem 0rem 0rem 6.25rem;
@@ -440,6 +476,7 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  padding: 1.25rem;
 }
 
 .nav__resto {
@@ -526,7 +563,7 @@ header {
   font-weight: 300;
 }
 
-.eateries-cards_bg {
+.eateries-cards__bg {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
@@ -536,7 +573,7 @@ header {
   background: #f6f6f6;
 }
 @media screen and (min-width: 767.98px) {
-  .eateries-cards_bg {
+  .eateries-cards__bg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -547,7 +584,7 @@ header {
   }
 }
 @media screen and (min-width: 1440px) {
-  .eateries-cards_bg {
+  .eateries-cards__bg {
     padding: 1.875rem 11.25rem;
   }
 }
@@ -581,12 +618,12 @@ header {
 }
 .eateries .cards-eateries__heart .heart-empty {
   opacity: 1;
-  /*z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover*/
+  /*z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover tout simplement le mettre en opacity: hidden en hover!!!*/
 }
 .eateries .cards-eateries__heart .heart-empty:hover {
   opacity: 0;
 }
-.eateries .cards-eateries__heart .heart-full-of {
+.eateries .cards-eateries__heart .heart-full-of { /*change le nom pour heartFilled*/
   opacity: 0;
   background: linear-gradient(#9356dc, #FF79DA);
   background-clip: text;
@@ -730,25 +767,26 @@ body {
   padding: 0.8125rem;
   background: #f6f6f6;
   border-radius: 2.1875rem;
-  transform: translateY(-15%);
-}
-@media screen and (min-width: 768px) {
-  .menu-container {
-    padding: 3.125rem;
-  }
+  position: relative;
+  z-index: 1;
+  margin-top: -0.25rem;
+  /*@media screen and (min-width: 768px) {
+      padding: func.rem(50);
+  }*/
 }
 
-/*.section {
-   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: func.rem(80);
-    @media screen and (min-width: 768px) {
-       width:80%;
-        padding: 0 func.rem(50);
-    }
-}*/
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  /*@media screen and (min-width: 768px) {
+     width:80%;
+      padding: 0 func.rem(50);
+  }*/
+}
+
 #menu__title {
   font-family: "shrikhand", "cursive";
   font-size: 1.5rem;
@@ -800,12 +838,12 @@ body {
 }
 .title-container .heart-empty {
   opacity: 1;
-  /*z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover*/
+  /*z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover tout simplement le mettre en opacity: hidden en hover!!!*/
 }
 .title-container .heart-empty:hover {
   opacity: 0;
 }
-.title-container .heart-full-of {
+.title-container .heart-full-of { /*change le nom pour heartFilled*/
   opacity: 0;
   background: linear-gradient(#9356dc, #FF79DA);
   background-clip: text;

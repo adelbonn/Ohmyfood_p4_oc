@@ -12,24 +12,25 @@
     padding: func.rem(13);
     background: var.$background-color;
     border-radius: func.rem(35); 
-    transform: translateY(-15%);
+   position: relative;
+   z-index: 1;
+   margin-top: func.rem(-4);
 
-    @media screen and (min-width: 768px) {
+    /*@media screen and (min-width: 768px) {
         padding: func.rem(50);
-        
-    }
+    }*/
 }
-/*.section {
+.section {
    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: func.rem(80);
-    @media screen and (min-width: 768px) {
+    /*@media screen and (min-width: 768px) {
        width:80%;
         padding: 0 func.rem(50);
-    }
-}*/
+    }*/
+}
 
 #menu__title {
     font-family: typo.$logo-font;

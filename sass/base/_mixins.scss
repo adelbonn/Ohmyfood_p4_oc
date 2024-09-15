@@ -105,6 +105,7 @@
    position: relative;
     //@include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
 }
+
 .heart-empty,
 .heart-full-of
  {
@@ -124,13 +125,13 @@
 
 .heart-empty {
     opacity: 1;
-    /*z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover*/
+    /*z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover tout simplement le mettre en opacity: hidden en hover!!!*/
 }
 .heart-empty:hover {
     opacity: 0;
 }
 
-.heart-full-of {
+.heart-full-of {  /*change le nom pour heartFilled*/
     opacity: 0;
     background: linear-gradient(var.$primary-color, var.$secondary-color);
     background-clip: text;
@@ -145,6 +146,13 @@
     
 }
 }
+
+@mixin partial-underline($length) {
+    padding-bottom: 10px;
+    border-bottom: 3px solid var.$green-color-bagde;
+    width: $length;
+}
+
 /*
 .title-container {
 

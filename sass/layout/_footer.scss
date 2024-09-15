@@ -50,6 +50,10 @@ footer {
                 margin-right:func.rem(11);
             }
           }
+          .font__footer-light {
+            font-weight: typo.$font-weight-light;
+            margin-left: func.rem(20)
+        } 
             
     }
 }
@@ -68,11 +72,8 @@ footer {
             align-items: end;
             gap: func.rem(7);
         }
-        .mentions {
-            font-weight: typo.$font-weight-light;
-            margin-left: func.rem(20)
-        }
-        .logo-footer {
+      
+       .logo-footer {
             margin:func.rem(0) func.rem(0) func.rem(0) func.rem(100);
         }
         p {

@@ -4,32 +4,67 @@
 @use '../../base/mixins' as mix;
 @use '../../base/typo' as typo;
 
-
+/*@mixin underline($length) {
+    padding-bottom: 2px;
+    border-bottom: 3px solid var.$green-color-bagde;
+    width: $length;
+}*/
 
 
 %cards-menus {
     background: var.$color-white;
-  border-radius: func.rem(15);
+    border-radius: func.rem(15);
     @include mix.shadow-card;
-   margin-bottom: func.rem(12) ;
+     margin-bottom: func.rem(12) ;
 }
 
-    .menu__card {
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start; 
+    .menu__cards {
+        @include mix.flex-center(column);
+        align-items: center;
+        
+
+       /* @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }*/
     }
     
+
+    .menu__title {
+        display: inline-block;
+        font-family: typo.$primary-font;
+        font-weight: typo.$font-weight-light;
+        text-transform: uppercase;
+        font-size: typo.$font-size-medium;
+        margin: func.rem(20) 0 func.rem(40);
+        align-self: flex-start;
+        padding-bottom: func.rem(10);
+        &::after {
+            content:'';
+            display: block;
+            width: 50%;
+            background : var.$green-color-bagde;
+            height: func.rem(3);
+        }
+
+    
+    }
+
     .menu__items {
-       @include mix.flex-center(row);
-       justify-content: space-between;
-       padding: func.rem(15);
-       @extend %cards-menus;
+        @include mix.flex-center(row);
+        justify-content: space-between;
+        padding: func.rem(15);
+        @extend %cards-menus;
 
-       @media screen and (min-width: 768px) {
-        width: 80%;
-       }
-
+        @media screen and (min-width: 768px) {
+            width: 80%;
+        }
+        .menu__meal {
+            @include mix.flex-center(column);
+            gap: func.rem(10);
+           }
+    }
+    /*
 
        .menu__meal {
         @include mix.flex-center(column);
@@ -121,15 +156,19 @@
         }
 
 
+
+
     .menu__title {
         font-family: typo.$primary-font;
         font-size: typo.$font-size-medium;
         font-weight: typo.$font-weight-light;
         text-transform: uppercase;
         margin: func.rem(20) 0 func.rem(40);
-        position: relative;
-        &::after {
-    /*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);*///*voir pourquoi la mixin ne fonctionne pas*/
+        padding-bottom: func.rem(20);
+       /* position: relative;
+        &::after {*/
+    /*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);
+    voir pourquoi la mixin ne fonctionne pas
             content:'';
             position: absolute;
             left: 0;
@@ -138,12 +177,6 @@
             height: func.rem(3);
             background: var.$green-color-bagde;
     
-        }
+        }*/
     }
 }
-
-.main-wrapper {
-    width: 80%;
-    padding: 0;
-    margin: 0;
-}}
