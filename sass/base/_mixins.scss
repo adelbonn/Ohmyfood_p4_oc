@@ -10,14 +10,18 @@
 
 //shadows
 
-//shadow header +badge;
+//shadow header +badge;/*mettre en placeholder*/
 @mixin shadow-primary {box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15); } 
 
  /*shadow card*/
 @mixin shadow-card {box-shadow:  0 4px 15px 0 rgba(0, 0, 0, 0.10);}
 
  //*buttonshadow-button
- @mixin shadow-button {box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);}
+ @mixin shadow-button($darken-amount: 1%) 
+ {
+    $shadow-color: darken(rgba(0, 0, 0, 0.25), $darken-amount);
+    box-shadow: 0 4px 10px 0 rgb$shadow-color;
+}
 
 //shadowInstructions
 @mixin shadow-instructions {box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.15);}
@@ -28,7 +32,7 @@
 
 
 
-/*button header*///mixin du buton de la page home (btn de base)
+/*button header*///mixin du button de la page home (btn de base)/*enlever le valeur mise ici dans la misin et le mettre uniquement pour le btn primary pour que cette mixin soit réutilisable , pas besoin de laisser les valauer du btn primary ici il suffit de la utiliser quand j utilise la mixin!!!)
 @mixin btn-primary($width: func.rem(218), $min-height: func.rem(50), $padding: func.rem(15) func.rem(20)) {
     width: $width;
     min-height: $min-height;
@@ -56,7 +60,7 @@
 
 }
 
-//mixin pour les cercles des bouton de la section fonctionnement
+//mixin pour les cercles des boutons de la section fonctionnement
 @mixin circle-number {
    background: var.$primary-color;
    width: func.rem(24);
@@ -91,30 +95,19 @@
     right: -10px;
 }*/
 
-/*hearts*///mixin des coeurs, (revoir comment faire pour que le coeur en gradient couvre mieux le coeur du dessous qui ne devrait pas apparaitre au hover, trouver pourquoi
+/*hearts*///mixin des coeurs,(trouve pourquoi le heart-empty ne passe pas en opcaity 0 quand il est en hover
 
 @mixin heart-icon($width, $height, $primary-color, $secondary-color) {
 
-.title-container {
-
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: func.rem(30);
-   position: relative;
-    //@include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
-}
 
 .heart-empty,
-.heart-full-of
+.heart-filled
  {
     position: absolute;
     top: 0;
     left: 0;
-    right: 10%;
+    right: 0;
     font-size: $width;
-    
     width: $width;
     height: $height;
     display: inline-block;
@@ -131,7 +124,7 @@
     opacity: 0;
 }
 
-.heart-full-of {  /*change le nom pour heartFilled*/
+.heart-filled {  
     opacity: 0;
     background: linear-gradient(var.$primary-color, var.$secondary-color);
     background-clip: text;
@@ -141,7 +134,7 @@
     transform: translate scale(1.2);
     
 }
-.heart-full-of:hover {
+.heart-filled:hover {
     opacity: 1;
     
 }
@@ -153,51 +146,5 @@
     width: $length;
 }
 
-/*
-.title-container {
 
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: func.rem(30);
-   position: relative;
-    //@include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
-}
-.heart-empty,
-.heart-full-of
- {
-    position: absolute;
-    top: 40%;
-    
-    font-size: $width;
-    margin: 20px;
-    width: $width;
-    height: $height;
-    transition: color 0.3s ease;
-}
-
-.heart-empty {
-    opacity: 1;
-    z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover
-}
-.heart-empty:hover {
-    opacity: 0;
-}
-
-.heart-full-of {
-    opacity: 0;
-    background: linear-gradient(var.$primary-color, var.$secondary-color);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: $width;
-    transform: translate scale(1.2);
-    
-}
-.heart-full-of:hover {
-    opacity: 1;
-    
-}
-}*/
 

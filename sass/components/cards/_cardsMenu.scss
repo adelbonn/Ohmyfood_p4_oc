@@ -19,14 +19,14 @@
 }
 
     .menu__cards {
+        border: 2px solide red;
         @include mix.flex-center(column);
-        align-items: center;
-        
-
-       /* @media screen and (min-width: 768px) {
+         
+       @media screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-        }*/
+          
+        }
     }
     
 
@@ -45,138 +45,64 @@
             width: 50%;
             background : var.$green-color-bagde;
             height: func.rem(3);
+            margin-top:func.rem(5);
         }
-
-    
     }
 
     .menu__items {
+        
         @include mix.flex-center(row);
-        justify-content: space-between;
-        padding: func.rem(15);
+        justify-content: start;
+       //padding: func.rem(15);
         @extend %cards-menus;
-
-        @media screen and (min-width: 768px) {
-            width: 80%;
+     
         }
+
+       /* @media screen and (min-width: 768px) {
+            width: 80%;
+        }*/
         .menu__meal {
             @include mix.flex-center(column);
             gap: func.rem(10);
+            margin-left: func.rem(10);
+            padding: func.rem(5);
            }
-    }
-    /*
 
-       .menu__meal {
-        @include mix.flex-center(column);
-        gap: func.rem(10);
-       }
+              
     
-       .price {
+    .menu__price {
         font-weight: typo.$font-weight-bold;
         display:flex;
         align-items: flex-end;
         overflow: hidden;
-             
-       }
-    
-       /*.menu__check{
+        position: relative;
+        top: 0;
+        left: 0;
+        //padding-bottom: func.rem(10);
+       // margin-bottom: func.rem(10);
+      }
+
+      .menu__check {
         background: var.$green-color-bagde;
-        margin: func.rem(-16) func.rem(-76) func.rem(-16) func.rem(16);
-        width: func.rem(60);
         height: func.rem(74);
-        border-top-right-radius: func.rem(15);
-        border-bottom-right-radius: func.rem(15);
-       @include mix.flex-center(row);
-    
+        width: func.rem(100);
+        border-radius: 0 func.rem(15) func.rem(15) 0;
+        margin-right: func.rem(-100);
+        @include mix.flex-center(row);
+        align-items: center;
+        justify-content: center;
         transition: all 0.5s ease-in-out;
-                &:hover {
-                    transform: scalex(1.5);
-                    opacity: 1;*/
+        transform: translateX(-100px);
+        overflow: hidden;
+        /*opacity:0;*/
        
-   
-.fa-check-circle {
-    opacity: 0;
-     &:hover
-          {
-           opacity: 1;
-           background: var.$green-color-bagde;
-           color: var.$color-white;
-            
-             }
-             + .menu__checkWrap {
-                 transform: rotate(0.5turn);
-             } 
-   
-.menu__checkWrap {
-             height: func.rem(74);
-             width: func.rem(60);
-             font-weight: typo.$font-weight-bold;
-             color: var.$color-white;
-          @include mix.flex-center(row);
-            border-radius: 50%;
-            background: var.$green-color-bagde;
-            transition-duration: 1s ease-in-out;
-            transform-origin: rotate(-0.5turn);
-        }
-       
-    
-    
-   
-.menu__check {
-    position: relative;
-    overflow: hidden;
-    width: func.rem(60);
-    height: func.rem(74);
-@include mix.flex-center(row);
-   
+      
 
-.fa-check-circle {
-    position: absolute;
-    top: 0;
-    right:0;
-    width: 20%;
-    height: 100%;
-    color: var.$green-color-bagde;
-    transform: translateX(20%);
-}
-.menu__check:hover .menu__check i {
-    transform: translateX(20%);
-}
+        .menu__check--Wrap {
 
+           opacity: 0;
+           transition: transform 0.5s ease;
+        }}
+    /*
 
-}
-@keyframes reveal-check {
-    from {
-        transform: translateX(100%);
-         }
-
-    to {
-        transform: translateX(0);
-    }
-        }
-
-
-
-
-    .menu__title {
-        font-family: typo.$primary-font;
-        font-size: typo.$font-size-medium;
-        font-weight: typo.$font-weight-light;
-        text-transform: uppercase;
-        margin: func.rem(20) 0 func.rem(40);
-        padding-bottom: func.rem(20);
-       /* position: relative;
-        &::after {*/
-    /*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);
-    voir pourquoi la mixin ne fonctionne pas
-            content:'';
-            position: absolute;
-            left: 0;
-            bottom: func.rem(-10);
-            width: func.rem(40);
-            height: func.rem(3);
-            background: var.$green-color-bagde;
-    
-        }*/
-    }
-}
+     

@@ -21,11 +21,23 @@
 </head>
 
   <body>
- <!--<div class="main-wrapper">-->   
-
+ <!--<div class="main-wrapper">--> 
+      <!--circle du loader
+      <div class="animcircle">
+        <div class="circle"></div>
+      </div>
+      mettre les petits points juste avt et après
+      -->  
+          <!--petits points du loader <div class="loader__container">
+              <div class="dot">
+                <div class="d1"></div>
+                <div class="d2"></div>
+                <div class="d3"></div>
+            </div>-->
             <!--header-->
             <header>
-              <!--div du loader (revoir comment le mettre sur toute la page entière)-->
+              <!--div
+               du loader (revoir comment le mettre sur toute la page entière)-->
               <a href="../index.html">
                 <i class="fas fa-arrow-left">
                 </i>
@@ -45,35 +57,38 @@
                  
                   <span class="hearts">
                     <i class="far fa-heart heart-empty" aria-hidden="true"></i>
-                    <i class="fas fa-heart heart-full-of" aria-hidden="true"></i>  
+                    <i class="fas fa-heart heart-filled" aria-hidden="true"></i>  
                   </span>
-                     </div>
+                     </div><!--div title-container-->
                 <!--Entrées-->
                 <div class="menu__cards">
-         <article>
+              <article class="menu__anim--1">
                   <h2 class="menu__title menu__title-cards">Entrées</h2>
+       <!--<div class="menu__check">-->
                   <div class="menu__items">
-                    <div class="menu__meal">
-                    <h3>Tartare de thon</h3>
-                    <p>Assaisonné au yuzu</p>
-                  </div>
-                    <div class="price">
-                      <p class="price-euro">25<span class="euro">€</span></p>  
+                      <div class="menu__meal">
+                        <h3>Tartare de thon</h3>
+                        <p>Assaisonné au yuzu</p>
+                      </div><!--div menu__meal-->
+                    <div class="menu__price">
+                      <p class="price-euro">25<span class="euro">€</span></p>
+                    </div><!--div menu__price-->  
                       <div class="menu__check">
-                     <!-- <div class="menu__checkWrap">-->
+                      <div class="menu__check--Wrap">
                     <i class="fas fa-check-circle"></i>
-                 <!-- </div>-->
-                  </div>
+                      </div><!--div check--wrap-->
+                 </div><!--div check-->
                    
-                  </div>
-                  </div>
+                  
+                  </div><!--div menu__items-->
+       <!--</div>-->
                   <div class="menu__items">
                       <div class="menu__meal">
                         <h3>Bouchée de homard croustillant</h3>
                         <p>Et sa farandole de petits légumes
                         </p>
                       </div> 
-                        <div class="price">
+                        <div class="menu__price">
                           <p>35<span class="euro">€</span></p> 
                           <i class="fas fa-check-circle"></i>
                         </div>
@@ -84,24 +99,24 @@
                             </h3>
                             <p>Aux truffes
                             </p>
-                          </div>
-                            <div class="price">
+                          </div><!--div menu__meal-->
+                            <div class="menu__price">
                               <p>20<span class="euro">€</span></p>
                               <!--check--><i class="fas fa-check-circle"></i>     
-                           </div>
+                           </div><!--div menu__price-->
            
-                  </div>
-                </article>
+                  </div><!--div menu__items-->
+              </article><!--menu__anim1-->
                 <!--Plats-->
-                <article>
+             <article class="menu__anim--2">
                   <h2 class="menu__title">Plats</h2>
                   <div class="menu__items">
                     <div class="menu__meal">
                       <h3>Poulet rôti aux herbes de Provence </h3>
                       <p>Et sa crème de truffe</p>
                     </div>
-                    <div class="price">
-                      <p>40<span class="euro">€</span></p>
+                    <div class="menu__price">
+                      <p>40<span class="menu__euro">€</span></p>
                     <!--check--><i class="fas fa-check-circle"></i>
                      
                     </div>
@@ -113,11 +128,10 @@
                         <p>Et ses légumes de saison
                         </p>
                       </div>
-                        <div class="price">
-                          <p>35<span class="euro">€</span></p>
-                        <!--check--><i class="fas fa-check-circle"></i>
-                        
-                    </div>
+                        <div class="menu__price">
+                          <p>35<span class="menu__euro">€</span></p>
+                        <!--check--><i class="fas fa-check-circle"></i>  
+                        </div>
                   </div>     
                   <div class="menu__items">
                           <div class="menu__meal">
@@ -126,15 +140,14 @@
                             <p>Et sa purée de panais
                             </p>
                           </div>
-                            <div class="price"> 
-                              <p>44<span class="euro">€</span></p>
-                            <!--check--><i class="fas fa-check-circle"></i>
-                           
-                        </div>
+                            <div class="menu__price"> 
+                              <p>44<span class="menu__euro">€</span></p>
+                            <!--check--><i class="fas fa-check-circle"></i>    
+                           </div>
                    </div>
-                </article>
+             </article><!--menu__anim2-->
                   <!--Desserts-->
-                
+             <article class="menu__anim3">
                     <h2 class="menu__title">Desserts</h2>
                       <div class="menu__items">
                         <div class="menu__meal">
@@ -142,7 +155,7 @@
                           <p>Du chef
                           </p>
                         </div>
-                          <div class="price">
+                          <div class="menu__price">
                             <p>18<span class="euro">€</span></p> 
                          
                           <!--check--><i class="fas fa-check-circle"></i>                         
@@ -155,11 +168,11 @@
                               <p>Revisitées
                               </p>
                             </div>
-                              <div class="price"> 
+                              <div class="menu__price"> 
                                 <p>22<span class="euro">€</span></p>
                               <!--check--><i class="fas fa-check-circle"></i>
                               
-                          </div>
+                             </div>
                       </div>
     
                      <div class="menu__items">
@@ -167,12 +180,12 @@
                             <h3>Tiramisu</h3>
                             <p>A la noisette</p>
                           </div>
-                          <div class="price">
+                          <div class="menu__price">
                               <p>23<span class="euro">€</span></p>    
                             <!--check--><i class="fas fa-check-circle"></i> 
                           </div>
                      </div>
-             
+             </article><!--menu__anim3-->
              </div><!--div de menu__cards-->
                      
      <!--</article>-->

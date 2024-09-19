@@ -77,6 +77,8 @@ body {
             }
  }
  
+
+ 
 .functioning-list {
     @include mix.flex-center(column);
     align-items: center;
@@ -109,7 +111,6 @@ body {
            
         &:hover {
               color: var.$primary-color; 
-
           }
     }
     
