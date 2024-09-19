@@ -1,41 +1,116 @@
-/*.loader__container {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-     display: flex;
-
-    .dot {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: var.$primary-color;
-        margin: 0 10px;
-       // animation: loader infinite 0.3s alternate;
-    }
-
-.d1 {
-    animation: loader infinite 0.3s alternate;
-    background: var.$primary-color;
+/*animation apparition des cards au chargement de la page menu*/
+.img__header {
+  opacity: 0;
+  transform: translateY(-40px);
+  transform-origin: top;
+  animation: revealImage 1.2s ease-in-out forwards;
 }
 
-.d2 {
-    animation: loader infinite 0.3s 0.05s alternate;
-    background: var.$green-color-bagde;
+@keyframes revealImage {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu-container {
+  opacity: 0.8;
+  transform: scale(0.8);
+  transform-origin: top;
+  animation: revealContainer 1s ease-in-out forwards;
+}
+.menu-container #menu__title {
+  opacity: 0.5;
+  transform: translateY(-60px);
+  animation: fadeInDown 1s ease-in-out forwards;
 }
 
-.d3 {
-    animation: loader infinite 0.3s 0.1s alternate;
-    background: var.$secondary-color;
+.hearts {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInDown 0.8s ease-in-out forwards;
+  animation-delay: 0.15s;
 }
 
-    @keyframes loader {
-        100% {
-            transform : translateY(-30px)
+.menu__cards article h2.menu__title {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeInDown 1.02s ease-in-out forwards;
+}
+.menu__cards article h2.menu__title:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.menu__cards article h2.menu__title:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.menu__cards article h2.menu__title:nth-child(3) {
+  animation-delay: 0.7s;
+}
+.menu__cards article .menu__items {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeInDown 1.04s ease-in-out forwards;
+}
+.menu__cards article .menu__items:nth-child(1) {
+  animation-delay: 0.6s;
+}
+.menu__cards article .menu__items:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.menu__cards article .menu__items:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.menu__cards article .menu__items:nth-child(4) {
+  animation-delay: 1s;
+}
 
-        }
-    }
-}*/
+/*.order-btn {
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeInUp 1.07s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.footer {
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeInDown 1.07s ease-in-out forwards;
+    animation-delay: 2s;
+}
+*/
+@keyframes revealContainer {
+  from {
+    opacity: 0.5;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opcacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   font-family: "Roboto", "sans-serif";
   font-size: 1rem;
@@ -181,17 +256,19 @@ h2 {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  justify-content: space-between;
-  /* @media screen and (min-width: 768px) {
-       width: 80%;
-   }*/
+  justify-content: start;
 }
-.menu__items .menu__meal {
+
+/* @media screen and (min-width: 768px) {
+     width: 80%;
+ }*/
+.menu__meal {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 0.625rem;
   margin-left: 0.625rem;
+  padding: 0.3125rem;
 }
 
 .menu__price {
@@ -202,7 +279,6 @@ h2 {
   position: relative;
   top: 0;
   left: 0;
-  padding-bottom: 0.625rem;
 }
 
 .menu__check {
@@ -210,117 +286,22 @@ h2 {
   height: 4.625rem;
   width: 6.25rem;
   border-radius: 0 0.9375rem 0.9375rem 0;
-  margin-left: 0.625rem;
+  margin-right: -6.25rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease-in-out;
+  transform: translateX(-100px);
   overflow: hidden;
   /*opacity:0;*/
 }
 .menu__check .menu__check--Wrap {
   opacity: 0;
-  transition: transform 0.5s;
-}
-.menu__check .menu__check--Wrap:hover + .fa-check-circle {
-  transform: rotate(360deg);
-  opacity: 1;
-  background: #99E2D0;
-  color: #fff;
+  transition: transform 0.5s ease;
 }
 
-/*
-
-   .menu__meal {
-    @include mix.flex-center(column);
-    gap: func.rem(10);
-   }
-
-
-
-   /*.menu__check{
-    background: var.$green-color-bagde;
-    margin: func.rem(-16) func.rem(-76) func.rem(-16) func.rem(16);
-    width: func.rem(60);
-    height: func.rem(74);
-    border-top-right-radius: func.rem(15);
-    border-bottom-right-radius: func.rem(15);
-   @include mix.flex-center(row);
-
-    transition: all 0.5s ease-in-out;
-            &:hover {
-                transform: scalex(1.5);
-                opacity: 1;*/
-/*.menu__checkWrap {
-             height: func.rem(74);
-             width: func.rem(60);
-             font-weight: typo.$font-weight-bold;
-             color: var.$color-white;
-          @include mix.flex-center(row);
-            border-radius: 50%;
-            background: var.$green-color-bagde;
-            transition-duration: 1s ease-in-out;
-            transform-origin: rotate(-0.5turn);
-        }*/
-/*.menu__check {
-    position: relative;
-    overflow: hidden;
-    width: func.rem(60);
-    height: func.rem(74);
-@include mix.flex-center(row);
-
-
-.fa-check-circle {
-    position: absolute;
-    top: 0;
-    right:0;
-    width: 20%;
-    height: 100%;
-    color: var.$green-color-bagde;
-    transform: translateX(20%);
-}
-.menu__check:hover .menu__check i {
-    transform: translateX(20%);
-}
-
-
-}
-@keyframes reveal-check {
-    from {
-        transform: translateX(100%);
-         }
-
-    to {
-        transform: translateX(0);
-    }
-        }
-
-*/
-/*  .menu__title {
-       font-family: typo.$primary-font;
-       font-size: typo.$font-size-medium;
-       font-weight: typo.$font-weight-light;
-       text-transform: uppercase;
-       margin: func.rem(20) 0 func.rem(40);
-       padding-bottom: func.rem(20);
-      /* position: relative;
-       &::after {*/
-/*faire un placeholder a la place de @include mix.partial-underline(var.$green-color-bagde, func.rem(3), 50%);
-    voir pourquoi la mixin ne fonctionne pas
-            content:'';
-            position: absolute;
-            left: 0;
-            bottom: func.rem(-10);
-            width: func.rem(40);
-            height: func.rem(3);
-            background: var.$green-color-bagde;
-
-        }
-    }
-}
-*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -464,7 +445,6 @@ header {
   padding-right: 2.625rem;
 }
 .nav__resto .nav__arrow {
-  color: rgb(233, 7, 7);
   margin: 2.625rem;
   font-size: base(--font-size-logo);
   font-weight: base(--font-weight-medium);
@@ -592,7 +572,7 @@ header {
 .eateries .cards-eateries__heart .heart-empty:hover {
   opacity: 0;
 }
-.eateries .cards-eateries__heart .heart-filled { /*change le nom pour heartFilled*/
+.eateries .cards-eateries__heart .heart-filled {
   opacity: 0;
   background: linear-gradient(#9356dc, #FF79DA);
   background-clip: text;
@@ -732,31 +712,26 @@ body {
 }
 
 .menu-container {
-  width: 100%;
+  max-width: 1200px;
   padding: 0.8125rem;
   background: #f6f6f6;
   border-radius: 2.1875rem;
+  box-sizing: border-box;
   position: relative;
   z-index: 2;
-  margin-top: -2.8125rem;
-  /* @media screen and (min-width: 768px) {
-       padding: func.rem(50);
-   }
-   @media screen and (min-width: 1024px) {
-       margin: 0 func.rem(180) 0 func.rem(180);
-   }*/
+  margin: -2.8125rem auto 0;
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    padding: 3.125rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu-container {
+    margin: -2.8125rem auto 0;
+  }
 }
 
-/*.section {
-   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: func.rem(80);
-    /*@media screen and (min-width: 768px) {
-       width:80%;
-        padding: 0 func.rem(50);
-    }*/
 #menu__title {
   font-family: "shrikhand", "cursive";
   font-size: 1.5rem;
@@ -811,7 +786,7 @@ body {
 .hearts .heart-empty:hover {
   opacity: 0;
 }
-.hearts .heart-filled { /*change le nom pour heartFilled*/
+.hearts .heart-filled {
   opacity: 0;
   background: linear-gradient(#9356dc, #FF79DA);
   background-clip: text;

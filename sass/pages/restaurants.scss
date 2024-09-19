@@ -8,19 +8,20 @@
 
 .menu-container {
     
-    width: 100%;
+    max-width: 1200px;
     padding: func.rem(13);
     background: var.$background-color;
     border-radius: func.rem(35); 
+    box-sizing: border-box;
     position: relative;
     z-index: 2;
-    margin-top: func.rem(-45);
+    margin: func.rem(-45) auto 0;
 
    @media screen and (min-width: 768px) {
         padding: func.rem(50);
     }
     @media screen and (min-width: 1024px) {
-        margin: 0 func.rem(180);
+        margin: func.rem(-45) auto 0;
     }
 }
 

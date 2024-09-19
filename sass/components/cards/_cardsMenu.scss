@@ -19,7 +19,7 @@
 }
 
     .menu__cards {
-        border: 2px solide red;
+       
         @include mix.flex-center(column);
          
        @media screen and (min-width: 768px) {
@@ -103,6 +103,6 @@
            opacity: 0;
            transition: transform 0.5s ease;
         }}
-    /*
+    
 
      

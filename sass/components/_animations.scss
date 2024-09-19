@@ -1,109 +1,148 @@
 @use '../base/variables' as var;
 
-/*animationcards au chargement de la page menu*/
-.menu__anim--1 {
-background: red;
+/*animation apparition des cards au chargement de la page menu*/
+
+
+//animation img du header
+.img__header {
+    opacity: 0;
+    transform: translateY(-40px);
+    transform-origin: top;
+    animation: revealImage 1.2s ease-in-out forwards;
 }
 
+@keyframes revealImage {
+    from {
+        opacity:0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+//animation du conteneur 
+.menu-container {
+    opacity: 0.8;
+    transform: scale(0.8);
+    transform-origin: top;
+    animation: revealContainer 1s ease-in-out forwards;
 
-/*.loader__container {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-     display: flex;
-
-    .dot {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: var.$primary-color;
-        margin: 0 10px;
-        animation: loader infinite 0.3s alternate;
+    #menu__title {
+        opacity: 0.5;
+        transform: translateY(-60px);
+        animation: fadeInDown 1s ease-in-out forwards;
     }
 
-.d1 {
-    animation: loader infinite 0.3s alternate;
-    background: var.$primary-color;
 }
 
-.d2 {
-    animation: loader infinite 0.3s 0.05s alternate;
-    background: var.$green-color-bagde;
+.hearts {
+    opacity: (0);
+    transform: translateY(-30px);
+    animation: fadeInDown 0.8s ease-in-out forwards;
+    animation-delay: 0.15s;// le coeur apparait juste après le titre
 }
 
-.d3 {
-    animation: loader infinite 0.3s 0.1s alternate;
-    background: var.$secondary-color;
-}
+//animation des cartes après le titre
 
-    @keyframes loader {
-        100% {
-            transform : translateY(-30px)
-    
+.menu__cards {
+    article {
+        //animation des titres de chaque section
+        h2.menu__title {
+            opacity: 0;
+            transform: translateY(-40px);
+            animation: fadeInDown 1.02s ease-in-out forwards;
+
+            &:nth-child(1) {
+                animation-delay: 0.3s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: 0.5s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 0.7s;
+        }
+    }
+
+    //animations des cartes qui suivent les titres
+
+        .menu__items {
+            opacity: 0;
+            transform: translateY(-40px);
+            animation: fadeInDown 1.04s ease-in-out forwards;
+
+            &:nth-child(1) {
+                animation-delay: 0.6s;
+            }
+            &:nth-child(2) {
+                animation-delay: 0.8s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 0.9s;
+            } 
+
+            
+            &:nth-child(4) {
+                animation-delay: 1s;
+            } 
+
         }
     }
 }
- /*   
-/***circle loader
 
-.animcircle {
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
+//animation bouton commander
+
+/*.order-btn {
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeInUp 1.07s ease-in-out forwards;
+    animation-delay: 3s;
 }
 
-
-.circle  {
-display: block;
-position relative;
-width: 120px;
-height: 120px;
-border-radius: 50%;
-border: 3px solid transparent;
-border-top-color: var.$primary-color;
-animation: circle-rotate 2s linear infinite;
+.footer {
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeInDown 1.07s ease-in-out forwards;
+    animation-delay: 2s;
 }
-
-.circle::before {
-content:"";
-position:absolute;
-top:5px;
-left:5px;
-right: 5px;
-bottom: 5px;
-border-radius: 50%;
-border: 3px solid transparent;
-border-top-color: var.$secondary-color;
-animation: circle-rotate 3s linear infinite;
-}
-
-.circle::after {
-content:"";
-position:absolute;
-top: 15px;
-left: 15px;
-right: 15px;
-bottom: 15px;
-border-radius: 50%;
-border: 3px solid transparent;
-border-top-color: var.$secondary-color;
-animation: circle-rotate 1.5s linear infinite;
-}
-
-@keyframes circle-rotate{
-0% {
-transform: rotate(0deg);
-}
-100% {
-transform: rotate(360deg);
-}
-}
-
-
-//animation letters loader de la page d'accueil
-
-
 */
+
+//keyframes animation conteneur
+@keyframes revealContainer {
+    from {
+        opacity: 0.5;
+        transform: scaleY(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+//keyframes animation titre
+
+@keyframes fadeInDown {
+    from {
+        opcacity:0;
+        transform: translateY(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+//keyframes animation apparaition des cartes
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
