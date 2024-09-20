@@ -1,4 +1,6 @@
 @use '../base/variables' as var;
+@use '../base/functions' as func;
+@use '../base/typo' as typo;
 
 /*animation apparition des cards au chargement de la page menu*/
 
@@ -40,7 +42,7 @@
     opacity: (0);
     transform: translateY(-30px);
     animation: fadeInDown 0.8s ease-in-out forwards;
-    animation-delay: 0.15s;// le coeur apparait juste après le titre
+    animation-delay: 0.15s;
 }
 
 //animation des cartes après le titre
@@ -66,7 +68,7 @@
         }
     }
 
-    //animations des cartes qui suivent les titres
+    //animations des cartes qui suivent directement les titres
 
         .menu__items {
             opacity: 0;
@@ -121,7 +123,7 @@
         transform: scaleY(1);
     }
 }
-//keyframes animation titre
+//keyframes animation du bas vers le haut 
 
 @keyframes fadeInDown {
     from {
@@ -134,7 +136,7 @@
     }
 }
 
-//keyframes animation apparaition des cartes
+//keyframes animation apparaition des titres et  cartes du haut vers le bas
 
 @keyframes fadeInUp {
     from {
@@ -144,5 +146,48 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+//animation check certe + rectange vert
+
+.menu__items {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s eaase;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top:0;
+        right:0;
+        height: 100%;
+        width: 0;
+        background: var.$green-color-bagde;
+        transition: width 0.6s ease-in-out;
+
+    }
+
+    //icône check
+    .menu__check--Wrap {
+        position: absolute;
+        color: white;
+        font-weight: typo.$font-weight-bold;
+        top: 50%;
+        right: 5%;
+        transform: translateX(-50%) rotate(0);
+        z-index: 3;
+        transition: transform 0.6s ease-in-out;
+    }
+
+    //animation au hover du rectangle et de l icône
+
+    &:hover::before {
+        width: 15%;
+    }
+
+    
+    &:hover .menu__check--Wrap {
+        transform: translateX(-50%) rotate(360deg);
     }
 }

@@ -1,3 +1,17 @@
+body {
+  font-family: "Roboto", "sans-serif";
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: "Roboto", "sans-serif";
+  color: #101010;
+}
+
+h2 {
+  font-family: "Roboto", "sans-serif";
+}
+
 /*animation apparition des cards au chargement de la page menu*/
 .img__header {
   opacity: 0;
@@ -111,18 +125,36 @@
     transform: translateY(0);
   }
 }
-body {
-  font-family: "Roboto", "sans-serif";
-  font-size: 1rem;
+.menu__items {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s eaase;
 }
-
-h1 {
-  font-family: "Roboto", "sans-serif";
-  color: #101010;
+.menu__items::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background: #99E2D0;
+  transition: width 0.6s ease-in-out;
 }
-
-h2 {
-  font-family: "Roboto", "sans-serif";
+.menu__items .menu__check--Wrap {
+  position: absolute;
+  color: white;
+  font-weight: 700;
+  top: 50%;
+  right: 5%;
+  transform: translateX(-50%) rotate(0);
+  z-index: 3;
+  transition: transform 0.6s ease-in-out;
+}
+.menu__items:hover::before {
+  width: 15%;
+}
+.menu__items:hover .menu__check--Wrap {
+  transform: translateX(-50%) rotate(360deg);
 }
 
 /*shadow card*/
@@ -218,7 +250,7 @@ h2 {
   background: #fff;
   border-radius: 0.9375rem;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9375rem;
 }
 
 .menu__cards {
@@ -257,6 +289,7 @@ h2 {
   justify-content: center;
   flex-direction: row;
   justify-content: start;
+  padding: 0.9375rem;
 }
 
 /* @media screen and (min-width: 768px) {
@@ -268,7 +301,6 @@ h2 {
   flex-direction: column;
   gap: 0.625rem;
   margin-left: 0.625rem;
-  padding: 0.3125rem;
 }
 
 .menu__price {
@@ -276,30 +308,12 @@ h2 {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  text-overflow: ellipsis;
   position: relative;
   top: 0;
   left: 0;
-}
-
-.menu__check {
-  background: #99E2D0;
-  height: 4.625rem;
-  width: 6.25rem;
-  border-radius: 0 0.9375rem 0.9375rem 0;
-  margin-right: -6.25rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease-in-out;
-  transform: translateX(-100px);
-  overflow: hidden;
-  /*opacity:0;*/
-}
-.menu__check .menu__check--Wrap {
-  opacity: 0;
-  transition: transform 0.5s ease;
+  margin-left: auto;
+  transition: transform 0.5s ease-in-out;
 }
 
 * {

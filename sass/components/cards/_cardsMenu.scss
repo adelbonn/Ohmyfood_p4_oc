@@ -15,13 +15,12 @@
     background: var.$color-white;
     border-radius: func.rem(15);
     @include mix.shadow-card;
-     margin-bottom: func.rem(12) ;
+     margin-bottom: func.rem(15) ;
 }
 
     .menu__cards {
        
         @include mix.flex-center(column);
-         
        @media screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
@@ -53,7 +52,7 @@
         
         @include mix.flex-center(row);
         justify-content: start;
-       //padding: func.rem(15);
+       padding: func.rem(15);
         @extend %cards-menus;
      
         }
@@ -65,7 +64,7 @@
             @include mix.flex-center(column);
             gap: func.rem(10);
             margin-left: func.rem(10);
-            padding: func.rem(5);
+            //padding: func.rem(5);
            }
 
               
@@ -75,34 +74,17 @@
         display:flex;
         align-items: flex-end;
         overflow: hidden;
+        text-overflow: ellipsis;
         position: relative;
         top: 0;
         left: 0;
-        //padding-bottom: func.rem(10);
-       // margin-bottom: func.rem(10);
-      }
-
-      .menu__check {
-        background: var.$green-color-bagde;
-        height: func.rem(74);
-        width: func.rem(100);
-        border-radius: 0 func.rem(15) func.rem(15) 0;
-        margin-right: func.rem(-100);
-        @include mix.flex-center(row);
-        align-items: center;
-        justify-content: center;
-        transition: all 0.5s ease-in-out;
-        transform: translateX(-100px);
-        overflow: hidden;
-        /*opacity:0;*/
-       
+        margin-left: auto;
+        transition: transform 0.5s ease-in-out;
+    
+        }
+      
       
 
-        .menu__check--Wrap {
-
-           opacity: 0;
-           transition: transform 0.5s ease;
-        }}
     
 
      
