@@ -75,10 +75,10 @@ h2 {
   animation-delay: 0.8s;
 }
 .menu__cards article .menu__items:nth-child(3) {
-  animation-delay: 0.9s;
+  animation-delay: 1s;
 }
 .menu__cards article .menu__items:nth-child(4) {
-  animation-delay: 1s;
+  animation-delay: 1.2s;
 }
 
 /*.order-btn {
@@ -127,7 +127,6 @@ h2 {
 }
 .menu__items {
   position: relative;
-  overflow: hidden;
   transition: transform 0.3s eaase;
 }
 .menu__items::before {
@@ -139,22 +138,35 @@ h2 {
   width: 0;
   background: #99E2D0;
   transition: width 0.6s ease-in-out;
+  z-index: 1;
 }
 .menu__items .menu__check--Wrap {
   position: absolute;
-  color: white;
-  font-weight: 700;
   top: 50%;
-  right: 5%;
-  transform: translateX(-50%) rotate(0);
-  z-index: 3;
+  right: 0;
+  width: 21px;
+  height: 21px;
+  z-index: 2;
+  transform: translateX(100%) transformY(-50%) rotate(0);
   transition: transform 0.6s ease-in-out;
+  opacity: 0;
+  color: white;
+}
+.menu__items .menu__check--Wrap.fa-check-circle {
+  font-size: 21px;
+}
+.menu__items .menu__price {
+  position: relative;
+  transition: tranform 0.6s ease-in-out, margin-right 0.6s ease-in-out;
+  z-index: 3;
+  margin-right: 10px;
 }
 .menu__items:hover::before {
   width: 15%;
 }
 .menu__items:hover .menu__check--Wrap {
-  transform: translateX(-50%) rotate(360deg);
+  transform: translateX(-60%) translateY(-50%) rotate(360deg);
+  opacity: 1;
 }
 
 /*shadow card*/
@@ -290,6 +302,7 @@ h2 {
   flex-direction: row;
   justify-content: start;
   padding: 0.9375rem;
+  overflow: hidden;
 }
 
 /* @media screen and (min-width: 768px) {

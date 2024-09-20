@@ -52,8 +52,9 @@
         
         @include mix.flex-center(row);
         justify-content: start;
-       padding: func.rem(15);
+        padding: func.rem(15);
         @extend %cards-menus;
+        overflow: hidden;
      
         }
 
