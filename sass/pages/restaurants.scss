@@ -27,8 +27,8 @@
 
 #menu__title {
     font-family: typo.$logo-font;
-    font-size: typo.$font-size-xxlarge;
-    font-size: typo.$font-size-xxlarge;
+    font-size: typo.$font-size-xxxlarge;
+    font-weight: typo.$font-weight-bold;
 }
 
 .img__header {
@@ -54,12 +54,16 @@
     position: relative;
     font-size: typo.$font-size-xxxlarge;
     letter-spacing: 0.7px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .hearts {
-    position: absolute;
-    top:40%;
-    left: 40%;
+   margin-left: 20px;
+   display:flex;
+   position: relative;
+   align-items: center;
     /*font-size: typo.$font-size-x-large;*/
      @include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
 
