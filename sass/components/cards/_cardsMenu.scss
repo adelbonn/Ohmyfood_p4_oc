@@ -58,14 +58,15 @@
      
         }
 
-       /* @media screen and (min-width: 768px) {
-            width: 80%;
-        }*/
         .menu__meal {
             @include mix.flex-center(column);
             gap: func.rem(10);
             margin-left: func.rem(10);
-            //padding: func.rem(5);
+          & h3, p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
            }
 
               

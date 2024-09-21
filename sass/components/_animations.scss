@@ -1,6 +1,109 @@
 @use '../base/variables' as var;
 @use '../base/functions' as func;
 @use '../base/typo' as typo;
+@use '../base/mixins' as mix;
+
+
+
+
+//animation pour faire disparaitre le loader
+//container du loader
+.loader__anim--container {
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var.$color-grey;
+    z-index: 9999;
+    animation: fadeOutLoader 3s ease-in-out forwards;
+
+}
+
+
+@keyframes fadeOutLoader {
+    0% {
+        opacity: 1;
+        z-index: 999;
+    }
+    70% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+        visibility: hidden;
+        z-index: 999;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+    }
+}
+
+//animation cercles loader
+
+.loader__circle--anim {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loader__circle {
+        display: block;
+        position: relative;
+        width:350px;
+        height: 350px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: var.$secondary-color;
+        animation: rotate-circle 3s linear infinite;
+    
+    &::before {
+        content:'';
+        position: absolute;
+        top:5px;
+        left: 5px;
+        right:5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: var.$primary-color;
+        animation: rotate-circle 2.5s alternate infinite;
+    }
+
+    &::after {
+        content:'';
+        position: absolute;
+        top:15px;
+        left: 15px;
+        right:15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: var.$background-color2;
+        animation: rotate-circle 2s alternate infinite;
+    }
+}}
+
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /*animation apparition des cards au chargement de la page menu*/
 
@@ -83,12 +186,12 @@
             }
 
             &:nth-child(3) {
-                animation-delay: 1s;
+                animation-delay: 1.1s;
             } 
 
             
             &:nth-child(4) {
-                animation-delay: 1.2s;
+                animation-delay: 1.3s;
             } 
 
         }
@@ -112,7 +215,7 @@
 }
 */
 
-//keyframes animation conteneur
+//keyframes animation menu__contenair
 @keyframes revealContainer {
     from {
         opacity: 0.5;
@@ -136,7 +239,7 @@
     }
 }
 
-//keyframes animation apparaition des titres et  cartes du haut vers le bas
+//keyframes animation apparition des titres et  cartes du haut vers le bas
 
 @keyframes fadeInUp {
     from {
@@ -149,7 +252,7 @@
     }
 }
 
-//animation check certe + rectange vert
+//animation check carte + rectange vert
 
 .menu__items {
     position: relative;
@@ -178,18 +281,16 @@
         transform: translateX(100%) transformY(-50%) rotate(0);
         transition: transform 0.6s ease-in-out;
         opacity: 0;
-        color :white;
-        &.fa-check-circle {
-            font-size: 21px;
-        }
+       color: white;
       
     }
 
-    .menu__price {  //trouve pourquoi il ne se déplace pas sur la gauche
+    .menu__price {  //trouve pourquoi il ne se déplace pas horizontalement sur la gauche
         position: relative;
         transition: tranform 0.6s ease-in-out, margin-right 0.6s ease-in-out;
         z-index: 3;
         margin-right: 10px;
+        
     }
     //animation au hover du rectangle et de l icône
 
@@ -200,6 +301,7 @@
     
     &:hover .menu__check--Wrap {
         transform: translateX(-60%) translateY(-50%) rotate(360deg);
-        opacity: 1;  //fait otate le check reste a le faire aller de droite a gauche (cf le loader quej'ai fait avec le texte
+        
+        opacity: 1;  //fait rotate le check reste a le faire aller de droite a gauche en restant droit (cf le loader quej'ai fait avec le texte
     }
 }

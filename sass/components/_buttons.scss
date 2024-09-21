@@ -15,9 +15,9 @@
 
       &:hover {
         opacity: 80%; 
-        transition: 0.3s;
+        transform: 0.3s ease-in-out;
         cursor: pointer;
-        @include mix.shadow-button;
+        box-shadow: 0.2rem 0.2rem func.rem(10) rgba(0, 0, 0, 0.5);
     }
 }
 
