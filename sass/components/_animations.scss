@@ -104,6 +104,28 @@
         transform: rotate(360deg);
     }
 }
+//texte au centr des cercles loader
+
+.loader___text {
+    position: absolute;
+    font-family: typo.$logo-font;
+    font-size: 3rem;
+    background: linear-gradient(90deg, var.$primary-color, var.$secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 2px rgba(146, 86, 220, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5), 3px 3px 8px rgba(255, 121, 218, 0.5);
+}
+@keyframes fadeInText {
+    0% {
+        opacity:0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /*animation apparition des cards au chargement de la page menu*/
 

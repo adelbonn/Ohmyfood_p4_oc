@@ -78,7 +78,7 @@ h2 {
   height: 350px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #FF79DA;
+  border-top-color: rgb(255, 121, 218);
   animation: rotate-circle 3s linear infinite;
 }
 .loader__circle--anim .loader__circle::before {
@@ -90,7 +90,7 @@ h2 {
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #9356dc;
+  border-top-color: rgb(146, 86, 220);
   animation: rotate-circle 2.5s alternate infinite;
 }
 .loader__circle--anim .loader__circle::after {
@@ -112,6 +112,27 @@ h2 {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+.loader___text {
+  position: absolute;
+  font-family: "shrikhand", "cursive";
+  font-size: 3rem;
+  background: linear-gradient(90deg, rgb(146, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(146, 86, 220, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5), 3px 3px 8px rgba(255, 121, 218, 0.5);
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /*animation apparition des cards au chargement de la page menu*/
@@ -275,7 +296,7 @@ h2 {
   padding: 0.9375rem 1.25rem;
   color: #fff;
   border-radius: 3.125rem;
-  background: linear-gradient(#FF79DA, #9356dc 85%);
+  background: linear-gradient(rgb(255, 121, 218), rgb(146, 86, 220) 85%);
   font-size: 1rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   min-width: 13.625rem;
@@ -301,7 +322,7 @@ h2 {
   padding: 0.9375rem 1.25rem;
   color: #fff;
   border-radius: 3.125rem;
-  background: linear-gradient(#FF79DA, #9356dc 85%);
+  background: linear-gradient(rgb(255, 121, 218), rgb(146, 86, 220) 85%);
   font-size: 1rem;
 }
 
@@ -688,7 +709,7 @@ header {
 }
 .eateries .cards-eateries__heart .heart-filled {
   opacity: 0;
-  background: linear-gradient(#9356dc, #FF79DA);
+  background: linear-gradient(rgb(146, 86, 220), rgb(255, 121, 218));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -792,7 +813,7 @@ body {
   }
 }
 .functioning .fonctioning-list__circle {
-  background: #9356dc;
+  background: rgb(146, 86, 220);
   width: 1.5rem;
   height: 1.5rem;
   color: #fff;
@@ -815,7 +836,7 @@ body {
   transition: transform 0.3s;
 }
 .functioning .functioning-list_icon:hover {
-  color: #9356dc;
+  color: rgb(146, 86, 220);
 }
 .functioning .functioning-list_links {
   display: flex;
@@ -902,7 +923,7 @@ body {
 }
 .hearts .heart-filled {
   opacity: 0;
-  background: linear-gradient(#9356dc, #FF79DA);
+  background: linear-gradient(rgb(146, 86, 220), rgb(255, 121, 218));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
