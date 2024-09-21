@@ -111,32 +111,40 @@
     width: $width;
     height: $height;
     display: inline-block;
-    transition: color 0.3s ease;
+    transition: opacity 0.3s, transform 0.3s, color 0.3s ease;
     
     
 }
 
 .heart-empty {
     opacity: 1;
-    /*z-index: 1;revoir comment ne plus voir le contour quand le coeur est en hover tout simplement le mettre en opacity: hidden en hover!!!*/
+   z-index: 2;  //heart-empty est audessus de heart-filled au départ
 }
-.heart-empty:hover {
+/*.heart-empty:hover {
     opacity: 0;
-}
+}*/
 
 .heart-filled {  
     opacity: 0;
+    z-index: 1;
     background: linear-gradient(var.$primary-color, var.$secondary-color);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: $width;
-    transform: translate scale(1.2);
-    
+    transform: translate scale(1) ease-in-out;
+    transition: opacity 0.3s, transform 0.3s ease;
 }
-.heart-filled:hover {
-    opacity: 1;
-    
+//lorsque l'utilisateur survole le coeur vide, alors le coeur vide disparait et le coeur rempli apparait
+.hearts:hover .heart-empty {
+    opacity: 0;
+    z-index: 1;
+}
+
+.hearts:hover .heart-filled {
+    opacity: 1;  //heart-filled apparait
+    z-index: 2;  //heart-filled apparait au dessus de heart-empty
+    transform: scale(1.2);  
 }
 }
 

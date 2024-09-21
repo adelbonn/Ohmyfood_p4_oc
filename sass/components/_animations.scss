@@ -262,7 +262,7 @@
 
 .menu__items {
     position: relative;
-    transition: transform 0.3s eaase;
+    transition: transform 0.3s ease;
 
     &::before {
         content: "";
@@ -281,8 +281,8 @@
         position: absolute;
         top: 50%;
         right: 0;
-        width:25px;
-        height:25px;
+        width:35px;
+        height:35px;
         z-index: 2;
         transform: translateX(100%) transformY(-50%) rotate(360deg);
         transition: transform 0.6s ease-in-out;
@@ -315,8 +315,8 @@
         }
     }
     
-    &:hover .menu__check--Wrap {
-        transform: translateX(-70%) translateY(-50%);
+    &:hover .menu__check--Wrap > i {
+        transform: translateX(-50%) translateY(-50%) rotate(360deg);
         opacity: 1;  
     }
 }

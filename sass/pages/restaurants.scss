@@ -2,7 +2,6 @@
 @use '../base/variables' as var;
 @use '../base/functions' as func;
 @use '../base/typo' as typo;    
-//@use '../layout/header';
 @use '../base/index' as base;
 
 
@@ -64,8 +63,10 @@
    display:flex;
    position: relative;
    align-items: center;
-    /*font-size: typo.$font-size-x-large;*/
-     @include mix.heart-icon(func.rem(20), func.rem(20), var.$primary-color, var.$secondary-color);
+   justify-content: center;
+
+    font-size: typo.$font-size-xxxlarge;
+     @include mix.heart-icon(func.rem(22), func.rem(21), var.$primary-color, var.$secondary-color);
 
 }
 
