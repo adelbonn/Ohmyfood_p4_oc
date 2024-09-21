@@ -204,20 +204,6 @@ h2 {
   animation-delay: 1.3s;
 }
 
-/*.order-btn {
-    opacity: 0;
-    transform: translateY(-40px);
-    animation: fadeInUp 1.07s ease-in-out forwards;
-    animation-delay: 3s;
-}
-
-.footer {
-    opacity: 0;
-    transform: translateY(-40px);
-    animation: fadeInDown 1.07s ease-in-out forwards;
-    animation-delay: 2s;
-}
-*/
 @keyframes revealContainer {
   from {
     opacity: 0.5;
@@ -267,8 +253,8 @@ h2 {
   position: absolute;
   top: 50%;
   right: 0;
-  width: 21px;
-  height: 21px;
+  width: 25px;
+  height: 25px;
   z-index: 2;
   transform: translateX(100%) transformY(-50%) rotate(0);
   transition: transform 0.6s ease-in-out;
@@ -277,15 +263,19 @@ h2 {
 }
 .menu__items .menu__price {
   position: relative;
-  transition: tranform 0.6s ease-in-out, margin-right 0.6s ease-in-out;
+  transition: tranform 1s ease-out, margin-right 1s ease-out;
   z-index: 3;
   margin-right: 10px;
 }
 .menu__items:hover::before {
   width: 15%;
 }
+.menu__items:hover .menu__price {
+  transform: translateX(-50px);
+  margin-right: 5px;
+}
 .menu__items:hover .menu__check--Wrap {
-  transform: translateX(-60%) translateY(-50%) rotate(360deg);
+  transform: translateX(-60%) translateY(-50%);
   opacity: 1;
 }
 
