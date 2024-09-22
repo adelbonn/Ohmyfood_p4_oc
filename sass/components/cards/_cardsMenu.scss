@@ -33,11 +33,14 @@
         text-transform: uppercase;
         font-size: typo.$font-size-medium;
         margin: func.rem(20) 0 func.rem(40);
-        align-self: flex-start;
-        padding-bottom: func.rem(10);
-        &::after {
+        align-self: start;
+        padding-bottom: func.rem(5);
+        position: relative;
+      &::after {
             content:'';
-            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
             width: 50%;
             background : var.$green-color-bagde;
             height: func.rem(3);
