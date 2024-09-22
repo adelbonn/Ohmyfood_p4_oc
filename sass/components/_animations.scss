@@ -211,14 +211,15 @@
         height: 100%;
         width: 0;
         background: var.$green-color-bagde;
-        z-index: 1;//devant son parent mais derrière le check
-        transition: width 0.6s ease-in-out; //transition pour que le rectangle se déploit sur la largeur (de droite a gauche)*/
+        z-index: 1;
+        transition: width 0.6s ease-in-out; 
     }
  }
 
  .menu__price {
- 
+    /*position: absolute;*/
     transition: transform 0.5s ease-in-out;
+    /*transition: left 0.5s ease-in-out, right 0.5s ease-in-out;*/
  }
 
  .menu__check--Wrap {
@@ -234,6 +235,7 @@
     transform: translateY(-50%);
     opacity: 0;
     z-index: 2;  //devant le rectangle vert
+   
  }
 // lie l'état du checkbox au changemnet d'état visuel du rectangle...  
 
@@ -261,7 +263,9 @@
 .menu__label:hover .menu__price,
 .menu__checkbox:checked + .menu__label .menu__price {
     transform: translateX(calc(-250%));
-    padding-left: func.rem(10);
+    /*padding-left: func.rem(10);*/
+    left: calc(15px + max(15%, 200px));
+    right: auto;
 }
 //ici si la carte est selectionnée (via checkbox checked) le rectangle reste visible
 .menu__checkbox:checked + .menu__label .menu__check--Wrap {

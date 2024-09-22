@@ -232,7 +232,9 @@ h2 {
 }
 
 .menu__price {
+  /*position: absolute;*/
   transition: transform 0.5s ease-in-out;
+  /*transition: left 0.5s ease-in-out, right 0.5s ease-in-out;*/
 }
 
 .menu__check--Wrap {
@@ -275,7 +277,9 @@ h2 {
 .menu__label:hover .menu__price,
 .menu__checkbox:checked + .menu__label .menu__price {
   transform: translateX(-250%);
-  padding-left: 0.625rem;
+  /*padding-left: func.rem(10);*/
+  left: calc(15px + max(15%, 200px));
+  right: auto;
 }
 
 .menu__checkbox:checked + .menu__label .menu__check--Wrap {
