@@ -126,7 +126,7 @@
     }
 }
 
-/*animation apparition des cards au chargement de la page menu*/
+/*animation apparition des cards au chargement de la page menu
 
 
 //animation img du header
@@ -256,67 +256,155 @@
         opacity: 1;
         transform: translateY(0);
     }
+}*/
+
+//variables pour gérer les délais d'animation
+$base-duration: 0.9s;
+$delay-increment: 0.2s;
+
+//animation de base (fadeIn et translation
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-//animation check carte + rectange vert
+//animation image header
 
-.menu__items {
-    position: relative;
+.img__header {
+    opacity:0;
+    transform: translateY(-40px);
+    animation: fadeInUp $base-duration ease-in-out forwards;
+    animation-delay:0s;
+}//animation titre + container menu
+
+.menu-container {
+    opacity: 0;
+    transform: scale(0.8);
+    transform-origin: top;
+    animation: fadeInUp $base-duration ease-in-out forwards;
+    animation-delay: 0.2s;
+
+    #menu__title {
+        opacity: 0;
+        transform: translateY(-60px);
+        animation: fadeInUp $base-duration ease-in-out forwards;
+        animation-delay: 0.2s;
+    }
+    .hearts {
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: fadeInUp $base-duration ease-in-out forwards;
+        animation-delay: 0.25s;
+}
+
+//animation pour les sections (entrées, plats, desserts)
+
+@for $i from 1 through 3 {
+    .menu__cards:nth-of-type(#{$i}) h2.menu__title {
+        opacity:0;
+        transform: translateY(-30px);
+        animation: fadeInUp $base-duration ease-in-out forwards;
+    }
+}
+
+//animation pour les cartes de menus
+
+@for $i from 1 through 4 {
+    .menu__cards:nth-of-type(1) .menu__items:nth-child(#{$i}), //cartes entrées
+    .menu__cards:nth-of-type(2) .menu__items:nth-child(#{$i}), //cartes plats
+    .menu__cards:nth-of-type(3) .menu__items:nth-child(#{$i}) { //cartes desserts
+        opacity: 0;
+        transform: translate(-30px);
+        animation: fadeInUp $base-duration ease-in-out forwards;
+//delai animation basé sur la position de chaque cartes
+        animation-delay: $delay-increment *$i + 0.7s;
+    }
+}
+}
+
+ //animation rectagle vert de la carte menu + check
+
+ .menu__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+    overflow: hidden;
     transition: transform 0.3s ease;
-
+    //rectangle vert
     &::before {
-        content: "";
+        content:'';
         position: absolute;
         top:0;
-        right:0;
-        height: 100%;
-        width: 0; 
-        background: var.$green-color-bagde;
-        transition: width 0.6s ease-in-out;
-        z-index: 1;
-    }
-
-    //icône check
-    .menu__check--Wrap {
-        position: absolute;
-        top: 50%;
         right: 0;
-        width:35px;
-        height:35px;
-        z-index: 2;
-        transform: translateX(100%) transformY(-50%) rotate(360deg);
-        transition: transform 0.6s ease-in-out;
-        opacity: 0;
-       color: white;
-      
+        height: 100%;
+        width: 0;
+        background: var.$green-color-bagde;
+        z-index: 1;//devant son parent mais derrière le check
+        transition: width 0.6s ease-in-out; //transition pour que le rectangle se déploit sur la largeur (de droite a gauche)*/
     }
+ }
 
-    .menu__price {  
-        position: relative;
-        transition: tranform 1s ease-out, margin-right 1s ease-out;
-        z-index: 3;
-        margin-right: 10px;
-        
-    }
-    //animation au hover du rectangle et de l icône
+ .menu__price {
+    margin-left: auto;
+    align-self: end;
+    font-weight: typo.$font-weight-bold;
+    transition: transform 0.5s ease-in-out;
+ }
 
-    &:hover::before {  
-        width: 15%;  //le rectangle se déploit de 15% de menu__items
-    }
-    &:hover .menu__price {
-        transform: translateX(calc(-15% - 20px));
-        margin-right: 5px;
-      
-        @media screen and (min-width: 768px) {
-            transform: translateX(calc(-20% - 30px));
-        }
-        @media screen and (min-width: 1024px) {
-            transform: translate(calc(-25% - 40px));
-        }
-    }
-    
-    &:hover .menu__check--Wrap > i {
-        transform: translateX(-50%) translateY(-50%) rotate(360deg);
-        opacity: 1;  
-    }
+ .menu__check--Wrap {
+    position: absolute; 
+    right: 0;
+    top: 50%;
+    width: var.$icon-size;
+    height: var.$icon-size;
+    @include mix.flex-center(row);
+    color: var.$color-white;  //changer quand le style sera fini en var.$color-white
+    font-size: var.$icon-size;
+    transition: transform 0.6s ease-in-out;
+    transform: translateY(-50%);
+    opacity: 0;
+    z-index: 2;  //devant le rectangle vert
+ }
+// ici je lie l'état du checkbox au changemnet d'état visuel du rectangle...  
+
+.menu__checkbox {
+    display: none; // la checkbox est cachée
 }
+
+.menu__label {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: transorm 0.3s ease-in-out;
+}
+
+// au hover le rectangle se déploit de droite a gauche sur 15%de largeur
+
+.menu__label:hover .menu__items::before {
+    width: 15%;
+}
+.menu__label:hover .menu__check--Wrap {
+    transform: translateX(-100%) translateY(-50%) rotate(-720deg);
+    opacity: 1;
+}
+//ici si la carte est selectionnée (via checkbox checked) le rectangle reste visible
+.menu__checkbox:checked + .menu__label .menu__check--Wrap {
+    transform: translateX(-100%) translateY(-50%) rotate(-720deg);  //l'icone est au centre
+    opacity: 1; // et est visible
+}
+.menu__checkbox:checked + menu__label .menu__check--Wrap {
+    animation: bounce 1s ease-in-out forwards;
+}
+.menu__checkbox:checked + .menu__label .menu__items::before {
+    width: 15%; //le rectangle reste visible
+}
+
