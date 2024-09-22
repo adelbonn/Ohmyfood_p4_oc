@@ -332,12 +332,7 @@ $delay-increment: 0.2s;
  //animation rectagle vert de la carte menu + check
 
  .menu__items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-radius: 15px;
-    overflow: hidden;
+    position: relative;
     transition: transform 0.3s ease;
     //rectangle vert
     &::before {

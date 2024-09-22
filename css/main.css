@@ -349,12 +349,7 @@ h2 {
 }
 
 .menu__items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  border-radius: 15px;
-  overflow: hidden;
+  position: relative;
   transition: transform 0.3s ease;
 }
 .menu__items::before {
@@ -547,6 +542,8 @@ h2 {
   justify-content: start;
   padding: 0.9375rem;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu__meal {
