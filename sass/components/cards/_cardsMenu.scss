@@ -21,13 +21,9 @@
     .menu__cards {
        
         @include mix.flex-center(column);
-       @media screen and (min-width: 768px) {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: func.rem(15);
-          
+      
         }
-    }
+   
     
 
     .menu__title {
@@ -58,7 +54,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-     
+        position: relative;
         }
 
         .menu__meal {
@@ -80,12 +76,11 @@
         align-items: flex-end;
         overflow: hidden;
         text-overflow: ellipsis;
-        position: relative;
-        top: 0;
-        left: 0;
+        white-space: nowrap;
         margin-left: auto;
-        /*padding-left: func.rem(50);*/
-        transition: transform 0.5s ease-in-out;
+        
+        /*padding-left: func.rem(15);*/
+     
     
         }
       

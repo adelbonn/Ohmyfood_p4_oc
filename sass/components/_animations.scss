@@ -126,141 +126,7 @@
     }
 }
 
-/*animation apparition des cards au chargement de la page menu
-
-
-//animation img du header
-.img__header {
-    opacity: 0;
-    transform: translateY(-40px);
-    transform-origin: top;
-    animation: revealImage 1.2s ease-in-out forwards;
-}
-
-@keyframes revealImage {
-    from {
-        opacity:0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-//animation du conteneur 
-.menu-container {
-    opacity: 0.8;
-    transform: scale(0.8);
-    transform-origin: top;
-    animation: revealContainer 1s ease-in-out forwards;
-
-    #menu__title {
-        opacity: 0.5;
-        transform: translateY(-60px);
-        animation: fadeInDown 1s ease-in-out forwards;
-    }
-
-}
-
-.hearts {
-    opacity: (0);
-    transform: translateY(-30px);
-    animation: fadeInDown 0.8s ease-in-out forwards;
-    animation-delay: 0.15s;
-}
-
-//animation des cartes après le titre
-
-.menu__cards {
-    article {
- //animation des titres de chaque section
-        h2.menu__title {
-            opacity: 0;
-            transform: translateY(-40px);
-            animation: fadeInDown 1.02s ease-in-out forwards;
-
-            &:nth-child(1) {
-                animation-delay: 0.3s;
-            }
-
-            &:nth-child(2) {
-                animation-delay: 0.5s;
-            }
-
-            &:nth-child(3) {
-                animation-delay: 0.7s;
-        }
-    }
-
-//animations des cartes qui suivent directement les titres
-
-        .menu__items {
-            opacity: 0;
-            transform: translateY(-40px);
-            animation: fadeInDown 1.04s ease-in-out forwards;
-
-            &:nth-child(1) {
-                animation-delay: 0.6s;
-            }
-            &:nth-child(2) {
-                animation-delay: 0.8s;
-            }
-
-            &:nth-child(3) {
-                animation-delay: 1.1s;
-            } 
-
-            
-            &:nth-child(4) {
-                animation-delay: 1.3s;
-            } 
-
-        }
-    }
-}
-
-
-
-//keyframes animation menu__contenair
-@keyframes revealContainer {
-    from {
-        opacity: 0.5;
-        transform: scaleY(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-}
-//keyframes animation du bas vers le haut 
-
-@keyframes fadeInDown {
-    from {
-        opcacity:0;
-        transform: translateY(-60px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-//keyframes animation apparition des titres et  cartes du haut vers le bas
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(60px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}*/
-
-//variables pour gérer les délais d'animation
-$base-duration: 0.9s;
-$delay-increment: 0.2s;
+//animation de la page d'accueil
 
 //animation de base (fadeIn et translation
 
@@ -280,27 +146,29 @@ $delay-increment: 0.2s;
 .img__header {
     opacity:0;
     transform: translateY(-40px);
-    animation: fadeInUp $base-duration ease-in-out forwards;
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
     animation-delay:0s;
-}//animation titre + container menu
+}
+
+//animation titre + container menu
 
 .menu-container {
     opacity: 0;
     transform: scale(0.8);
     transform-origin: top;
-    animation: fadeInUp $base-duration ease-in-out forwards;
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
     animation-delay: 0.2s;
 
     #menu__title {
         opacity: 0;
         transform: translateY(-60px);
-        animation: fadeInUp $base-duration ease-in-out forwards;
+        animation: fadeInUp var.$base-duration ease-in-out forwards;
         animation-delay: 0.2s;
     }
     .hearts {
         opacity: 0;
         transform: translateY(-30px);
-        animation: fadeInUp $base-duration ease-in-out forwards;
+        animation: fadeInUp var.$base-duration ease-in-out forwards;
         animation-delay: 0.25s;
 }
 
@@ -310,7 +178,7 @@ $delay-increment: 0.2s;
     .menu__cards:nth-of-type(#{$i}) h2.menu__title {
         opacity:0;
         transform: translateY(-30px);
-        animation: fadeInUp $base-duration ease-in-out forwards;
+        animation: fadeInUp var.$base-duration ease-in-out forwards;
     }
 }
 
@@ -322,9 +190,9 @@ $delay-increment: 0.2s;
     .menu__cards:nth-of-type(3) .menu__items:nth-child(#{$i}) { //cartes desserts
         opacity: 0;
         transform: translate(-30px);
-        animation: fadeInUp $base-duration ease-in-out forwards;
+        animation: fadeInUp var.$base-duration ease-in-out forwards;
 //delai animation basé sur la position de chaque cartes
-        animation-delay: $delay-increment *$i + 0.7s;
+        animation-delay: var.$delay-increment *$i + 0.7s;
     }
 }
 }
@@ -332,7 +200,7 @@ $delay-increment: 0.2s;
  //animation rectagle vert de la carte menu + check
 
  .menu__items {
-    position: relative;
+   
     transition: transform 0.3s ease;
     //rectangle vert
     &::before {
@@ -349,9 +217,7 @@ $delay-increment: 0.2s;
  }
 
  .menu__price {
-    margin-left: auto;
-    align-self: end;
-    font-weight: typo.$font-weight-bold;
+ 
     transition: transform 0.5s ease-in-out;
  }
 
@@ -369,10 +235,10 @@ $delay-increment: 0.2s;
     opacity: 0;
     z-index: 2;  //devant le rectangle vert
  }
-// ici je lie l'état du checkbox au changemnet d'état visuel du rectangle...  
+// lie l'état du checkbox au changemnet d'état visuel du rectangle...  
 
 .menu__checkbox {
-    display: none; // la checkbox est cachée
+    display: none;
 }
 
 .menu__label {
@@ -391,14 +257,18 @@ $delay-increment: 0.2s;
     transform: translateX(-100%) translateY(-50%) rotate(-720deg);
     opacity: 1;
 }
+
+.menu__label:hover .menu__price,
+.menu__checkbox:checked + .menu__label .menu__price {
+    transform: translateX(calc(-250%));
+    padding-left: func.rem(10);
+}
 //ici si la carte est selectionnée (via checkbox checked) le rectangle reste visible
 .menu__checkbox:checked + .menu__label .menu__check--Wrap {
     transform: translateX(-100%) translateY(-50%) rotate(-720deg);  //l'icone est au centre
     opacity: 1; // et est visible
 }
-.menu__checkbox:checked + menu__label .menu__check--Wrap {
-    animation: bounce 1s ease-in-out forwards;
-}
+
 .menu__checkbox:checked + .menu__label .menu__items::before {
     width: 15%; //le rectangle reste visible
 }

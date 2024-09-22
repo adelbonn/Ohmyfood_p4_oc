@@ -32,7 +32,10 @@ $underline-thickness: func.rem(3);
 $underline-length: 50%;
 
 
-//variables pour l'animaition du rectangle vert et du check
+//variables pour l'animation de la page menu au chargement de la page
+$base-duration: 0.9s;
+$delay-increment: 0.2s;
+
 
 // Variables pour l'animation du rectangle du check et du prix
 $green-color-bagde: #99E2D0;
