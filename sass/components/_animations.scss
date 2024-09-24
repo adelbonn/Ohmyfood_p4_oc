@@ -213,6 +213,8 @@
         right: 0;
         height: 100%;
         width: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
         background: var.$green-color-bagde;
         z-index: 1;
         transition: width 0.6s ease-in-out; 
@@ -231,6 +233,7 @@
     position: absolute; 
     right: 0;
     top: 50%;
+   
     width: var.$icon-size;
     height: var.$icon-size;
     @include mix.flex-center(row);
