@@ -1,0 +1,155 @@
+body {
+  font-family: "Roboto", "sans-serif";
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: "Roboto", "sans-serif";
+  color: #101010;
+}
+
+h2 {
+  font-family: "Roboto", "sans-serif";
+}
+
+/*shadow card*/
+/*button header*/
+/*buttons functioning*/
+/*@mixin badge-new {
+    background: var.$primary-color;
+    color: var.$color-white;
+    padding: func.rem(5) func.rem(10);
+    border-radius: base.rem(20);
+    font-size: typo.$font-size-x-small;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}*/
+/*hearts*/
+.hearts:hover .heart-filled {
+  opacity: 1;
+}
+
+body {
+  height: 100vh;
+}
+
+.main-wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/***section info**/
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #f7f7f7;
+  padding-top: 2.375rem;
+  padding: 2.4rem 1.875rem;
+}
+.info h1 {
+  color: #101010;
+  font-family: "Roboto", "sans-serif";
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.info p {
+  font-family: "Roboto", "sans-serif";
+  font-weight: 300;
+  font-size: 1.125rem;
+  margin-bottom: 1.6875rem;
+  align-self: center;
+}
+
+/**section functioning**/
+.functioning {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.25rem;
+  background: #fff;
+}
+.functioning h2 {
+  align-self: flex-start;
+  margin: 3rem 0 1.625rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.functioning .functioning__item {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background: #f6f6f6;
+  border-radius: 1.25rem;
+  border: none;
+  padding: 1.75rem 2.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  margin: 1.5625rem 0;
+  max-width: 20.9375rem;
+  height: auto;
+  transition: transform 0.3s;
+}
+.functioning .functioning__item:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  transform: scale(0.95);
+}
+.functioning .functioning-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .functioning .functioning-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+}
+.functioning .fonctioning-list__circle {
+  background: rgb(146, 86, 220);
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 0.875rem;
+  position: absolute;
+  left: -10px;
+  top: 25%;
+  transform: translateY(40%);
+}
+.functioning .functioning-list__number {
+  margin-top: 0.25rem;
+}
+.functioning .functioning-list_icon {
+  color: #7E7E7E;
+  margin-right: 1.6875rem;
+  transition: transform 0.3s;
+}
+.functioning .functioning-list_icon:hover {
+  color: rgb(146, 86, 220);
+}
+.functioning .functioning-list_links {
+  display: flex;
+}
+.functioning p {
+  font-size: 1rem;
+  font-weight: 500;
+}/*# sourceMappingURL=home.css.map */

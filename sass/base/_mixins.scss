@@ -32,7 +32,7 @@
 
 
 
-/*button header*///mixin du button de la page home (btn de base)/*enlever le valeur mise ici dans la misin et le mettre uniquement pour le btn primary pour que cette mixin soit réutilisable , pas besoin de laisser les valauer du btn primary ici il suffit de la utiliser quand j utilise la mixin!!!)
+/*button header*///mixin du button de la page home (btn de base)
 @mixin btn-primary($width: func.rem(218), $min-height: func.rem(50), $padding: func.rem(15) func.rem(20)) {
     width: $width;
     min-height: $min-height;
@@ -45,7 +45,7 @@
 
 
 /*buttons functioning*///button de la section functionning
-//changer son nom car aussi utiliser pour les cards menu faire des variables
+
 @mixin button-style-functioning {
     background: var.$background-color;
     border-radius: func.rem(20);
@@ -111,42 +111,44 @@
     width: $width;
     height: $height;
     display: inline-block;
-    transition: opacity 0.3s, transform 0.3s, color 0.3s ease;
+    transition: opacity 0.2s; //, transform 0.3s, background 0.3s ease;
     
     
 }
 
 .heart-empty {
+
     opacity: 1;
-   z-index: 2;  //heart-empty est audessus de heart-filled au départ
+   //z-index: 2;  //heart-empty est au dessus de heart-filled au départ
 }
-/*.heart-empty:hover {
+.heart-empty:hover {
     opacity: 0;
-}*/
+}
 
 .heart-filled {  
     opacity: 0;
-    z-index: 1;
+    //z-index: 1;
     background: linear-gradient(var.$primary-color, var.$secondary-color);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: $width;
-    transform: translate scale(1) ease-in-out;
-    transition: opacity 0.3s, transform 0.3s ease;
+  //  transform: translate scale(1) ease-in-out;
+    transition: opacity 0.3s;//, transform 0.3s ease;
 }
+
 //lorsque l'utilisateur survole le coeur vide, alors le coeur vide disparait et le coeur rempli apparait
-.hearts:hover .heart-empty {
-    opacity: 0;
-    z-index: 1;
+//.hearts:hover .heart-empty {
+  //  opacity: 0;
+   // z-index: 1;
 }
 
 .hearts:hover .heart-filled {
     opacity: 1;  //heart-filled apparait
-    z-index: 2;  //heart-filled apparait au dessus de heart-empty
-    transform: scale(1.2);  
+    //z-index: 2;  //heart-filled apparait au dessus de heart-empty
+   // transform: scale(1.2);  
 }
-}
+
 
 
 //soulignement des titres des menus
