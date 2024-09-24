@@ -111,7 +111,7 @@
     width: $width;
     height: $height;
     display: inline-block;
-    transition: opacity 0.2s; //, transform 0.3s, background 0.3s ease;
+    transition: opacity 0.2s, transform 0.3s, background 0.3s ease;
     
     
 }
@@ -119,7 +119,6 @@
 .heart-empty {
 
     opacity: 1;
-   //z-index: 2;  //heart-empty est au dessus de heart-filled au départ
 }
 .heart-empty:hover {
     opacity: 0;
@@ -127,7 +126,6 @@
 
 .heart-filled {  
     opacity: 0;
-    //z-index: 1;
     background: linear-gradient(var.$primary-color, var.$secondary-color);
     background-clip: text;
     -webkit-background-clip: text;
