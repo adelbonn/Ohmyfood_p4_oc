@@ -284,7 +284,7 @@
     }
 }
 .menu__label:hover .menu__check--Wrap {
-    transform: translateX(-100%), rotate(-360deg);
+    transform: translateX(-100%) rotate(-360deg);
     opacity: 1;
 }
 
@@ -306,5 +306,15 @@
 
 .menu__checkbox:checked + .menu__label .menu__items::before {  //au clic de l utilisateur(avec :checked) le rectangle reste visible
     width: 15%; //le rectangle reste visible
+
+    @media screen and (min-width: 570px) {
+        width: 12%;
+    }
+    @media screen and (min-width: 768px) {
+        width: 10%;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 8%;
+    }
 }
 
