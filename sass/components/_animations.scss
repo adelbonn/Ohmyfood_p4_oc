@@ -22,14 +22,13 @@
     background: var.$color-grey;
     z-index: 9999;
     animation: fadeOutLoader 3s ease-in-out forwards;
-    
 
 }
 
 //keyframes de disparition du loader
 @keyframes fadeOutLoader {
     0% {
-        opacity: 0.8;
+        opacity: 1;
         z-index: 999;
     }
    
@@ -114,7 +113,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-   text-shadow: 1px 1px 2px rgba(146, 86, 220, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5), 3px 3px 8px rgba(255, 121, 218, 0.5);
+   //text-shadow: 1px 1px 2px rgba(146, 86, 220, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5), 3px 3px 8px rgba(255, 121, 218, 0.5);
     animation: fadeInText 2s ease-in-out forwards; 
 }
 @keyframes fadeInText {
@@ -127,6 +126,8 @@
         transform: translateY(0);
     }
 }
+
+
 
 //animation de la page d'accueil
 
@@ -261,19 +262,21 @@
 
 // au hover le rectangle se déploit de droite a gauche sur 15% de largeur
 
-.menu__label:hover .menu__items::before {
+.menu__label:hover .menu__items::before,
+.menu__checkbox:checked + .menu__label .menu__items::before
+{
     width: 15%;
 }
 
 @media screen and (min-width: 570px) {
     .menu__label:hover .menu__items::before,
     .menu__checkbox:checked + .menu__label .menu__items::before {
-        width: 12%;
+        width: 10%;
     }
     @media screen and (min-width: 768px) {
         .menu__label:hover .menu__items::before,
         .menu__checkbox:checked + .menu__label .menu__items::before {
-            width: 10%;
+            width: 8%;
         }
     }
     @media screen and (min-width: 1024px) {
@@ -292,21 +295,47 @@
 .menu__checkbox:checked + .menu__label .menu__price {  //tester d autres valeurs car en tailles d'écran plus grandes le rectangle mange le prix
    transform: translateX(calc(-100% - 10px)); //le prix se déplace de 10px a gauche au hover et au clic (:checked) de l utilisateur 
 
-   @media screen and (min-width: 570px) {
-    transform: translateX(calc(-100% - 10px));
-   }
 
+    @media screen and (min-width: 320px) {
+      transform: translateX(calc(-100% - 25px));
+    }
+
+    @media screen and (min-width: 352px) {
+        transform: translateX(calc(-100% - 20px));
+    }
+
+    @media screen and (min-width: 500px) {
+        transform: translateX(calc(-100% - 35px));
+    }
+   @media screen and (min-width: 660px) {
+    transform: translateX(calc(-100% - 40px));
+   }
+    @media screen and (min-width: 768px) {
+      transform: translateX(calc(-100% - 40px));
+    }
 
 }
 //ici si la carte est selectionnée au clic (via checkbox checked)
 .menu__checkbox:checked + .menu__label .menu__check--Wrap {
-    transform: translateX(-100%) translateY(-50%) rotate(-360deg);  //l'icone est au centre
-    opacity: 1; // et est visible
+    transform: translateX(-100%) translateY(-50%) rotate(-360deg); 
+    opacity: 1; 
 }
 
-.menu__checkbox:checked + .menu__label .menu__items::before {  //au clic de l utilisateur(avec :checked) le rectangle reste visible
-    width: 15%; //le rectangle reste visible
 
+/*.menu__checkbox:checked + .menu__label .menu__items::before {  //au clic de l utilisateur(avec :checked) le rectangle reste visible
+    width: 15%; 
+
+    @media screen and (min-width: 320px) {
+        width: 20%;
+    }
+    @media screen and (min-width: 352px) {
+        width: 18%;
+    }
+
+    @media screen and (min-width: 500px) {
+        width: 15%;
+      
+    }
     @media screen and (min-width: 570px) {
         width: 12%;
     }
@@ -316,5 +345,5 @@
     @media screen and (min-width: 1024px) {
         width: 8%;
     }
-}
+}*/
 
