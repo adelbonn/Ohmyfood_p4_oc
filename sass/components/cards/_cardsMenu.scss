@@ -4,11 +4,7 @@
 @use '../../base/mixins' as mix;
 @use '../../base/typo' as typo;
 
-/*@mixin underline($length) {
-    padding-bottom: 2px;
-    border-bottom: 3px solid var.$green-color-bagde;
-    width: $length;
-}*/
+
 
 
 %cards-menus {
@@ -21,7 +17,6 @@
     .menu__cards {
        
         @include mix.flex-center(column);
-      
         }
    
     
@@ -55,6 +50,8 @@
         padding: func.rem(15);
         @extend %cards-menus;
         overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
      
         position: relative;
         }
@@ -84,7 +81,6 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        /*padding-left: func.rem(15);*/
     
         }
       

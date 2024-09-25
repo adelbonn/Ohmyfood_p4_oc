@@ -111,7 +111,7 @@
     width: $width;
     height: $height;
     display: inline-block;
-    transition: opacity 0.2s, transform 0.3s, background 0.3s ease;
+    transition: opacity 0.2s, transform 0.3s ease;
     
     
 }
@@ -131,20 +131,18 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: $width;
-  //  transform: translate scale(1) ease-in-out;
+ 
     transition: opacity 0.3s;//, transform 0.3s ease;
+}
+
+.heart-filled:hover {
+    opacity:1;
 }
 
 //lorsque l'utilisateur survole le coeur vide, alors le coeur vide disparait et le coeur rempli apparait
 //.hearts:hover .heart-empty {
   //  opacity: 0;
    // z-index: 1;
-}
-
-.hearts:hover .heart-filled {
-    opacity: 1;  //heart-filled apparait
-    //z-index: 2;  //heart-filled apparait au dessus de heart-empty
-   // transform: scale(1.2);  
 }
 
 

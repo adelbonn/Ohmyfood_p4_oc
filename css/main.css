@@ -26,10 +26,6 @@ h2 {
     right: -10px;
 }*/
 /*hearts*/
-.hearts:hover .heart-filled {
-  opacity: 1;
-}
-
 .loader__anim--container {
   position: fixed;
   top: 0;
@@ -316,17 +312,20 @@ h2 {
 .menu__label:hover .menu__price,
 .menu__checkbox:checked + .menu__label .menu__price {
   transform: translateX(calc(-100% - 10px));
-  /*@media screen and (min-width: 320px) {
-    transform: translateX(calc(-100% - 25px));
-  }
-
-  @media screen and (min-width: 352px) {
+  transition: transform 0.3s ease-in-out;
+  /*@media screen and (min-width: 352px) {
       transform: translateX(calc(-100% - 20px));
   }
 
   @media screen and (min-width: 375px) {
       transform: translateX(calc(-100% - 25px));
   }*/
+}
+@media screen and (min-width: 320px) {
+  .menu__label:hover .menu__price,
+  .menu__checkbox:checked + .menu__label .menu__price {
+    transform: translateX(calc(-100% - 25px));
+  }
 }
 @media screen and (min-width: 400px) {
   .menu__label:hover .menu__price,
@@ -442,11 +441,6 @@ h2 {
   font-weight: 700;
 }
 
-/*@mixin underline($length) {
-    padding-bottom: 2px;
-    border-bottom: 3px solid var.$green-color-bagde;
-    width: $length;
-}*/
 .menu__items {
   background: #fff;
   border-radius: 0.9375rem;
@@ -489,6 +483,8 @@ h2 {
   justify-content: start;
   padding: 0.9375rem;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   position: relative;
 }
 
@@ -515,7 +511,6 @@ h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  /*padding-left: func.rem(15);*/
 }
 
 * {
@@ -779,7 +774,7 @@ header {
   width: 1.4375rem;
   height: 1.375rem;
   display: inline-block;
-  transition: opacity 0.2s, transform 0.3s, background 0.3s ease;
+  transition: opacity 0.2s, transform 0.3s ease;
 }
 .eateries .cards-eateries__heart .heart-empty {
   opacity: 1;
@@ -795,6 +790,9 @@ header {
   -webkit-text-fill-color: transparent;
   font-size: 1.4375rem;
   transition: opacity 0.3s;
+}
+.eateries .cards-eateries__heart .heart-filled:hover {
+  opacity: 1;
 }
 
 /*layout*/
@@ -994,7 +992,7 @@ body {
   width: 1.4375rem;
   height: 1.375rem;
   display: inline-block;
-  transition: opacity 0.2s, transform 0.3s, background 0.3s ease;
+  transition: opacity 0.2s, transform 0.3s ease;
 }
 .hearts .heart-empty {
   opacity: 1;
@@ -1010,6 +1008,9 @@ body {
   -webkit-text-fill-color: transparent;
   font-size: 1.4375rem;
   transition: opacity 0.3s;
+}
+.hearts .heart-filled:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
