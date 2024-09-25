@@ -258,9 +258,10 @@
 .menu__label:hover .menu__items::before,
 .menu__checkbox:checked + .menu__label .menu__items::before
 {
-    width: 15%;
-    max-width: 75px;
-    min-width: 55px;
+  
+   width: clamp(10%, 15%, 20%);
+   transition: width 0.3s ease-in-out;
+ 
 }
 
 

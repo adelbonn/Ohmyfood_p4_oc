@@ -269,8 +269,7 @@ h2 {
 .menu__label:hover .menu__items::before,
 .menu__checkbox:checked + .menu__label .menu__items::before {
   width: 15%;
-  max-width: 75px;
-  min-width: 55px;
+  transition: width 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 320px) {
