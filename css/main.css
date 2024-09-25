@@ -230,7 +230,6 @@ h2 {
 .menu__price {
   position: relative;
   transition: transform 0.3s ease-in-out;
-  /*transition: left 0.5s ease-in-out, right 0.5s ease-in-out;*/
   z-index: 3;
 }
 
@@ -496,6 +495,8 @@ h2 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  flex: 1 1 auto;
+  max-width: calc(100% - 100px);
 }
 .menu__meal h3, .menu__meal p {
   overflow: hidden;
