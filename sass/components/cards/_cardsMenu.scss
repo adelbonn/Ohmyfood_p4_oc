@@ -55,15 +55,14 @@
         padding: func.rem(15);
         @extend %cards-menus;
         overflow: hidden;
-        white-space: nowrap;
-       text-overflow: ellipsis;
+     
         position: relative;
         }
 
         .menu__meal {
             @include mix.flex-center(column);
             gap: func.rem(10);
-            //margin-left: func.rem(10);//vérifier pourquoi il ne s'enlève pas
+           
             overflow: hidden;//cache le débordement du texte
             white-space: nowrap;//empêche de revenir à la ligne
             text-overflow: ellipsis; //tronque le texte si trop long

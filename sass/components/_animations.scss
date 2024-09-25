@@ -88,10 +88,10 @@
 
 
 @keyframes rotate-circle {
-    0% {
+    from {
         transform: rotate(0deg);
     }
-    100% {
+    to {
         transform: rotate(360deg);
     }
 }
@@ -110,11 +110,11 @@
 }
 @keyframes fadeInText {
     0% {
-        opacity:0;
+      
         transform: translateY(30px);
     }
     100% {
-        opacity: 1;
+    
         transform: translateY(0);
     }
 }
@@ -158,7 +158,7 @@
         opacity: 0;
         transform: translateY(-60px);
         animation: fadeInUp var.$base-duration ease-in-out forwards;
-        animation-delay: 0.2s;
+        animation-delay: 0.25s;
     }
     .hearts {
         opacity: 0;
@@ -188,7 +188,7 @@
         transform: translate(-30px);
         animation: fadeInUp var.$base-duration ease-in-out forwards;
 //délai animation basé sur la position de chaque cartes,
-        animation-delay: var.$delay-increment *$i + 0.5s;
+        animation-delay: var.$delay-increment *$i + 0.4s;
     }
 }
 }
@@ -210,13 +210,14 @@
         border-bottom-right-radius: 15px;
         background: var.$green-color-bagde;
         z-index: 1;
-        transition: width 0.6s ease-in-out; 
+        transition: width 0.3s ease-in-out; 
+       // transition-delay: 500ms;
     }
  }
 
  .menu__price {
     position: relative;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     /*transition: left 0.5s ease-in-out, right 0.5s ease-in-out;*/
     z-index: 3;
  }
@@ -232,7 +233,8 @@
     @include mix.flex-center(row);
     color: var.$color-white; 
     font-size: var.$icon-size;
-    transition: transform 0.6s ease-in-out;
+    //transition-delay: 500ms;
+    transition: transform 0.3s ease-in-out;
     transform: translateY(-50%);
     opacity: 0;
     z-index: 2; 
@@ -258,7 +260,7 @@
 {
     width: 15%;
     max-width: 75px;
-    min-width: 60px;
+    min-width: 55px;
 }
 
 
@@ -306,10 +308,10 @@
 
 .menu__label:hover .menu__price,
 .menu__checkbox:checked + .menu__label .menu__price {  
-   transform: translateX(calc(-100% - 10px)); //le prix se déplace de 10px a gauche au hover et au clic (:checked) de l utilisateur 
+   transform: translateX(calc(-100% - 10px)); //déplacement du prix de la carte
 
 
-    @media screen and (min-width: 320px) {
+    /*@media screen and (min-width: 320px) {
       transform: translateX(calc(-100% - 25px));
     }
 
@@ -319,7 +321,7 @@
     
     @media screen and (min-width: 375px) {
         transform: translateX(calc(-100% - 25px));
-    }
+    }*/
 
     @media screen and (min-width: 400px) {
         transform: translateX(calc(-100% - 35px));
@@ -344,28 +346,18 @@
 }
 
 
-/*.menu__checkbox:checked + .menu__label .menu__items::before {  //au clic de l utilisateur(avec :checked) le rectangle reste visible
-    width: 15%; 
+//rognage du texte des cartes au hover et au checked
 
-    @media screen and (min-width: 320px) {
-        width: 20%;
-    }
-    @media screen and (min-width: 352px) {
-        width: 18%;
-    }
+.menu__label:hover .menu__meal h3,
+.menu__checkbox:checked + .menu__label .menu__meal h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
-    @media screen and (min-width: 500px) {
-        width: 15%;
-      
-    }
-    @media screen and (min-width: 570px) {
-        width: 12%;
-    }
-    @media screen and (min-width: 768px) {
-        width: 10%;
-    }
-    @media screen and (min-width: 1024px) {
-        width: 8%;
-    }
-}*/
-
+.menu__label:hover .menu__meal p,
+.menu__checkbox:checked + .menu__label .menu__meal p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
