@@ -11,7 +11,8 @@
     background: var.$color-white;
     border-radius: func.rem(15);
     @include mix.shadow-card;
-     margin-bottom: func.rem(15) ;
+     margin: func.rem(16) 0;
+     cursor: pointer;
 }
 
     .menu__cards {
@@ -45,66 +46,99 @@
 
     .menu__items {
         
-        @include mix.flex-center(row);
-        justify-content: start;
-        padding: func.rem(15);
+      display: flex;
+      flex-direction: row;
+       justify-content: space-between;
+         align-items: center;
+         gap: 5;
+      //  justify-content: start;
+       //padding: func.rem(15);
+       //gap: 5;
         @extend %cards-menus;
-        position: relative;
+      //  position: relative;
         overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+       // white-space: nowrap;
+       // text-overflow: ellipsis;
        
         }
 
-        .menu__meal {
-            @include mix.flex-center(column);
-            gap: func.rem(10);
-           
-            overflow: hidden;//cache le débordement du texte
-            white-space: nowrap;//empêche de revenir à la ligne
-            text-overflow: ellipsis; //tronque le texte si trop long
+        .menu__content {
+            display: flex;
+            flex-direction: column;
+           // gap: func.rem(10);
+          // justify-content: space-between;
+           // overflow: hidden;//cache le débordement du texte
+           // white-space: nowrap;//empêche de revenir à la ligne
+            //text-overflow: ellipsis; //tronque le texte si trop long
 
-            flex: 1 1 auto;//permet a mon texte de s'ajuster a l'espace disponible
-            max-width: calc(100% - 90px); // réduit l'espace occupé par le texte pour laisser la place au prix et au check+rectangle vert
+           flex: 1 1 auto;//permet a mon texte de s'ajuster a l'espace disponible
+         
 
           & h3, p {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-          }
-        } 
+            padding: func.rem(15) func.rem(15) 0;
+          
+          //overflow: hidden;
+           // white-space: nowrap;
+           // text-overflow: ellipsis;
+         }
 
-              
+          .menu__second_row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+           
+         }         
+        
+         .menu__price {
+            transition: transform 0.3s ease-in-out;
+            font-weight: typo.$font-weight-bold;
+        
+           
+
+        } 
+    }
+  
+  .menu__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var.$icon-size;
+    color: var.$color-white;
+    margin-right: -60px;
+   
+    height: 80px;
+    width: 59px;
+    border-radius: 0 func.rem(15) func.rem(15) 0;
+    background: var.$green-color-bagde;
+    transition: transform 0.3s ease-in-out;
+  } 
+
+  .menu__items:hover .menu__check
+   {
+   margin-left: 10;
+   transform: translateX(-100%);
+  }
     
-    .menu__price {
-        font-weight: typo.$font-weight-bold;
-        display:flex;
-        align-items: flex-end;
-        margin-left: auto;
-       //padding-right: 10px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    
-        }
-    
-      
+    .menu__items:hover .menu__price
+    {
+    transform: translateX(-100%);
+    }  
       
 //rognage du texte des cartes au hover et au checked
 
-.menu__label:hover .menu__meal h3,
-.menu__checkbox:checked + .menu__label .menu__meal h3 {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+//.menu__label:hover .menu__meal h3,
+//.menu__checkbox:checked + .menu__label .menu__meal h3 {
+ //   overflow: hidden;
+ //   white-space: nowrap;
+  //  text-overflow: ellipsis;
+//}
 
-.menu__label:hover .menu__meal p,
-.menu__checkbox:checked + .menu__label .menu__meal p {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+//.menu__label:hover .menu__meal p,
+//.menu__checkbox:checked + .menu__label .menu__meal p {
+ //   overflow: hidden;
+ //   white-space: nowrap;
+  //  text-overflow: ellipsis;
+
 
     
 

@@ -32,7 +32,13 @@
         z-index: 999;
     }
    
-   
+   50% {
+        opacity: 1;
+   }
+   80% {
+    opacity: 1;
+
+   }
     100% {
         opacity: 0;
         display: none;
@@ -53,8 +59,8 @@
     .loader__circle {
         display: block;
         position: relative;
-        width:clamp(250px, 20vw, 350px);
-        height: clamp(250px, 20vw, 350px);
+        width:clamp(300px, 20vw, 350px);
+        height: clamp(300px, 20vw, 350px);
         border-radius: 50%;
         border: 3px solid transparent;
         border-top-color: var.$secondary-color;
@@ -90,10 +96,10 @@
 
 
 @keyframes rotate-circle {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+   100% {
         transform: rotate(360deg);
     }
 }
@@ -102,7 +108,7 @@
 .loader___text {
     position: absolute;
     font-family: typo.$logo-font;
-    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     background: linear-gradient(90deg, var.$primary-color, var.$secondary-color);
     background-clip: text;
     -webkit-background-clip: text;
@@ -202,51 +208,37 @@
 
  //animation rectangle vert de la carte menu + check au hover de menu__label (menu__item)
 
- .menu__items {
+ /*.menu__items {
    
     transition: transform 0.3s ease;
-    //rectangle vert
-    &::before {
-        content:'';
-        position: absolute;
-        top:0;
-        right: 0;
-        height: 100%;
-        width: 0;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        background: var.$green-color-bagde;
-        z-index: 1;
-        transition: width 0.3s ease-in-out; 
-      
-    }
- }
+    
+ }*/
 
- .menu__price {
+ /*.menu__price {
     position: relative;
     transition: transform 0.3s ease-in-out;
     z-index: 3;
- }
+ }*/
 
  //icon du check dans le rectangle vert
- .menu__check--Wrap {
-    position: absolute; 
-    right: 0;
-    top: 50%;
-    width: var.$icon-size;
-    height: var.$icon-size;
-    @include mix.flex-center(row);
-    color: var.$color-white; 
-    font-size: var.$icon-size;
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(-50%);
-    opacity: 0;
-    z-index: 2; 
+ //.menu__check--Wrap {
+ //   position: absolute; 
+  //  right: 0;
+  //  top: 50%;
+  //  width: var.$icon-size;
+   // height: var.$icon-size;
+  //  @include mix.flex-center(row);
+ //   color: var.$color-white; 
+ //   font-size: var.$icon-size;
+ //   transition: transform 0.3s ease-in-out;
+ //   transform: translateY(-50%);
+ //   opacity: 0;
+ //   z-index: 2; 
    
- }
+ 
 
  //checkbox pour que le rectangle reste visible au clic de l'utilisateur
-.menu__checkbox {
+/*.menu__checkbox {
     display: none;
 }
 
@@ -255,87 +247,30 @@
     display: block;
     position: relative;
     transition: transform 0.3s ease-in-out;
-}
+}*/
 
 // au hover le rectangle se déploit de droite a gauche sur 15% de largeur
 
-.menu__label:hover .menu__items::before,
+/*.menu__label:hover .menu__items::before,
 .menu__checkbox:checked + .menu__label .menu__items::before
 {
    width: clamp(8%, 15%, 20%);
    transition: width 0.3s ease-in-out;
    max-width: 80px;
-}
-
-
-/*@media screen and (min-width: 320px) {
-    .menu__label:hover .menu__items::before,
-    .menu__checkbox:checked + .menu__label .menu__items::before {
-        width: 20%;
-    }
 }*/
 
-@media screen and (min-width: 352px) {
-    .menu__label:hover .menu__items::before,
-    .menu__checkbox:checked + .menu__label .menu__items::before {
-        width: 18%;
-    }
-}
-@media screen and (min-width: 500px) {
-    .menu__label:hover .menu__items::before,
-    .menu__checkbox:checked + .menu__label .menu__items::before {
-        width: 15%;
-    }
-}
-@media screen and (min-width: 560px) {
-    .menu__label:hover .menu__items::before,
-    .menu__checkbox:checked + .menu__label .menu__items::before {
-        width: 12%;
-    }
-    @media screen and (min-width: 768px) {
-        .menu__label:hover .menu__items::before,
-        .menu__checkbox:checked + .menu__label .menu__items::before {
-            width: 10%;
-        }
-    }
-   @media screen and (min-width: 1024px) {
-        .menu__label:hover .menu__items::before,
-        .menu__checkbox:checked + .menu__label .menu__items::before {
-            width: 8%;
-        }
-}
 
-
-.menu__label:hover .menu__price,
+/*.menu__label:hover .menu__price,
 .menu__checkbox:checked + .menu__label .menu__price {  
    transform: translateX(calc(-100% - 10px)); //déplacement du prix de la carte
    transition: transform 0.3s ease-in-out;
 
-   @media screen and (min-width: 320px) {
-      transform: translateX(calc(-100% - 25px));
-    }
-
-    @media screen and (min-width: 400px) {
-        transform: translateX(calc(-100% - 35px));
-    }
-
-    @media screen and (min-width: 570px) {
-        transform: translateX(calc(-100% - 30px));
-    }
-   @media screen and (min-width: 630px) {
-    transform: translateX(calc(-100% - 45px));
-   }
-    @include media.respond-to(tablet) {
-      transform: translateX(calc(-100% - 40px));
-    }
-
-}
-}
+}*/
 //ici si la carte est survolée ou/et est selectionnée au clic (via checkbox checked) le check rotate et se place au centre du rectangle vert
-.menu__label:hover .menu__check--Wrap,
+/*.menu__label:hover .menu__check--Wrap,
 .menu__checkbox:checked + .menu__label .menu__check--Wrap {
     transform: translateX(-100%) translateY(-50%) rotate(-360deg); 
     opacity: 1; 
 }
-
+*/
 
