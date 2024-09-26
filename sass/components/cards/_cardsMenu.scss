@@ -51,14 +51,13 @@
        justify-content: space-between;
          align-items: center;
          gap: 5;
-      //  justify-content: start;
-       //padding: func.rem(15);
+   
        //gap: 5;
         @extend %cards-menus;
       //  position: relative;
         overflow: hidden;
-       // white-space: nowrap;
-       // text-overflow: ellipsis;
+        white-space: nowrap;
+        text-overflow: ellipsis;
        
         }
 

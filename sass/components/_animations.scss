@@ -220,25 +220,10 @@
     z-index: 3;
  }*/
 
- //icon du check dans le rectangle vert
- //.menu__check--Wrap {
- //   position: absolute; 
-  //  right: 0;
-  //  top: 50%;
-  //  width: var.$icon-size;
-   // height: var.$icon-size;
-  //  @include mix.flex-center(row);
- //   color: var.$color-white; 
- //   font-size: var.$icon-size;
- //   transition: transform 0.3s ease-in-out;
- //   transform: translateY(-50%);
- //   opacity: 0;
- //   z-index: 2; 
-   
  
 
  //checkbox pour que le rectangle reste visible au clic de l'utilisateur
-/*.menu__checkbox {
+.menu__checkbox {
     display: none;
 }
 
@@ -247,30 +232,24 @@
     display: block;
     position: relative;
     transition: transform 0.3s ease-in-out;
-}*/
+}
+
+.menu__checkbox:checked + .menu__label .menu__check,
+.menu__checkbox:checked + .menu__label .menu__price {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
 
 // au hover le rectangle se déploit de droite a gauche sur 15% de largeur
 
-/*.menu__label:hover .menu__items::before,
-.menu__checkbox:checked + .menu__label .menu__items::before
-{
-   width: clamp(8%, 15%, 20%);
-   transition: width 0.3s ease-in-out;
-   max-width: 80px;
-}*/
 
 
-/*.menu__label:hover .menu__price,
+
+.menu__label:hover .menu__price,
 .menu__checkbox:checked + .menu__label .menu__price {  
-   transform: translateX(calc(-100% - 10px)); //déplacement du prix de la carte
+   //transform: translateX(calc(-100% - 10px)); //déplacement du prix de la carte
    transition: transform 0.3s ease-in-out;
 
-}*/
-//ici si la carte est survolée ou/et est selectionnée au clic (via checkbox checked) le check rotate et se place au centre du rectangle vert
-/*.menu__label:hover .menu__check--Wrap,
-.menu__checkbox:checked + .menu__label .menu__check--Wrap {
-    transform: translateX(-100%) translateY(-50%) rotate(-360deg); 
-    opacity: 1; 
 }
-*/
+
 
