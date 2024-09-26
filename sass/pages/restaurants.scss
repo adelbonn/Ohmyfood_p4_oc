@@ -56,6 +56,11 @@
     display:flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include media.respond-to('tablet') {
+       display: flex;
+       justify-content: center;
+    }
 }
 
 .hearts {
@@ -64,59 +69,11 @@
    position: relative;
    align-items: center;
    justify-content: center;
+    padding-bottom: func.rem(20);
 
-   //position: absolute;
-   //top: 40%;
-   //right: 60%;
 
     font-size: typo.$font-size-xxxlarge;
      @include mix.heart-icon(func.rem(23), func.rem(22), var.$primary-color, var.$secondary-color);
 
 
-   //  @media screen and (min-width: 500px) {
-   //right: 30%; 
 }
-
-//@media screen and (min-width: 375px) {
-  // right: 10%;
-
-
-/*.Alafrancaise {
-    margin-left: 20px;
-   position: absolute;
-   top: 40%;
-   right: 60%;
-
-    font-size: typo.$font-size-xxxlarge;
-     @include mix.heart-icon(func.rem(23), func.rem(22), var.$primary-color, var.$secondary-color);
-
-}
-
-}
-.HeartTitleMenu {
-@media screen and (min-width: 320px) {
- position: absolute;
- top: 55%;
-}
-
-@media screen and (min-width: 375px) {
- position: absolute;
- top: 40%;
- right: 10%;
-}
-@media screen and (min-width: 400px) {
-    position: absolute;
-    top: 40%;
-    right: 15%;
-   }
-   @media screen and (min-width: 500px) and (max-width: 768px) {
-    position: absolute;
-    top: 40%;
-    right: 40%;
-   }
-    @media screen and (min-width: 500px) and (max-width: 1024px) {
-     position: absolute;
-     top: 40%;
-     right: 50%;
-    }
-}*/

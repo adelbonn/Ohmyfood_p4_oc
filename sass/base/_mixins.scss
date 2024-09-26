@@ -2,7 +2,7 @@
 @use 'variables' as var;
 @use 'functions' as func;
 @use '../base/typo' as typo;
-//@use '../base/mixins' as mix;
+
 
 
 
@@ -82,20 +82,8 @@
     flex-direction: ($direction);
 }
 
-//badge new, mixin du bage new
-//faire un place holder************
-/*@mixin badge-new {
-    background: var.$primary-color;
-    color: var.$color-white;
-    padding: func.rem(5) func.rem(10);
-    border-radius: base.rem(20);
-    font-size: typo.$font-size-x-small;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-}*/
 
-/*hearts*///mixin des coeurs,(trouve pourquoi le heart-empty ne passe pas en opcaity 0 quand il est en hover
+/*hearts*///mixin des coeurs
 
 @mixin heart-icon($width, $height, $primary-color, $secondary-color) {
 
@@ -111,7 +99,7 @@
     width: $width;
     height: $height;
     display: inline-block;
-    transition: opacity 0.2s, transform 0.3s ease;
+    transition: opacity 0.2s, transform 0.3s ease-in-out;
     
     
 }
@@ -144,11 +132,11 @@
 
 
 //soulignement des titres des menus
-@mixin partial-underline($length) {
+/*@mixin partial-underline($length) {
     padding-bottom: 10px;
     border-bottom: 3px solid var.$green-color-bagde;
     width: $length;
-}
+}*/
 
 
 

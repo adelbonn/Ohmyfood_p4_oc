@@ -90,6 +90,21 @@
     
       
       
+//rognage du texte des cartes au hover et au checked
+
+.menu__label:hover .menu__meal h3,
+.menu__checkbox:checked + .menu__label .menu__meal h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.menu__label:hover .menu__meal p,
+.menu__checkbox:checked + .menu__label .menu__meal p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
     
 
