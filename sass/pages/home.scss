@@ -3,6 +3,7 @@
 @use '../base/mixins' as mix;
 @use '../base/functions' as func;
 @use '../base/typo' as typo;
+@use '../base/mediaqueries' as media;
 
 body {
     height: 100vh;
@@ -54,7 +55,7 @@ body {
      
     h2 {
         align-self: flex-start;
-        margin: func.rem(48) 0 1.625rem 0;
+        margin: func.rem(25) 0 func.rem(25) 0;
         font-size: typo.$font-size-xxlarge;
         font-weight: typo.$font-weight-bold;
 
@@ -83,7 +84,7 @@ body {
     @include mix.flex-center(column);
     align-items: center;
 
-    @media screen and (min-width: 768px)
+    @include media.respond-to(tablet)
     {
         display: flex;
         flex-direction: row;
@@ -119,7 +120,7 @@ body {
     }
 
     p {
-        font-size: typo.$font-size-medium;  //voir si je ne peux pas faire une mixin pour les titres des cartes et une pour le ss titre des cards, le code se répète trop ou texter peut être plutôt extend
+        font-size: typo.$font-size-medium; 
         font-weight: typo.$font-weight-medium;
     }
 }    

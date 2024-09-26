@@ -49,11 +49,11 @@
         justify-content: start;
         padding: func.rem(15);
         @extend %cards-menus;
+        position: relative;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-     
-        position: relative;
+       
         }
 
         .menu__meal {
@@ -65,14 +65,14 @@
             text-overflow: ellipsis; //tronque le texte si trop long
 
             flex: 1 1 auto;//permet a mon texte de s'ajuster a l'espace disponible
-            max-width: calc(100% - 100px); // réduit l'espace occupé par le texte pour laisser la place au prix et au check+rectngale vert
+            max-width: calc(100% - 90px); // réduit l'espace occupé par le texte pour laisser la place au prix et au check+rectangle vert
 
           & h3, p {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
           }
-           }
+        } 
 
               
     
@@ -81,11 +81,13 @@
         display:flex;
         align-items: flex-end;
         margin-left: auto;
+       //padding-right: 10px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     
         }
+    
       
       
 

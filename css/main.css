@@ -49,8 +49,9 @@ h2 {
   }
   100% {
     opacity: 0;
+    display: none;
     visibility: hidden;
-    z-index: -1;
+    z-index: -10;
   }
 }
 .loader__circle--anim {
@@ -63,12 +64,18 @@ h2 {
 .loader__circle--anim .loader__circle {
   display: block;
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: rgb(255, 121, 218);
   animation: rotate-circle 3s linear infinite;
+}
+@media screen and (min-width: 768px) {
+  .loader__circle--anim .loader__circle {
+    width: 350px;
+    height: 350px;
+  }
 }
 .loader__circle--anim .loader__circle::before {
   content: "";
@@ -106,12 +113,17 @@ h2 {
 .loader___text {
   position: absolute;
   font-family: "shrikhand", "cursive";
-  font-size: 3rem;
+  font-size: 2rem;
   background: linear-gradient(90deg, rgb(146, 86, 220), rgb(255, 121, 218));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   animation: fadeInText 2s ease-in-out forwards;
+}
+@media screen and (min-width: 768px) {
+  .loader___text {
+    font-size: 3rem;
+  }
 }
 
 @keyframes fadeInText {
@@ -265,44 +277,46 @@ h2 {
 .menu__checkbox:checked + .menu__label .menu__items::before {
   width: 15%;
   transition: width 0.3s ease-in-out;
+  max-width: 80px;
 }
 
-@media screen and (min-width: 320px) {
-  .menu__label:hover .menu__items::before,
-  .menu__checkbox:checked + .menu__label .menu__items::before {
-    width: 20%;
-  }
+/*@media screen and (min-width: 320px) {
+    .menu__label:hover .menu__items::before,
+    .menu__checkbox:checked + .menu__label .menu__items::before {
+        width: 20%;
+    }
 }
+
 @media screen and (min-width: 352px) {
-  .menu__label:hover .menu__items::before,
-  .menu__checkbox:checked + .menu__label .menu__items::before {
-    width: 18%;
-  }
+    .menu__label:hover .menu__items::before,
+    .menu__checkbox:checked + .menu__label .menu__items::before {
+        width: 18%;
+    }
 }
 @media screen and (min-width: 500px) {
-  .menu__label:hover .menu__items::before,
-  .menu__checkbox:checked + .menu__label .menu__items::before {
-    width: 15%;
-  }
+    .menu__label:hover .menu__items::before,
+    .menu__checkbox:checked + .menu__label .menu__items::before {
+        width: 15%;
+    }
 }
 @media screen and (min-width: 560px) {
-  .menu__label:hover .menu__items::before,
-  .menu__checkbox:checked + .menu__label .menu__items::before {
-    width: 12%;
-  }
-}
-@media screen and (min-width: 560px) and (min-width: 768px) {
-  .menu__label:hover .menu__items::before,
-  .menu__checkbox:checked + .menu__label .menu__items::before {
-    width: 10%;
-  }
-}
-@media screen and (min-width: 560px) and (min-width: 1024px) {
-  .menu__label:hover .menu__items::before,
-  .menu__checkbox:checked + .menu__label .menu__items::before {
-    width: 8%;
-  }
-}
+    .menu__label:hover .menu__items::before,
+    .menu__checkbox:checked + .menu__label .menu__items::before {
+        width: 12%;
+    }
+    @media screen and (min-width: 768px) {
+        .menu__label:hover .menu__items::before,
+        .menu__checkbox:checked + .menu__label .menu__items::before {
+            width: 10%;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .menu__label:hover .menu__items::before,
+        .menu__checkbox:checked + .menu__label .menu__items::before {
+            width: 8%;
+        }
+    }
+}*/
 .menu__label:hover .menu__check--Wrap {
   transform: translateX(-100%) translateY(-50%) rotate(-360deg);
   opacity: 1;
@@ -312,13 +326,6 @@ h2 {
 .menu__checkbox:checked + .menu__label .menu__price {
   transform: translateX(calc(-100% - 10px));
   transition: transform 0.3s ease-in-out;
-  /*@media screen and (min-width: 352px) {
-      transform: translateX(calc(-100% - 20px));
-  }
-
-  @media screen and (min-width: 375px) {
-      transform: translateX(calc(-100% - 25px));
-  }*/
 }
 @media screen and (min-width: 320px) {
   .menu__label:hover .menu__price,
@@ -481,10 +488,10 @@ h2 {
   flex-direction: row;
   justify-content: start;
   padding: 0.9375rem;
+  position: relative;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  position: relative;
 }
 
 .menu__meal {
@@ -496,7 +503,7 @@ h2 {
   white-space: nowrap;
   text-overflow: ellipsis;
   flex: 1 1 auto;
-  max-width: calc(100% - 100px);
+  max-width: calc(100% - 90px);
 }
 .menu__meal h3, .menu__meal p {
   overflow: hidden;
@@ -741,7 +748,7 @@ header {
   align-items: center;
   background: #f6f6f6;
 }
-@media screen and (min-width: 767.98px) {
+@media screen and (min-width: 768px) {
   .eateries-cards__bg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -845,7 +852,7 @@ body {
 }
 .functioning h2 {
   align-self: flex-start;
-  margin: 3rem 0 1.625rem 0;
+  margin: 1.5625rem 0 1.5625rem 0;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -937,7 +944,7 @@ body {
     padding: 3.125rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .menu-container {
     margin: -2.8125rem auto 0;
   }
@@ -1013,5 +1020,45 @@ body {
 .hearts .heart-filled:hover {
   opacity: 1;
 }
+
+/*.Alafrancaise {
+    margin-left: 20px;
+   position: absolute;
+   top: 40%;
+   right: 60%;
+
+    font-size: typo.$font-size-xxxlarge;
+     @include mix.heart-icon(func.rem(23), func.rem(22), var.$primary-color, var.$secondary-color);
+
+}
+
+}
+.HeartTitleMenu {
+@media screen and (min-width: 320px) {
+ position: absolute;
+ top: 55%;
+}
+
+@media screen and (min-width: 375px) {
+ position: absolute;
+ top: 40%;
+ right: 10%;
+}
+@media screen and (min-width: 400px) {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+   }
+   @media screen and (min-width: 500px) and (max-width: 768px) {
+    position: absolute;
+    top: 40%;
+    right: 40%;
+   }
+    @media screen and (min-width: 500px) and (max-width: 1024px) {
+     position: absolute;
+     top: 40%;
+     right: 50%;
+    }
+}*/
 
 /*# sourceMappingURL=main.css.map */

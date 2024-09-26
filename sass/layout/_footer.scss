@@ -4,6 +4,8 @@
 @use '../base/functions' as func;
 //@use '../base/reset';
 @use '../base/typo' as typo;
+@use '../base/mediaqueries' as media;
+
 
 footer {
     background: var.$color-grey;
@@ -57,7 +59,7 @@ footer {
             
     }
 }
-@media screen and (min-width: 768px) {
+@include media.respond-to('tablet') {
     footer {
         height: func.rem(114);
         display: flex;

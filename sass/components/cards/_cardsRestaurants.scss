@@ -3,6 +3,8 @@
 @use '../../base/mixins' as mix;
 @use '../../base/functions' as func;
 @use '../../base/typo' as typo;
+@use '../../base/mediaqueries' as media;
+
 
 //*restaurants (eateries)*/
 
@@ -98,7 +100,7 @@
     align-items: center;
     background: var.$background-color;
 
-   @media screen and (min-width: 767.98px) {
+   @include media.respond-to('tablet') {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -107,8 +109,9 @@
         width: 100%;
         padding: func.rem(30) func.rem(50);
     }
-    @media screen and (min-width: 1440px) {
+    @include media.respond-to('desktop') {
      padding: func.rem(30) func.rem(180);
+     
 }
 }
 
