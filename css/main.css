@@ -370,10 +370,16 @@ h2 {
 .menu__content {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   flex: 1 1 auto;
 }
 .menu__content h3, .menu__content p {
   padding: 0.9375rem 0.9375rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu__content .menu__second_row {
   display: flex;
@@ -406,6 +412,20 @@ h2 {
 
 .menu__items:hover .menu__price {
   transform: translateX(-100%);
+}
+
+.menu__label:hover .menu__meal h3,
+.menu__checkbox:checked + .menu__label .menu__meal h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu__label:hover .menu__meal p,
+.menu__checkbox:checked + .menu__label .menu__meal p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 * {
