@@ -54,7 +54,6 @@
    
        //gap: 5;
         @extend %cards-menus;
-      //  position: relative;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -64,7 +63,7 @@
         .menu__content {
             display: flex;
             flex-direction: column;
-           // gap: func.rem(10);
+        
           // justify-content: space-between;
             overflow: hidden;//cache le débordement du texte
             white-space: nowrap;//empêche de revenir à la ligne
@@ -73,18 +72,27 @@
            flex: 1 1 auto;//permet a mon texte de s'ajuster a l'espace disponible
          
 
-          & h3, p {
+
+        
+
+          & h3 {
             padding: func.rem(15) func.rem(15) 0;
-          
-          overflow: hidden;
             white-space: nowrap;
-           text-overflow: ellipsis;
+            text-overflow: ellipsis;
          }
+
+            & p {
+                padding: 0 func.rem(15) func.rem(15);
+               
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
 
           .menu__second_row {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
            
          }         
         
@@ -132,8 +140,8 @@
    text-overflow: ellipsis;
 }
 
-.menu__label:hover .menu__meal p,
-.menu__checkbox:checked + .menu__label .menu__meal p {
+.menu__label:hover .menu__content p,
+.menu__checkbox:checked + .menu__label .menu__content p {
     overflow: hidden;
     white-space: nowrap;
    text-overflow: ellipsis;
