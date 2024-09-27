@@ -413,8 +413,8 @@ h2 {
   transform: translateX(-100%);
 }
 
-.menu__label:hover .menu__meal h3,
-.menu__checkbox:checked + .menu__label .menu__meal h3 {
+.menu__label:hover .menu__content h3,
+.menu__checkbox:checked + .menu__label .menu__content h3 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
