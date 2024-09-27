@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/****************a reverifier avec ma maquette***************/
 body {
   font-family: "Roboto", "sans-serif";
   font-size: 1rem;
@@ -263,112 +265,112 @@ h2 {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 0.2s;
+  animation-delay: 0.2s; /******réajuster avec les variables****************/
 }
 
 .menu__cards:nth-of-type(2) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.4s; /******réajuster avec les variables****************/
 }
 
 .menu__cards:nth-of-type(3) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 0.6s;
+  animation-delay: 0.6s; /******réajuster avec les variables****************/
 }
 
 .menu__cards:nth-of-type(4) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 0.8s;
+  animation-delay: 0.8s; /******réajuster avec les variables****************/
 }
 
 .menu__label:nth-of-type(1) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 0.2s;
+  animation-delay: 0.25s;
 }
 
 .menu__label:nth-of-type(2) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.5s;
 }
 
 .menu__label:nth-of-type(3) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 0.6s;
+  animation-delay: 0.75s;
 }
 
 .menu__label:nth-of-type(4) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 0.8s;
+  animation-delay: 1s;
 }
 
 .menu__label:nth-of-type(5) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 1s;
+  animation-delay: 1.25s;
 }
 
 .menu__label:nth-of-type(6) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 1.2s;
+  animation-delay: 1.5s;
 }
 
 .menu__label:nth-of-type(7) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 1.4s;
+  animation-delay: 1.75s;
 }
 
 .menu__label:nth-of-type(8) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 1.6s;
+  animation-delay: 2s;
 }
 
 .menu__label:nth-of-type(9) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 1.8s;
+  animation-delay: 2.25s;
 }
 
 .menu__label:nth-of-type(10) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 
 .menu__label:nth-of-type(11) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 2.2s;
+  animation-delay: 2.75s;
 }
 
 .menu__label:nth-of-type(12) {
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 2.4s;
+  animation-delay: 3s;
 }
 
 /**button gradient**/
@@ -1007,9 +1009,19 @@ body {
 
 .img__header {
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   object-fit: cover;
   background: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") cover no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .img__header {
+    height: 40vh;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .img__header {
+    height: 60vh;
+  }
 }
 
 .nav__arrow {

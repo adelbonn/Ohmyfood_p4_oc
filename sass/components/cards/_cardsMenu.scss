@@ -61,7 +61,7 @@
             flex-direction: column;
             justify-content: space-between;
             overflow: hidden;
-             flex: 1 1 auto;//permet a mon texte de s'ajuster a l'espace disponible avec flex grow 1 flex shrin
+             flex: 1 1 auto;
          
 
           & h3 {
@@ -111,7 +111,7 @@
   } 
 
 
-//input de type checkbox pour permettre a l'utilisateur de pouvoir sélectionner le plat qui lui convient, en cliquant dessus, et de le voir sélectioner a l'écran ou s'il n'en veux plus de le déselectionner en recliquant dessus
+//input de type checkbox pour permettre a l'utilisateur de pouvoir sélectionner le plat qui lui convient, en cliquant dessus, et de le voir sélectioner a l'écran ou s'il n'en veux plus de le déselectionner en recliquant dessus(pour la simulation de la première version du site)
 
 .menu__checkbox {
     display: none;
