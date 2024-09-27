@@ -280,5 +280,24 @@
     animation-delay: 2.9s;
 }
 
+//animation des titres des sections entrées plats, desserts, puis de chacune des cartes sans ajouter des classes à chauq ecartes et titres de section dans le html
 
+@for $i from 1 through 4 {
+    .menu__cards:nth-of-type(#{$i}) {
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: fadeInUp var.$base-duration ease-in-out forwards;
+        animation-delay: #{$i * 0.2}s;
+    }
+}
 
+//boucle pour animer les cartes une à une
+
+@for $i from 1 through 12 {
+    .menu__label:nth-of-type(#{$i}) {
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: fadeInUp var.$base-duration ease-in-out forwards;
+        animation-delay: #{$i * 0.2}s;//delay-increment
+    }
+}
