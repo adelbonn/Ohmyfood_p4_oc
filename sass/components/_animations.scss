@@ -132,9 +132,9 @@
 
 
 
-//animation de la page d'accueil
 
-//animation de base (fadeIn et translation)
+
+//animation de base pour la page menu (fadeIn et translation)
 
 @keyframes fadeInUp {
     from {
@@ -148,7 +148,6 @@
 }
 
 //animation image header
-
 .img__header {
     opacity:0;
     transform: translateY(-40px);
@@ -176,80 +175,110 @@
         transform: translateY(-30px);
         animation: fadeInUp var.$base-duration ease-in-out forwards;
         animation-delay: 0.25s;
+ }
 }
 
-//animation pour les sections (entrées, plats, desserts)
-
-@for $i from 1 through 3 {
-    .menu__cards:nth-of-type(#{$i}) h2.menu__title {
-        opacity:0;
-        transform: translateY(-30px);
-        animation: fadeInUp var.$base-duration ease-in-out forwards;
-    }
+//animmation a l'arrivée sur la page menu des titres puis des cartes
+//***********faire une boucle for************
+.menu__title--anim1 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 0.3s;
 }
 
-//animation pour les cartes de menus
-
-@for $i from 1 through 4 {
-    .menu__cards:nth-of-type(1) .menu__items:nth-child(#{$i}), //cartes entrées
-    .menu__cards:nth-of-type(2) .menu__items:nth-child(#{$i}), //cartes plats
-    .menu__cards:nth-of-type(3) .menu__items:nth-child(#{$i}) { //cartes desserts
-        opacity: 0;
-        transform-origin: top; 
-        transform: translate(-30px);
-        animation: fadeInUp var.$base-duration ease-in-out forwards;
-//délai animation basé sur la position de chaque cartes,
-        animation-delay: var.$delay-increment *$i + 0.4s;
-    }
-}
+.menu__title--anim2 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 0.5s;
 }
 
-
-
- //animation rectangle vert de la carte menu + check au hover de menu__label (menu__item)
-
- /*.menu__items {
-   
-    transition: transform 0.3s ease;
-    
- }*/
-
- /*.menu__price {
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-    z-index: 3;
- }*/
-
- 
-
- //checkbox pour que le rectangle reste visible au clic de l'utilisateur
-.menu__checkbox {
-    display: none;
+.menu__title--anim3 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 0.7s;
 }
 
-.menu__label {
-    cursor: pointer;
-    display: block;
-    position: relative;
-    transition: transform 0.3s ease-in-out;
+//animation des cartes, une par une
+
+.menu__label--anim1 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 0.9s;
 }
 
-.menu__checkbox:checked + .menu__label .menu__check,
-.menu__checkbox:checked + .menu__label .menu__price {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+.menu__label--anim2 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 1.1s;
 }
 
-// au hover le rectangle se déploit de droite a gauche sur 15% de largeur
-
-
-
-
-.menu__label:hover .menu__price,
-.menu__checkbox:checked + .menu__label .menu__price {  
-   //transform: translateX(calc(-100% - 10px)); //déplacement du prix de la carte
-   transition: transform 0.3s ease-in-out;
-
+.menu__label--anim3 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 1.3s;
 }
+
+.menu__label--anim4 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+.menu__label--anim5 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 1.7s;
+}
+
+.menu__label--anim6 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 1.9s;
+}
+
+.menu__label--anim7 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 2.1s;
+}
+
+.menu__label--anim8 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 2.3s;
+}
+
+.menu__label--anim9 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 2.5s;
+}
+
+.menu__label--anim10 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 2.7s;
+}
+
+.menu__label--anim11 {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp var.$base-duration ease-in-out forwards;
+    animation-delay: 2.9s;
+}
+
 
 

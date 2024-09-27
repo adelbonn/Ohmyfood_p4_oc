@@ -46,57 +46,47 @@
 
     .menu__items {
         
-      display: flex;
-      flex-direction: row;
-       justify-content: space-between;
+         display: flex;
+         justify-content: space-between;
          align-items: center;
-         gap: 5;
-   
-       //gap: 5;
+         gap: 5px;
         @extend %cards-menus;
         overflow: hidden;
         white-space: nowrap;
-        text-overflow: ellipsis;
-       
+        //text-overflow: ellipsis;
         }
 
         .menu__content {
             display: flex;
             flex-direction: column;
-        
-          // justify-content: space-between;
-            overflow: hidden;//cache le débordement du texte
-            white-space: nowrap;//empêche de revenir à la ligne
-            text-overflow: ellipsis; //tronque le texte si trop long
-
-           flex: 1 1 auto;//permet a mon texte de s'ajuster a l'espace disponible
+            justify-content: space-between;
+            overflow: hidden;
+             flex: 1 1 auto;//permet a mon texte de s'ajuster a l'espace disponible avec flex grow 1 flex shrin
          
-
-
-        
 
           & h3 {
             padding: func.rem(15) func.rem(15) 0;
+            overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
          }
 
             & p {
                 padding: 0 func.rem(15) func.rem(15);
-               
+                overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
             }
 
           .menu__second_row {
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
             align-items: center;
            
          }         
         
          .menu__price {
+            flex-shrink: 0;
             transition: transform 0.3s ease-in-out;
             font-weight: typo.$font-weight-bold;
         
@@ -120,13 +110,33 @@
     transition: transform 0.3s ease-in-out;
   } 
 
+
+//input de type checkbox pour permettre a l'utilisateur de pouvoir sélectionner le plat qui lui convient, en cliquant dessus, et de le voir sélectioner a l'écran ou s'il n'en veux plus de le déselectionner en recliquant dessus
+
+.menu__checkbox {
+    display: none;
+}
+
+.menu__label {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu__checkbox:checked + .menu__label .menu__check,
+.menu__checkbox:checked + .menu__label .menu__price {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
   .menu__items:hover .menu__check
    {
    margin-left: 10;
    transform: translateX(-100%);
   }
     
-    .menu__items:hover .menu__price
+   .menu__items:hover .menu__price
     {
     transform: translateX(-100%);
     }  
