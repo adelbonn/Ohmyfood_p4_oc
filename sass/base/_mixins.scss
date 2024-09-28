@@ -10,18 +10,12 @@
 
 //shadows
 
-//shadow header +badge;/*mettre en placeholder*/
+//shadow header +badge;/************mettre en placeholder***************/
 @mixin shadow-primary {box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15); } 
 
- /*shadow card*/
+ /*shadow card*//*********revérifier si les carte ont bien des shadows**********************/
 @mixin shadow-card {box-shadow:  0 4px 15px 0 rgba(0, 0, 0, 0.10);}
 
- //*buttonshadow-button
- @mixin shadow-button($darken-amount: 1%) 
- {
-    $shadow-color: darken(rgba(0, 0, 0, 0.25), $darken-amount);
-    box-shadow: 0 4px 10px 0 rgb$shadow-color;
-}
 
 //shadowInstructions
 @mixin shadow-instructions {box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.15);}
@@ -41,8 +35,14 @@
     border-radius: func.rem(50);  
     background: linear-gradient( var.$secondary-color, var.$primary-color 85%);
     font-size: typo.$font-size-medium;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  /***Trouver pourquoi la transition sur background blloque (écrit en rouge) et corriger cela**********/
 }
-
+ //*buttonshadow-button
+ @mixin shadow-button($darken-amount: 1%) 
+ {
+    $shadow-color: darken(rgba(0, 0, 0, 0.5), $darken-amount);
+    box-shadow: 0 4px 10px 0 $shadow-color;
+}
 
 /*buttons functioning*///button de la section functionning
 

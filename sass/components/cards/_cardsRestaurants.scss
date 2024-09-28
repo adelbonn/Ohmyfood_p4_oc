@@ -12,12 +12,27 @@
     @include mix.flex-center(column);
     padding: func.rem(50) func.rem(20);
     background: var.$background-color;
+
+    @include media.respond-to ('tablet') {
+        padding: func.rem(30) func.rem(45);
+    }
  
+    @include media.respond-to ('laptop') {
+        padding: func.rem(30) func.rem(90);
+    }
+    @include media.respond-to ('desktop') {
+        padding: func.rem(50) func.rem(180);
+    }
+
        h2 {
         margin: func.rem(4) 0 func.rem(20) 0;
         font-weight: typo.$font-weight-bold;
         font-size: typo.$font-size-xxlarge;
      
+
+        @include media.respond-to ('desktop') {
+            margin: 0 0 func.rem(28) 0;
+        }
        }
 
       figure {
@@ -25,9 +40,9 @@
         border-radius:func.rem(15);
         height: func.rem(251);
         width: 100%;
-        margin-bottom: func.rem(18);
+       // margin-bottom: func.rem(18);
         position: relative;
-        @include mix.shadow-card
+        //@include mix.shadow-card
     
        }
 
@@ -101,14 +116,16 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: func.rem(50) func.rem(100);
+        gap: func.rem(50) func.rem(50);
         justify-content: center;
         width: 100%;
-        padding: func.rem(30) func.rem(50);
+        //padding: func.rem(30) func.rem(50);
     }
+
+    
     @include media.respond-to('desktop') {
-     padding: func.rem(30) func.rem(180);
-     
+     //padding: func.rem(30) func.rem(180);
+     gap: func.rem(50) func.rem(100);
 }
 }
 

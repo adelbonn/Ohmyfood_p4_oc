@@ -14,7 +14,7 @@ h2 {
   font-family: "Roboto", "sans-serif";
 }
 
-/*shadow card*/
+/*shadow card*/ /*********revérifier si les carte ont bien des shadows**********************/
 /*button header*/
 /*buttons functioning*/
 /*hearts*/
@@ -382,21 +382,22 @@ h2 {
   border-radius: 3.125rem;
   background: linear-gradient(rgb(255, 121, 218), rgb(146, 86, 220) 85%);
   font-size: 1rem;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /***Trouver pourquoi la transition sur background blloque (écrit en rouge) et corriger cela**********/
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   min-width: 13.625rem;
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .btn:hover {
-  opacity: 80%;
-  transform: opacity 0.3s ease-in-out;
   cursor: pointer;
-  box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
+  background-color: linear-gradient(white, white 85%);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .button-order {
   padding: 2.5rem;
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -408,6 +409,7 @@ h2 {
   border-radius: 3.125rem;
   background: linear-gradient(rgb(255, 121, 218), rgb(146, 86, 220) 85%);
   font-size: 1rem;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /***Trouver pourquoi la transition sur background blloque (écrit en rouge) et corriger cela**********/
 }
 
 .location {
@@ -741,19 +743,37 @@ header {
   padding: 3.125rem 1.25rem;
   background: #f6f6f6;
 }
+@media screen and (min-width: 768px) {
+  .eateries {
+    padding: 1.875rem 2.8125rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .eateries {
+    padding: 1.875rem 5.625rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .eateries {
+    padding: 3.125rem 11.25rem;
+  }
+}
 .eateries h2 {
   margin: 0.25rem 0 1.25rem 0;
   font-weight: 700;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 1440px) {
+  .eateries h2 {
+    margin: 0 0 1.75rem 0;
+  }
 }
 .eateries figure {
   background: #fff;
   border-radius: 0.9375rem;
   height: 15.6875rem;
   width: 100%;
-  margin-bottom: 1.125rem;
   position: relative;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
 .eateries img {
   border-top-left-radius: 0.9375rem;
@@ -816,15 +836,14 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 3.125rem 6.25rem;
+    gap: 3.125rem 3.125rem;
     justify-content: center;
     width: 100%;
-    padding: 1.875rem 3.125rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .eateries-cards__bg {
-    padding: 1.875rem 11.25rem;
+    gap: 3.125rem 6.25rem;
   }
 }
 
@@ -910,12 +929,27 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 3rem 1.25rem;
   background: #fff;
+}
+@media screen and (min-width: 768px) {
+  .functioning {
+    padding: 1.875rem 2.8125rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .functioning {
+    padding: 1.875rem 5.625rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .functioning {
+    padding: 3.125rem 11.25rem;
+  }
 }
 .functioning h2 {
   align-self: flex-start;
-  margin: 1.5625rem 0 1.5625rem 0;
+  margin: 0 0 1.5625rem 0;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -934,7 +968,7 @@ body {
   text-align: center;
   font-weight: 500;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  margin: 1.5625rem 0;
+  margin: 0 0 1.5625rem 0;
   max-width: 20.9375rem;
   height: auto;
   transition: transform 0.3s;
@@ -943,6 +977,11 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   transform: scale(0.95);
+}
+@media screen and (min-width: 1440px) {
+  .functioning .functioning__item {
+    margin-bottom: 0;
+  }
 }
 .functioning .functioning-list {
   display: flex;
@@ -958,7 +997,13 @@ body {
     gap: 2.5rem;
   }
 }
-.functioning .fonctioning-list__circle {
+@media screen and (min-width: 1440px) {
+  .functioning .functioning-list {
+    justify-content: flex-start;
+    gap: 3.75rem;
+  }
+}
+.functioning .functioning-list .fonctioning-list__circle {
   background: rgb(146, 86, 220);
   width: 1.5rem;
   height: 1.5rem;
@@ -973,21 +1018,21 @@ body {
   top: 25%;
   transform: translateY(40%);
 }
-.functioning .functioning-list__number {
+.functioning .functioning-list .functioning-list__number {
   margin-top: 0.25rem;
 }
-.functioning .functioning-list_icon {
+.functioning .functioning-list .functioning-list_icon {
   color: #7E7E7E;
   margin-right: 1.6875rem;
   transition: transform 0.3s;
 }
-.functioning .functioning-list_icon:hover {
+.functioning .functioning-list .functioning-list_icon:hover {
   color: rgb(146, 86, 220);
 }
-.functioning .functioning-list_links {
+.functioning .functioning-list .functioning-list_links {
   display: flex;
 }
-.functioning p {
+.functioning .functioning-list p {
   font-size: 1rem;
   font-weight: 500;
 }

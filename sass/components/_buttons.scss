@@ -1,7 +1,7 @@
 //@use '../base/variables' as var;
 @use '../base/mixins' as mix;
 @use '../base/functions' as func;
-//@use '../base/typo' as typo;
+@use '../base/variables' as var;
 @use '../base/index' as base;
 
 
@@ -11,21 +11,20 @@
    @include mix.btn-primary;
     @include mix.shadow-primary;
     min-width: func.rem(218);
-    transition: transform 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
       &:hover {
-        opacity: 80%; 
-        transform: opacity 0.3s ease-in-out;
+        //opacity: 1; 
         cursor: pointer;
-        box-shadow: 0.2rem 0.2rem func.rem(10) rgba(0, 0, 0, 0.5);
-    }
+       background-color: linear-gradient(lighten(var.$secondary-color, 80%), lighten(var.$primary-color,80%) 85%);
+    @include mix.shadow-button(100%);
+      }
 }
 
 
 .button-order {
   padding: func.rem(40);
-  display: flex;
-  justify-content: center;
+@include mix.flex-center(row);
   align-items: center;
 }
 .btn-order {

@@ -49,13 +49,27 @@ body {
 
  .functioning {
    @include mix.flex-center(column);
-    padding: func.rem(20);
+    padding: func.rem(48) func.rem(20);
     background: var.$color-white;
  
+
+    @include media.respond-to(tablet)
+    {
+        padding: func.rem(30) func.rem(45);
+    }
+
+    @include media.respond-to(laptop)
+    {
+        padding: func.rem(30) func.rem(90);
+    }
+    @include media.respond-to(desktop)
+    {
+        padding: func.rem(50) func.rem(180);
+    }
      
     h2 {
         align-self: flex-start;
-        margin: func.rem(25) 0 func.rem(25) 0;
+        margin: 0 0 func.rem(25) 0;
         font-size: typo.$font-size-xxlarge;
         font-weight: typo.$font-weight-bold;
 
@@ -65,7 +79,7 @@ body {
         @include mix.flex-center(row);
         @include mix.button-style-functioning;      
         @include mix.shadow-instructions;
-        margin: func.rem(25) 0;
+        margin: 0 0 func.rem(25) 0;
         max-width: func.rem(335);
         height: auto;
         transition: transform 0.3s;
@@ -75,6 +89,11 @@ body {
                 cursor: pointer;
                 @include mix.shadow-instructions; 
                 transform: scale(0.95)
+            }
+
+            @include media.respond-to(desktop)
+            {
+               margin-bottom: 0;
             }
  }
  
@@ -90,10 +109,12 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         gap: func.rem(40);
-        
     }
 
-    
+    @include media.respond-to(desktop)
+    {
+       justify-content: flex-start;
+       gap: func.rem(60);
    
     }
     .fonctioning-list__circle  {
@@ -123,7 +144,7 @@ body {
         font-size: typo.$font-size-medium; 
         font-weight: typo.$font-weight-medium;
     }
-}    
+}  }  
 
 
 
