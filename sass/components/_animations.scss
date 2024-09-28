@@ -124,8 +124,8 @@
       
         transform: translateY(30px);
     }
+
     100% {
-    
         transform: translateY(0);
     }
 }
@@ -277,7 +277,7 @@
     animation-delay: 2.9s;
 }
 
-//animation des titres des sections entrées plats, desserts, puis de chacune des cartes sans ajouter des classes à chauq ecartes et titres de section dans le html
+//animation des titres des sections entrées plats, desserts, puis de chacune des cartes sans ajouter des classes à chaques cartes et titres de section dans le html
 //boucle des titres des sections
 @for $i from 1 through 4 {
     .menu__cards:nth-of-type(#{$i}) {
@@ -295,6 +295,6 @@
         opacity: 0;
         transform: translateY(-30px);
         animation: fadeInUp var.$base-duration ease-in-out forwards;
-        animation-delay: #{$i * 0.25}s;//delay-increment**********ajuster avec les variables*************/
+        animation-delay: #{$i * 0.25}s;//delay-increment**********ajuster avec les variables, mettre une variable a la place du delai, pour rendre le code plus maintenable*************/
     }
 }
