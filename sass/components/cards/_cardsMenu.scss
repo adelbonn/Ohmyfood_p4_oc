@@ -3,7 +3,7 @@
 @use '../../base/functions' as func;
 @use '../../base/mixins' as mix;
 @use '../../base/typo' as typo;
-
+@use '../../base/mediaqueries' as media;
 
 
 
@@ -11,15 +11,23 @@
     background: var.$color-white;
     border-radius: func.rem(15);
     @include mix.shadow-card;
-     margin: func.rem(16) 0;
+     margin: func.rem(0) 0 func.rem(16);
      cursor: pointer;
 }
 
     .menu__cards {
        
         @include mix.flex-center(column);
+
+        @include media.respond-to('tablet') {
+            margin: 0 auto;
+            max-width: func.rem(634);
         }
-   
+        @include media.respond-to('desktop') {
+            margin: 0 auto;
+            max-width: func.rem(634);
+        }
+    }
     
 
     .menu__title {
@@ -28,7 +36,7 @@
         font-weight: typo.$font-weight-light;
         text-transform: uppercase;
         font-size: typo.$font-size-medium;
-        margin: func.rem(20) 0 func.rem(40);
+        margin: func.rem(40) 0 func.rem(12);
         align-self: start;
         padding-bottom: func.rem(5);
         position: relative;
