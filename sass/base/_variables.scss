@@ -27,7 +27,7 @@ $grey-tint4: #7E7E7E;
 $size: 1rem;
 
 //soulignement titre
-$underline-color: #9356dc;
+$underline-color: #99E2D0;
 $underline-thickness: func.rem(3);
 $underline-length: 50%;
 
@@ -36,12 +36,8 @@ $underline-length: 50%;
 $base-duration: 0.9s;
 $delay-increment: 0.2s;
 
-
-// Variables pour l'animation du rectangle du check et du prix
-$green-color-bagde: #99E2D0;
-
-$price-margin: 15px;
-$icon-size: 25px;
+//variables animation icone cardsMenu
+$icon-size: 20px;
 
 //variables images du hero header
 /****************a reverifier avec ma maquette***************/

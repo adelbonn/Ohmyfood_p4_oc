@@ -1,4 +1,4 @@
-//@use '../base/variables' as var;
+
 @use '../base/mixins' as mix;
 @use '../base/functions' as func;
 @use '../base/variables' as var;
@@ -14,7 +14,7 @@
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
       &:hover {
-        //opacity: 1; 
+        opacity: 90%; 
         cursor: pointer;
        background-color: linear-gradient(lighten(var.$secondary-color, 80%), lighten(var.$primary-color,80%) 85%);
     @include mix.shadow-button(100%);

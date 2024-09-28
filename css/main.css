@@ -388,6 +388,7 @@ h2 {
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .btn:hover {
+  opacity: 90%;
   cursor: pointer;
   background-color: linear-gradient(white, white 85%);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
@@ -536,7 +537,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
   margin-right: -60px;
   height: 80px;
@@ -908,20 +909,46 @@ body {
   padding-top: 2.375rem;
   padding: 2.4rem 1.875rem;
 }
+@media screen and (min-width: 1440px) {
+  .info {
+    padding: 1.875rem 25rem;
+  }
+}
 .info h1 {
   color: #101010;
   font-family: "Roboto", "sans-serif";
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.758125rem;
   text-align: center;
   padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .info h1 {
+    font-size: 2rem;
+    margin-bottom: 0.9375rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.125rem;
+  }
 }
 .info p {
   font-family: "Roboto", "sans-serif";
   font-weight: 300;
   font-size: 1.125rem;
+  line-height: 1.318125rem;
   margin-bottom: 1.6875rem;
   align-self: center;
+  color: #353535;
+}
+@media screen and (min-width: 1024px) {
+  .info p {
+    font-size: 1.125rem;
+    margin-bottom: 1.125rem;
+  }
 }
 
 /**section functioning**/

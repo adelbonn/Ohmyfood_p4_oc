@@ -24,21 +24,44 @@ body {
     padding-top: func.rem(38);
     padding: func.rem(38.4) func.rem(30);  
 
+    @include media.respond-to('desktop') {
+        padding: func.rem(30) func.rem(400);
+    }
+
     h1 {
         color: var.$color-black;
         font-family: typo.$primary-font;
         font-size: func.rem(24);
         font-weight: typo.$font-weight-bold;
+        line-height: func.rem(28.13);
         text-align: center;
         padding-bottom: func.rem(8); 
+
+        @include media.respond-to('tablet') {
+            font-size: typo.$font-size-title-home-tablet;
+            margin-bottom: func.rem(15);
+        }
+    
+    @include media.respond-to (laptop) {
+        font-size: typo.$font-size-title-home-desktop;
+       margin-bottom: func.rem(18);
     }
+}
 
     p {
         font-family: typo.$primary-font;
         font-weight: typo.$font-weight-light;
         font-size: func.rem(18);
+        line-height: func.rem(21.09);
         margin-bottom: func.rem(27);
-        align-self: center; 
+        align-self: center;
+        color: var.$color-grey; 
+
+           
+    @include media.respond-to (laptop) {
+        font-size: typo.$font-size-xlarge;
+       margin-bottom: func.rem(18);
+    }
     }
 
 }
