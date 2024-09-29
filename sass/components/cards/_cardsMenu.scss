@@ -9,6 +9,7 @@
 
 %cards-menus {
     background: var.$color-white;
+    height: func.rem(70);
     border-radius: func.rem(15);
     @include mix.shadow-card;
      margin: func.rem(0) 0 func.rem(16);
@@ -60,8 +61,7 @@
         
         @extend %cards-menus;
         overflow: hidden;
-        white-space: nowrap;
-        //text-overflow: ellipsis;
+      
         }
 
         .menu__content {
@@ -69,51 +69,54 @@
             flex-direction: column;
             justify-content: space-between;
             gap: func.rem(5);
-            overflow: hidden;
+            overflow-x: hidden;
              flex: 1 1 auto;
+    
          
 
-          & h3 {
-            padding: func.rem(15) func.rem(15) 0;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-         }
+              & h3, & p {
+               padding: func.rem(15) func.rem(15) 0;
+               overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;           
+                }
 
             & p {
-                padding: 0 func.rem(15) func.rem(15);
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                padding: func.rem(0) func.rem(15) func.rem(15);
+                            
             }
+         
 
           .menu__second_row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-           
+            overflow: hidden;   
+            text-overflow: ellipsis; 
+            white-space: nowrap;       
          }         
         
          .menu__price {
             flex-shrink: 0;
             transition: transform 0.3s ease-in-out;
             font-weight: typo.$font-weight-bold;
-        
+           // padding-left: 10px;
+           
+          
            
 
         } 
     }
   
   .menu__check {
-    display: flex;
-    justify-content: center;
+   @include mix.flex-center(row);
     align-items: center;
     font-size: var.$icon-size;
     color: var.$color-white;
-    margin-right: -60px;
+    margin-right: -59px;
    
-    height: 80px;
-    width: 59px;
+    height: func.rem(70);
+    width: func.rem(59);
     border-radius: 0 func.rem(15) func.rem(15) 0;
     background: var.$green-color-bagde;
     transition: transform 0.3s ease-in-out;
@@ -141,22 +144,28 @@
 
   .menu__items:hover .menu__check
    {
-   margin-left: 10;
+   //margin-left: 10px;
    transform: translateX(-100%);
   }
-    
+  .menu__checkbox:checked + .menu__label  .menu__price {
+  
+    margin-left: auto;
+  }
+
+
    .menu__items:hover .menu__price
     {
     transform: translateX(-100%);
     }  
       
-//rognage du texte des cartes au hover et au checked
+//rognage du texte des cartes au hover et au checked + 
 
 .menu__label:hover .menu__content h3,
 .menu__checkbox:checked + .menu__label .menu__content h3 {
    overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
+   //flex-shrink: 1;
 }
 
 .menu__label:hover .menu__content p,
@@ -164,6 +173,7 @@
     overflow: hidden;
     white-space: nowrap;
    text-overflow: ellipsis;
+   //flex-shrink: 1;
 
 }
     
