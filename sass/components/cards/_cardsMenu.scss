@@ -53,6 +53,7 @@
         }
     }
 
+
     .menu__items {
         
          display: flex;
@@ -69,8 +70,8 @@
             flex-direction: column;
             justify-content: space-between;
             gap: func.rem(5);
-            overflow-x: hidden;
-             flex: 1 1 auto;
+            overflow-x: hidden;           
+            flex: 1 1 auto;
     
          
 
@@ -82,8 +83,7 @@
                 }
 
             & p {
-                padding: func.rem(0) func.rem(15) func.rem(15);
-                            
+                padding: func.rem(0) func.rem(15) func.rem(15);                          
             }
          
 
