@@ -160,6 +160,7 @@ h2 {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
+  margin-top: 50px;
   animation: appaer 0.3s backwards, flash 1s 1.2s infinite backwards, dotSaute 1s 1s alternate, fadeOutLoader 3s 2.9s ease-in-out forwards;
 }
 
@@ -291,7 +292,7 @@ h2 {
   box-shadow: 0 0 20px -5px rgba(255, 255, 255, 0.5) inset, 0 -40px 40px -20px rgba(255, 255, 255, 0.5) inset;
   background: linear-gradient(to top, rgb(146, 86, 220), rgb(255, 121, 218));
   background-position: 0px 120px;
-  animation: fill 3s 0.5s ease-in-out infinite;
+  animation: fill 3s 0.2s ease-in-out infinite;
 }
 
 .cup::before {
@@ -326,14 +327,14 @@ h2 {
   color: #353535;
   height: 70px;
   width: 80px;
-  background: linear-gradient(to top, rgb(146, 86, 220), rgb(255, 121, 218));
-  border: 2px solid #99E2D0;
+  background: linear-gradient(to top, rgb(146, 86, 220), #c5e2f8);
+  border: 1px solid #99E2D0;
   position: absolute;
-  left: 30%;
-  top: 5%;
+  left: 25%;
+  top: 0;
   transform: rotate(35deg) translateX(-50%);
   border-radius: 0 10px 0;
-  animation: bounce 2s infinite;
+  animation: bounce 2s 0.25s infinite;
 }
 
 @keyframes bounce {
