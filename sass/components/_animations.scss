@@ -158,7 +158,7 @@
     align-items: center;
     background: var.$color-grey;
     z-index: 99;
-   // animation: fadeOutLoader 3s 2.8s ease-in-out forwards;
+   animation: fadeOutLoader 3s 2.8s ease-in-out forwards;
 }
 
 .lettreloader {
@@ -171,7 +171,7 @@
     color: transparent;
     letter-spacing: 2px;
     margin-top: 50px;
-     animation: appaer 1.8s 1s backwards, flash 1.5s 1s infinite backwards, dotSaute 1.5s 1s ease-in-out alternate backwards, fadeOutLoader 3s 2.9s ease-in-out forwards;
+     animation: appaer 1.8s 1s backwards, flash 1.5s 1s infinite backwards, dotSaute 2s 1s ease-in-out alternate backwards, fadeOutLoader 3s 2.9s ease-in-out forwards;
     
 }
 
@@ -184,12 +184,13 @@
 .dot {
     font-family: typo.$logo-font;
     font-size: 2.5rem;
+    padding-left: 5px;
     background: linear-gradient(90deg, var.$primary-color, var.$secondary-color);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 3px;
-    animation: appaer 2.5s 0.4s ease-in-out infinite,  flash 1s 1s  ease-in-out infinite, dotSaute 1s 1.2s ease-in-out infinite, fadeOutLoader 3s 2.9s ease-in-out forwards;
+    animation: appaer 2s 0.4s ease-in-out infinite,  flash 1.5s 1s  ease-in-out infinite, dotSaute 1s 1.2s ease-in-out infinite, fadeOutLoader 3s 2.9s ease-in-out forwards;
 }
 
 
@@ -218,7 +219,7 @@
         transform: translateY(-10px);
     }
     70% {
-        transform: translateY(-5px)scale(1.5);
+        transform: translateY(-2px)scale(1.5);
     }
     80% {
         transform: translateY(-5px)scale(1.8);
@@ -248,7 +249,7 @@
     }
     90% {
         color: var.$secondary-color;
-        text-shadow: 0 0 10px var.$primary-color, 0 0 70px var.$primary-color;
+        text-shadow: 0 0 20px var.$primary-color, 0 0 70px var.$primary-color;
         letter-spacing: 15px;
         transform: perspective(100px) rotateX(-90deg) translateY(10px);
     }
