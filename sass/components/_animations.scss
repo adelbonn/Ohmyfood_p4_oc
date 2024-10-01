@@ -347,27 +347,61 @@ background-color: var.$color-grey;
             transform: translateX(0);
         }
     }
-
-
- .bubble, 
-.bubble2 {
-    height: 15px;
-    width: 15px;
-    background: var.$secondary-color;
+/*.container__bubble {
+    margin: 0 0 5px 0;
+    width: 110px;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    top: -45%;
+    left: 50%;
+}
+*/
+ .bubble 
+ {
+    height: 40px;
+    width: 9px;
+    background: rgba(255, 255, 255, 0.4);
     border: 1px solid grey;
     position: relative;
     left: 50%;
     top: -50%;
-    transform: rotate(90deg) translateX(-50%);
-    border-radius: 100%;
+    transform: rotate(90deg);
+    border-radius: 0 100%;
+    animation: bubble 3s ease-in-out infinite backwards;
+}
+.bubble::after 
+{
+   height: 45px;
+   width: 9px;
+   background: rgba(255, 255, 255, 0.2);
+   border: 1px solid grey;
+   position: absolute;
+   left: 50%;
+   top: -50%;
+   transform: rotate(90deg);
+   border-radius: 0 100%;
+   animation: bubble 3s ease-in-out infinite backwards;
+}
+
+.bubble2 {
+    display:inline-block;
+    height: 55px;
+    width: 9px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid grey;
+    position: relative;
+    left: 50%;
+    top: -50%;
+    transform: rotate(12deg);
+    border-radius:  0 100%;
     animation: bubble 3s ease-in-out infinite backwards;
 }
 
 
-
 @keyframes bubble {
     0% {
-        transform: translateY(26px);
+        transform: translateY(12px);
         box-shadow: 4px -10px rgba(255, 255, 255, 0), 6px 0px rgba(255, 255, 255, 0), 8px -15px rgba(255, 255, 255, 0), 12px 0px rgba(255, 255, 255, 0);
     }
     20% {
@@ -390,7 +424,7 @@ background-color: var.$color-grey;
 
     100% {
 
-        transform: translateY(-100px);
+       transform: translateY(-100px);
         box-shadow: 4px -100px rgba(255, 255, 255, 0), 8px -90px rgba(255, 255, 255, 0), 10px -120px rgba(255, 255, 255, 0), 15px -45px rgba(255, 255, 255, 0);
     }
 }
