@@ -149,7 +149,6 @@ h2 {
   align-items: center;
   background: #353535;
   z-index: 99;
-  animation: fadeOutLoader 3s 2.8s ease-in-out forwards;
 }
 
 .lettreloader {
@@ -336,7 +335,7 @@ h2 {
   left: 25%;
   top: 0;
   transform: rotate(35deg) translateX(-50%);
-  border-radius: 0 10px 0;
+  border-radius: 3px 3px 10px 3px;
   animation: bounce 2s 0.25s infinite;
 }
 
@@ -362,24 +361,27 @@ h2 {
   position: relative;
   left: 50%;
   top: -50%;
-  border-radius: 50%;
+  transform: rotate(90deg) translateX(-50%);
+  border-radius: 100%;
   animation: bubble 3s ease-in-out infinite backwards;
 }
 
 @keyframes bubble {
   0% {
-    box-shadow: 4px -10px rgba(255, 255, 255, 0), 6px 0px rgba(255, 255, 255, 0), 8px -15px regba(255, 255, 255, 0), 12px 0px rgba(255, 255, 255, 0);
+    transform: translateY(26px);
+    box-shadow: 4px -10px rgba(255, 255, 255, 0), 6px 0px rgba(255, 255, 255, 0), 8px -15px rgba(255, 255, 255, 0), 12px 0px rgba(255, 255, 255, 0);
   }
   20% {
     box-shadow: 4px -20px rgba(255, 255, 255, 0), 8px -10px rgba(255, 255, 255, 0), 10px -30px rgba(255, 255, 255, 0.5), 15px -5px rgba(255, 255, 255, 0);
   }
   40% {
-    box-shadow: 2px -40px rgba(255, 255, 255, 0.5), 8px -30px rgba(255, 255, 255, 0.4), 8px -60pw rgba(255, 255, 255, 0.5), 12px -15px rgba(255, 255, 255, 0.5);
+    box-shadow: 2px -40px rgba(255, 255, 255, 0.5), 8px -30px rgba(255, 255, 255, 0.4), 8px -60px rgba(255, 255, 255, 0.5), 12px -15px rgba(255, 255, 255, 0.5);
   }
   60% {
     box-shadow: 4px -60px rgba(255, 255, 255, 0.5), 6px -50px rgba(255, 255, 255, 0.4), 10px -90px rgba(255, 255, 255, 0.5), 15px -25px rgba(255, 255, 255, 0.5);
   }
   80% {
+    transform: translateY(-50px);
     box-shadow: 2px, -80px, rgba(255, 255, 255, 0.5), 4px -70px rgba(255, 255, 255, 0.4), 8px -120px rgba(255, 255, 255, 0), 12px -35px rgba(255, 255, 255, 0.5);
   }
   100% {
