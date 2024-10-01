@@ -12,7 +12,7 @@
     height: func.rem(70);
     border-radius: func.rem(15);
     @include mix.shadow-primary;
-    margin: func.rem(16) 0;
+    margin: func.rem(12) 0 func.rem(0) 0;
      cursor: pointer;
 }
 
@@ -30,6 +30,12 @@
         }
     }
     
+    .menu__section-plats {
+        display: flex;
+        flex-direction: column;
+        gap: func.rem(12);
+        //margin: func.rem(10) 0;
+    }
 
     .menu__title {
         display: inline-block;
@@ -37,7 +43,7 @@
         font-weight: typo.$font-weight-light;
         text-transform: uppercase;
         font-size: typo.$font-size-medium;
-        margin: func.rem(40) 0 func.rem(12);
+        margin: func.rem(40) 0 func.rem(0);//change second func.rem(12) to func.rem(0)
         align-self: start;
         padding-bottom: func.rem(5);
         position: relative;
