@@ -18,22 +18,22 @@ h2 {
 /*button header*/
 /*buttons functioning*/
 /*hearts*/
-.loader__anim--container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #353535;
-  z-index: 10;
-  animation: fadeOutLoader 3s ease-in-out forwards;
-}
+/*.loader__anim--container {
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var.$color-grey;
+    z-index: 10;
+    animation: fadeOutLoader 3s ease-in-out forwards;
 
+}*/
 @keyframes fadeOutLoader {
   0% {
     opacity: 1;
@@ -52,80 +52,86 @@ h2 {
     z-index: -10;
   }
 }
-.loader__circle--anim {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.loader__circle--anim .loader__circle {
-  display: block;
-  position: relative;
-  width: clamp(300px, 20vw, 350px);
-  height: clamp(300px, 20vw, 350px);
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: rgb(255, 121, 218);
-  animation: rotate-circle 3s linear infinite;
-}
-.loader__circle--anim .loader__circle::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: rgb(146, 86, 220);
-  animation: rotate-circle 2.5s alternate infinite;
-}
-.loader__circle--anim .loader__circle::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #89c8fa;
-  animation: rotate-circle 1s alternate infinite;
-}
+/*.loader__circle--anim {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loader__circle {
+        display: block;
+        position: relative;
+        width:clamp(300px, 20vw, 350px);
+        height: clamp(300px, 20vw, 350px);
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: var.$secondary-color;
+        animation: rotate-circle 3s linear infinite;
+
+
+    &::before {
+        content:'';
+        position: absolute;
+        top:5px;
+        left: 5px;
+        right:5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: var.$primary-color;
+        animation: rotate-circle 2.5s alternate infinite;
+    }
+
+    &::after {
+        content:'';
+        position: absolute;
+        top:15px;
+        left: 15px;
+        right:15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: var.$background-color2;
+        animation: rotate-circle 1s alternate infinite;
+    }
+}}
+
 
 @keyframes rotate-circle {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+   100% {
+        transform: rotate(360deg);
+    }
 }
-.loader___text {
-  position: absolute;
-  font-family: "shrikhand", "cursive";
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  background: linear-gradient(90deg, rgb(146, 86, 220), rgb(255, 121, 218));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: fadeInText 2s ease-in-out forwards;
-}
-@media screen and (min-width: 768px) {
-  .loader___text {
-    font-size: 3rem;
-  }
-}
+//texte (Ohmyfood) au centre des cercles loader (1er loadare)
 
-@keyframes fadeInText {
-  0% {
-    transform: translateY(30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.loader___text {
+    position: absolute;
+    font-family: typo.$logo-font;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    background: linear-gradient(90deg, var.$primary-color, var.$secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeInText 2s ease-in-out forwards; 
+
+    @include media.respond-to(tablet) {
+        font-size: 3rem;
+    }
 }
+@keyframes fadeInText {
+    0% {
+
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -160,51 +166,51 @@ h2 {
   color: transparent;
   letter-spacing: 2px;
   margin-top: 50px;
-  animation: appaer 1s 1s backwards, flash 1.5s 1s infinite backwards, dotSaute 1s 1s ease-in-out alternate backwards, fadeOutLoader 3s 2.9s ease-in-out forwards;
+  animation: appaer 1.8s 1s backwards, flash 1.5s 1s infinite backwards, dotSaute 1.5s 1s ease-in-out alternate backwards, fadeOutLoader 3s 2.9s ease-in-out forwards;
 }
 
 .lettreloader:nth-of-type(1) {
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
 }
 
 .lettreloader:nth-of-type(2) {
-  animation-delay: 0.4s;
-}
-
-.lettreloader:nth-of-type(3) {
   animation-delay: 0.6s;
 }
 
+.lettreloader:nth-of-type(3) {
+  animation-delay: 0.9s;
+}
+
 .lettreloader:nth-of-type(4) {
-  animation-delay: 0.8s;
-}
-
-.lettreloader:nth-of-type(5) {
-  animation-delay: 1s;
-}
-
-.lettreloader:nth-of-type(6) {
   animation-delay: 1.2s;
 }
 
-.lettreloader:nth-of-type(7) {
-  animation-delay: 1.4s;
+.lettreloader:nth-of-type(5) {
+  animation-delay: 1.5s;
 }
 
-.lettreloader:nth-of-type(8) {
-  animation-delay: 1.6s;
-}
-
-.lettreloader:nth-of-type(9) {
+.lettreloader:nth-of-type(6) {
   animation-delay: 1.8s;
 }
 
+.lettreloader:nth-of-type(7) {
+  animation-delay: 2.1s;
+}
+
+.lettreloader:nth-of-type(8) {
+  animation-delay: 2.4s;
+}
+
+.lettreloader:nth-of-type(9) {
+  animation-delay: 2.7s;
+}
+
 .lettreloader:nth-of-type(10) {
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 .lettreloader:nth-of-type(11) {
-  animation-delay: 2.2s;
+  animation-delay: 3.3s;
 }
 
 .dot {
