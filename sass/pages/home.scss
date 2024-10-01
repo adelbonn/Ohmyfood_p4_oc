@@ -116,6 +116,7 @@ body {
 
             @include media.respond-to(desktop)
             {
+                gap: 0 func.rem(25);
                margin-bottom: 0;
             }
  }
@@ -134,12 +135,11 @@ body {
         gap: func.rem(40);
     }
 
-    @include media.respond-to(desktop)
+   /* @include media.respond-to(desktop)
     {
-       justify-content: flex-start;
-       gap: func.rem(60);
-   
-    }
+       gap: func.rem(60) func.rem(40);
+    }*/
+
     .fonctioning-list__circle  {
         @include mix.circle-number;
     }

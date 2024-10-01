@@ -2,6 +2,7 @@
 @use 'functions' as func;
 @use 'typo' as typo;
 @use 'base' as base;
+@use 'mixins' as mix;
 
 /*%badge-new {
     background: var.$primary-color;
@@ -21,6 +22,8 @@
    margin-bottom: func.rem(12) ;
 }
 
+
+
 %badgeNew {
   position: absolute;
   content:'Nouveau';
@@ -34,4 +37,8 @@
   right: 3%;
   font-size: typo.$font-size-x-small;
   color: var.$green-font-badge;
+}
+
+%shadow-primary {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }

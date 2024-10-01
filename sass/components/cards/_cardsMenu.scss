@@ -54,12 +54,10 @@
     }
 
 
-    .menu__items {
-        
+    .menu__items {       
          display: flex;
          justify-content: space-between;
-         align-items: center;
-        
+         align-items: center;      
         @extend %cards-menus;
         overflow: hidden;
         }
@@ -70,15 +68,15 @@
             flex-direction: column;
             justify-content: space-evenly;
             gap: func.rem(5);
-           overflow:hidden;             
+            overflow:hidden;             
             width: 100%;
-           padding: 0.75rem;
-           transition: width 0.3s ease;
+            padding: func.rem(12);
+            transition: width 0.3s ease;
 
 
          & h3 {
-            font-size: 18px;
-            font-weight: bold;
+            font-size: typo.$font-size-xlarge;
+            font-weight: typo.$font-weight-bold;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -90,17 +88,17 @@
          }      
 
          .menu__description {
-            font-size: 15px;
+            font-size: typo.$font-size-small;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             width: 100%;
-            margin-right: 0.25rem;
+            margin-right: func.rem(4);
           }
 
           .menu__price {
-            font-size: 15px;
-            font-weight: bold;
+            font-size: typo.$font-size-small;
+            font-weight: typo.$font-weight-bold;
           }
 
     }
@@ -110,14 +108,13 @@
     align-items: center;
     font-size: var.$icon-size;
     color: var.$color-white;
-    margin-right: -59px;
+    margin-right: func.rem(-59);
    
     height: func.rem(70);
     width: func.rem(59);
     border-radius: 0 func.rem(15) func.rem(15) 0;
     background: var.$green-color-bagde;
-
-   transition: margin-right 0.5s ease;
+    transition: margin-right 0.5s ease;
   } 
 
 
@@ -136,21 +133,13 @@
 
 
 
-  .menu__items:hover .menu__check
+  .menu__items:hover .menu__check,
+  .menu__items:hover .menu__price
    {
    margin-right: 0px;
   }
-
-   .menu__items:hover .menu__price
-    {
- 
-    margin-right: 0;
-    }  
-    
- .menu__checkbox:checked + .menu__label .menu__check {
-    margin-right: 0;
-  }
-
+   
+ .menu__checkbox:checked + .menu__label .menu__check,
   .menu__checkbox:checked + .menu__label .menu__price {
     margin-right: 0;
   }
