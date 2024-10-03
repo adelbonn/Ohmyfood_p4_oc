@@ -14,10 +14,9 @@ h2 {
   font-family: "Roboto", "sans-serif";
 }
 
-/*shadow card*/ /*********revérifier si les cartes ont bien des shadows**********************/
+/*shadows*/
 /*button header*/
 /*buttons functioning*/
-/*hearts*/
 /*.loader__anim--container {
     position: fixed;
     top:0;
@@ -402,7 +401,7 @@ h2 {
 
 @keyframes bubble {
   0% {
-    transform: translateY(12px);
+    transform: translateY(0px);
     box-shadow: 4px -10px rgba(255, 255, 255, 0), 6px 0px rgba(255, 255, 255, 0), 8px -15px rgba(255, 255, 255, 0), 12px 0px rgba(255, 255, 255, 0);
   }
   20% {
@@ -415,11 +414,11 @@ h2 {
     box-shadow: 4px -60px rgba(255, 255, 255, 0.5), 6px -50px rgba(255, 255, 255, 0.4), 10px -90px rgba(255, 255, 255, 0.5), 15px -25px rgba(255, 255, 255, 0.5);
   }
   80% {
-    transform: translateY(-50px);
+    transform: translateY(-10px);
     box-shadow: 2px, -80px, rgba(255, 255, 255, 0.5), 4px -70px rgba(255, 255, 255, 0.4), 8px -120px rgba(255, 255, 255, 0), 12px -35px rgba(255, 255, 255, 0.5);
   }
   100% {
-    transform: translateY(-100px);
+    transform: translateY(-40px);
     box-shadow: 4px -100px rgba(255, 255, 255, 0), 8px -90px rgba(255, 255, 255, 0), 10px -120px rgba(255, 255, 255, 0), 15px -45px rgba(255, 255, 255, 0);
   }
 }
@@ -449,25 +448,46 @@ h2 {
   animation-delay: 0.25s;
 }
 
-.menu__title--anim1 {
+/*animations, à l'arrivée sur la page menu, des titres puis des cartes*/
+/*.menu__title--anim1 {
   opacity: 0;
   transform: translateY(-30px);
-  animation: fadeInUp 0.9s ease-in-out forwards;
+  animation: fadeInUp var.$base-duration ease-in-out forwards;
   animation-delay: 0.3s;
 }
 
 .menu__title--anim2 {
   opacity: 0;
   transform: translateY(-30px);
-  animation: fadeInUp 0.9s ease-in-out forwards;
+  animation: fadeInUp var.$base-duration ease-in-out forwards;
   animation-delay: 0.5s;
 }
 
 .menu__title--anim3 {
   opacity: 0;
   transform: translateY(-30px);
-  animation: fadeInUp 0.9s ease-in-out forwards;
+  animation: fadeInUp var.$base-duration ease-in-out forwards;
   animation-delay: 0.7s;
+}*/
+.menu__title--anim1 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInUp 0.9s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+.menu__title--anim2 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInUp 0.9s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+.menu__title--anim3 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInUp 0.9s ease-in-out forwards;
+  animation-delay: 0.6s;
 }
 
 /*.menu__label--anim1 {
@@ -644,20 +664,6 @@ h2 {
   animation-delay: 2.5s;
 }
 
-.menu__label:nth-of-type(11) {
-  opacity: 0;
-  transform: translateY(-30px);
-  animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 2.75s;
-}
-
-.menu__label:nth-of-type(12) {
-  opacity: 0;
-  transform: translateY(-30px);
-  animation: fadeInUp 0.9s ease-in-out forwards;
-  animation-delay: 3s;
-}
-
 /**button gradient**/
 .btn {
   width: 13.625rem;
@@ -735,7 +741,7 @@ h2 {
   background: #fff;
   height: 4.375rem;
   border-radius: 0.9375rem;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   margin: 0.75rem 0 0rem 0;
   cursor: pointer;
 }
@@ -758,12 +764,12 @@ h2 {
   }
 }
 
-.menu__section-plats {
+/*.menu__section-plats {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-}
-
+  gap: func.rem(12);
+  //margin: func.rem(10) 0;
+}*/
 .menu__title {
   display: inline-block;
   font-family: "Roboto", "sans-serif";
@@ -839,7 +845,7 @@ h2 {
   width: 3.6875rem;
   border-radius: 0 0.9375rem 0.9375rem 0;
   background: #99E2D0;
-  transition: margin-right 0.5s ease;
+  transition: margin-right 0.5s ease, transform 0.5s ease;
 }
 
 .menu__checkbox {
@@ -1101,6 +1107,7 @@ header {
 
 .eateries-cards {
   width: 340px;
+  height: 251px;
   height: auto;
 }
 @media screen and (min-width: 1440px) {
@@ -1133,7 +1140,6 @@ header {
     gap: 3.125rem 6.25rem;
   }
 }
-
 .eateries .cards-eateries__heart {
   position: relative;
   width: 1.5625rem;

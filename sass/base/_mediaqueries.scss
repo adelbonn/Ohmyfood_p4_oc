@@ -1,8 +1,8 @@
 //Mobile first Approach
 
 @mixin respond-to($breakpoint) {
-    @if $breakpoint == phone {
-        @media screen and (min-width: 375px) {
+    @if $breakpoint == mini-phone {
+        @media screen and (min-width: 320px) {
             @content;
         }
     }
@@ -18,6 +18,11 @@
     }
     @if $breakpoint == desktop {
         @media screen and (min-width: 1440px) {
+            @content;
+        }
+    }
+    @if $breakpoint == large-desktop {
+        @media screen and (min-width: 1920px) {
             @content;
         }
     }

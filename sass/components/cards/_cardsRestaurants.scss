@@ -105,10 +105,11 @@
 
 
 .eateries-cards {
-   width: 340px;
+    width: 340px;
+    height: 251px;
     height: auto;
     @include media.respond-to('desktop'){
-max-width: 490px;
+    max-width: 490px;
 }
 }
 
@@ -131,11 +132,14 @@ max-width: 490px;
         //padding: func.rem(30) func.rem(50);
     }
 
-    
     @include media.respond-to('desktop') {
      //padding: func.rem(30) func.rem(180);
      gap: func.rem(50) func.rem(100);
-}
+    }
+
+    @include media.respond-to('large-desktop') {
+        
+    }
 }
 
 .eateries .cards-eateries__heart {

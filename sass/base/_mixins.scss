@@ -8,12 +8,11 @@
 
 
 
-//shadows
+/*shadows*/
 
-//shadow header +badge;/************mettre en placeholder***************/
 @mixin shadow-primary {box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15); } 
 
- /*shadow card*//*********revérifier si les cartes ont bien des shadows**********************/
+ //shadow card
 @mixin shadow-card {box-shadow:  0 4px 15px 0 rgba(0, 0, 0, 0.10);}
 
 
@@ -82,7 +81,7 @@
 }
 
 
-/*hearts*///mixin des coeurs
+//mixin des coeurs
 
 @mixin heart-icon($width, $height, $primary-color, $secondary-color) {
 

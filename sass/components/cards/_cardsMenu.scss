@@ -1,153 +1,139 @@
-
-@use '../../base/variables' as var;
-@use '../../base/functions' as func;
-@use '../../base/mixins' as mix;
-@use '../../base/typo' as typo;
-@use '../../base/mediaqueries' as media;
-
-
+@use "../../base/variables" as var;
+@use "../../base/functions" as func;
+@use "../../base/mixins" as mix;
+@use "../../base/typo" as typo;
+@use "../../base/mediaqueries" as media;
 
 %cards-menus {
-    background: var.$color-white;
-    height: func.rem(70);
-    border-radius: func.rem(15);
-    @include mix.shadow-primary;
-    margin: func.rem(12) 0 func.rem(0) 0;
-     cursor: pointer;
+  background: var.$color-white;
+  height: func.rem(70);
+  border-radius: func.rem(15);
+  @include mix.shadow-card;
+  margin: func.rem(12) 0 func.rem(0) 0;
+  cursor: pointer;
 }
 
-    .menu__cards {
-       
-        @include mix.flex-center(column);
+.menu__cards {
+  @include mix.flex-center(column);
 
-        @include media.respond-to('tablet') {
-            margin: 0 auto;
-            max-width: func.rem(634);
-        }
-        @include media.respond-to('desktop') {
-            margin: 0 auto;
-            max-width: func.rem(634);
-        }
-    }
-    
-    .menu__section-plats {
-        display: flex;
-        flex-direction: column;
-        gap: func.rem(12);
-        //margin: func.rem(10) 0;
-    }
+  @include media.respond-to("tablet") {
+    margin: 0 auto;
+    max-width: func.rem(634);
+  }
+  @include media.respond-to("desktop") {
+    margin: 0 auto;
+    max-width: func.rem(634);
+  }
+}
 
-    .menu__title {
-        display: inline-block;
-        font-family: typo.$primary-font;
-        font-weight: typo.$font-weight-light;
-        text-transform: uppercase;
-        font-size: typo.$font-size-medium;
-        margin: func.rem(40) 0 func.rem(0);//change second func.rem(12) to func.rem(0)
-        align-self: start;
-        padding-bottom: func.rem(5);
-        position: relative;
-      &::after {
-            content:'';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50%;
-            background : var.$green-color-bagde;
-            height: func.rem(3);
-            margin-top:func.rem(5);
-        }
-    }
+/*.menu__section-plats {
+  display: flex;
+  flex-direction: column;
+  gap: func.rem(12);
+  //margin: func.rem(10) 0;
+}*/
 
-
-    .menu__items {       
-         display: flex;
-         justify-content: space-between;
-         align-items: center;      
-        @extend %cards-menus;
-        overflow: hidden;
-        }
-
-        .menu__content {
-        
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            gap: func.rem(5);
-            overflow:hidden;             
-            width: 100%;
-            padding: func.rem(12);
-            transition: width 0.3s ease;
-
-
-         & h3 {
-            font-size: typo.$font-size-xlarge;
-            font-weight: typo.$font-weight-bold;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-         }
-             
-          .menu__second_row {
-            display: flex;
-            justify-content: space-between;   
-         }      
-
-         .menu__description {
-            font-size: typo.$font-size-small;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 100%;
-            margin-right: func.rem(4);
-          }
-
-          .menu__price {
-            font-size: typo.$font-size-small;
-            font-weight: typo.$font-weight-bold;
-          }
-
-    }
-  
-  .menu__check {
-   @include mix.flex-center(row);
-    align-items: center;
-    font-size: var.$icon-size;
-    color: var.$color-white;
-    margin-right: func.rem(-59);
-   
-    height: func.rem(70);
-    width: func.rem(59);
-    border-radius: 0 func.rem(15) func.rem(15) 0;
+.menu__title {
+  display: inline-block;
+  font-family: typo.$primary-font;
+  font-weight: typo.$font-weight-light;
+  text-transform: uppercase;
+  font-size: typo.$font-size-medium;
+  margin: func.rem(40) 0 func.rem(0); //change second func.rem(12) to func.rem(0)
+  align-self: start;
+  padding-bottom: func.rem(5);
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
     background: var.$green-color-bagde;
-    transition: margin-right 0.5s ease;
-  } 
+    height: func.rem(3);
+    margin-top: func.rem(5);
+  }
+}
 
+.menu__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend %cards-menus;
+  overflow: hidden;
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: func.rem(5);
+  overflow: hidden;
+  width: 100%;
+  padding: func.rem(12);
+  transition: width 0.3s ease;
+
+  & h3 {
+    font-size: typo.$font-size-xlarge;
+    font-weight: typo.$font-weight-bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .menu__second_row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu__description {
+    font-size: typo.$font-size-small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin-right: func.rem(4);
+  }
+
+  .menu__price {
+    font-size: typo.$font-size-small;
+    font-weight: typo.$font-weight-bold;
+  }
+}
+
+.menu__check {
+  @include mix.flex-center(row);
+  align-items: center;
+  font-size: var.$icon-size;
+  color: var.$color-white;
+  margin-right: func.rem(-59);
+
+  height: func.rem(70);
+  width: func.rem(59);
+  border-radius: 0 func.rem(15) func.rem(15) 0;
+  background: var.$green-color-bagde;
+  transition: margin-right 0.5s ease, transform 0.5s ease;
+}
 
 //input de type checkbox pour permettre a l'utilisateur de pouvoir sélectionner le plat qui lui convient, en cliquant dessus, et de le voir sélectioner a l'écran ou s'il n'en veux plus de le déselectionner en recliquant dessus(pour la simulation de la première version du site)
 
 .menu__checkbox {
-    display: none;
+  display: none;
 }
 
 .menu__label {
-    cursor: pointer;
-    display: block;
-    position: relative;
-    transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
 }
 
+.menu__items:hover .menu__check,
+.menu__items:hover .menu__price {
+  margin-right: 0px;
+}
 
-
-  .menu__items:hover .menu__check,
-  .menu__items:hover .menu__price
-   {
-   margin-right: 0px;
-  }
-   
- .menu__checkbox:checked + .menu__label .menu__check,
-  .menu__checkbox:checked + .menu__label .menu__price {
-    margin-right: 0;
-  }
-
-     
+.menu__checkbox:checked + .menu__label .menu__check,
+.menu__checkbox:checked + .menu__label .menu__price {
+  margin-right: 0;
+}
