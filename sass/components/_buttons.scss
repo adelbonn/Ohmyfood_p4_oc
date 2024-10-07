@@ -1,33 +1,32 @@
-
-@use '../base/mixins' as mix;
-@use '../base/functions' as func;
-@use '../base/variables' as var;
-@use '../base/index' as base;
-
+@use "../base/mixins" as mix;
+@use "../base/functions" as func;
+@use "../base/variables" as var;
+@use "../base/index" as base;
 
 /**button gradient**/
 
-.btn  {
-   @include mix.btn-primary;
-    @include mix.shadow-primary;
-    min-width: func.rem(218);
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.btn {
+  @include mix.btn-primary;
+  @include mix.shadow-primary;
+  min-width: func.rem(218);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
-      &:hover {
-        opacity: 90%; 
-        cursor: pointer;
-       background-color: linear-gradient(lighten(var.$secondary-color, 80%), lighten(var.$primary-color,80%) 85%);
+  &:hover {
+    opacity: 90%;
+    cursor: pointer;
+    background-color: linear-gradient(
+      lighten(var.$secondary-color, 80%),
+      lighten(var.$primary-color, 80%) 85%
+    );
     @include mix.shadow-button(100%);
-      }
+  }
 }
-
 
 .button-order {
   padding: func.rem(40);
-@include mix.flex-center(row);
+  @include mix.flex-center(row);
   align-items: center;
 }
 .btn-order {
- @include mix.btn-primary(func.rem(186), func.rem(50));
+  @include mix.btn-primary(func.rem(186), func.rem(50));
 }
-

@@ -1,0 +1,507 @@
+[33mcommit 7de87aeec10fb738971e228705f6d7ae53c751de[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev-modif[m[33m)[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Oct 3 21:24:59 2024 +0200
+
+    refactorisation du code pour animation des titres des section entrées, plats, desserts
+
+[33mcommit 0efcf133ab2102aac2823bbdc61b1fcf2aed9c22[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Wed Oct 2 00:50:58 2024 +0200
+
+    correction mise en page des cartes menus
+
+[33mcommit 7ac96ac11528ff6baefad8c1717027a9c036f005[m[33m ([m[1;31morigin/dev-modif[m[33m)[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Wed Oct 2 00:32:25 2024 +0200
+
+    refactorisation code cardMenu
+
+[33mcommit 8e9b665eeb8cd9a2c6d99159b83c03aded2664e0[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Oct 1 22:41:56 2024 +0200
+
+    fix: correction menu__price et menu__description, au hover et au checked
+
+[33mcommit 4ca0efdcdbf3178b716f1849a6ff9d1c240a646b[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Oct 1 18:50:26 2024 +0200
+
+    réglage text loader
+
+[33mcommit d2ca4cf4e628124a1bd0d89661270086ee6ae1a4[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Oct 1 18:11:48 2024 +0200
+
+    ajustements bubble loader
+
+[33mcommit 8b44443ff9992ed39d7db072ffe9705b1180aa34[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Oct 1 17:00:20 2024 +0200
+
+    ajustements du départ des bulles du loader
+
+[33mcommit f56f120aa6467ccce7d99a1067c1ebad66149aff[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Oct 1 16:11:58 2024 +0200
+
+    ajustements sur le loader
+
+[33mcommit aec4a1fe79564ac0d77b2daa7fc7f293732c7044[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Mon Sep 30 21:04:02 2024 +0200
+
+    mise en place du nouveau loader sur la page page acceuil
+
+[33mcommit d492037cb2e9291ad321a2bdf728fcbf27b2280c[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Mon Sep 30 20:35:37 2024 +0200
+
+    ajustement lettres du loader page menu
+
+[33mcommit 50f5681b9002c1ba140cb9b2c8dfde1a3b68a4c2[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Mon Sep 30 20:17:45 2024 +0200
+
+    ajout loader sur les pages menu des restaurants
+
+[33mcommit 8e21dfe37fb9c54409c9f1930f1c678f725f4419[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Mon Sep 30 19:33:26 2024 +0200
+
+    ajustement sur le loader et ajout des bulles
+
+[33mcommit be3d9a5af59597481aac58fa2ab3b9ce5f86d967[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Mon Sep 30 09:26:36 2024 +0200
+
+    loader2, pages menu
+
+[33mcommit 3f767ae807f40d9ef9e9cca490201dc5f0ab2f57[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sun Sep 29 23:39:31 2024 +0200
+
+    ajout des arria-label aux input de type checkbox dans les pages menus
+
+[33mcommit d4fbbf408b4cfe697db3a446a7c1a67f37b31373[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 28 21:56:44 2024 +0200
+
+    rectif gap
+
+[33mcommit 2fdc62b920d745a8bac33d09e7011d853ec6e15a[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 28 21:55:36 2024 +0200
+
+    rectif gap cardsmenu
+
+[33mcommit 7bf65bab7123c8db71d220d0008b138d760c1ae2[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 28 18:24:23 2024 +0200
+
+    fix ajustements mise en page section info sur la page acceuil en desktop
+
+[33mcommit 0bd8c09fa55ce6d24ce1e37574660f06fcfa10bb[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 28 17:41:57 2024 +0200
+
+    fix: ajustement de la transtion de btn et de l ombre et correction de la mise en page de la page acceuil
+
+[33mcommit 190adc69af616fa51813caae448890d6d4451bc4[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 28 13:51:34 2024 +0200
+
+    fix: ajustements dimensions en accord avec la maquette
+
+[33mcommit d006cf82b1ca86e9be6decd45e7619d55f390e9c[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 28 02:16:55 2024 +0200
+
+    corrections erreurs de frappe html pages menus
+
+[33mcommit c45d9e4ed9b22b5f2f1a1f586667ee534489dcdb[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 27 23:39:09 2024 +0200
+
+    ajout des mediaqueries image du hero header pages menu
+
+[33mcommit 146a155b0fa108dbdecf1111514c332323b38f4e[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 27 23:13:42 2024 +0200
+
+    mise a jour du html des pages menu
+
+[33mcommit 21ff655f9133aa36604b9f8213093c23c5b30e0f[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 27 21:25:32 2024 +0200
+
+    boucles pour animations des cartes du menu une à une et pour animation des titres des section entrées, plats , desserts avec un delay
+
+[33mcommit c91b5cf1cf7b9ebf9f1b912a3fb47b5cada35350[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 27 21:06:39 2024 +0200
+
+    feat: animation des cartes une à une + les titres, page menu
+
+[33mcommit e77269df17dc67ba5fbbc906de75120452f16c88[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 27 13:12:51 2024 +0200
+
+    correction de toutes les cartes dans page delice des sens
+
+[33mcommit 5435e5a42ed2165491a29827a388b1bc625acb95[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 27 12:40:50 2024 +0200
+
+    correction mise en forme des trois cartes entrées (délices des sens)
+
+[33mcommit 4436dd875da656b0f70ae4dee81e4a0e93d233a9[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 27 12:17:19 2024 +0200
+
+    ajustements dimensions, margin, padding, 1ere carte entrée delice de sens
+
+[33mcommit ceb08a7575c0797b423b5ccea6134afe7290516b[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 26 22:03:46 2024 +0200
+
+    ajout checked sur input de type checkbox sur les cartes menu, au clic le rectangle vert reste visible
+
+[33mcommit 2b58f1e9c2416b59fe7b77adc313113be601196e[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 26 21:51:53 2024 +0200
+
+     remise des white-space:nowrap, overflow:hidden, text-overflow ellipsis, sur les contenu menu_items
+
+[33mcommit 8c70c5706c4bccbb9cf31340059d1b70fa6f6dad[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 26 21:30:12 2024 +0200
+
+    ajustement prix/check au hover de menu__item
+
+[33mcommit 2ef17660f0f3aff1ff020d63a66cf59fc5ad41a2[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 26 12:55:05 2024 +0200
+
+    ajustement mise en place coeur titre menu
+
+[33mcommit 6fa7f124a500475df3169a400e5acef77c189b36[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 26 10:24:13 2024 +0200
+
+    centralisation des mediaqueries
+
+[33mcommit aa55d0b82747d51ff8be51676da21df9d69ac1cf[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Wed Sep 25 14:17:21 2024 +0200
+
+    fix: correction texte tronqué au checked
+
+[33mcommit d762d0e8c6ab392ebaa7f6eb44452cc5fef3ddae[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Wed Sep 25 13:22:24 2024 +0200
+
+    fix: apparition/disparition heart-empty/ heart-filled au hover sur la page index
+
+[33mcommit 3ba11d049443e879cec5d737194e02d84dd79633[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Wed Sep 25 12:40:32 2024 +0200
+
+    fix: ajustement déplacement du prix au hover
+
+[33mcommit 46cdd3a37c20610c02c7b74216c7167f6729d154[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Wed Sep 25 12:33:42 2024 +0200
+
+    fix: ajustement opacity texte loader
+
+[33mcommit b066d0d4c9353fea9355749acecd38c488804044[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 24 21:22:02 2024 +0200
+
+    fix: ajustements espacements prix/check
+
+[33mcommit c97423cfe15adb29c09187b97d9f17a7ae298000[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 24 20:04:51 2024 +0200
+
+    fix correction dimensions et espacements check et prix, pages menus
+
+[33mcommit 185c9cee355c968d594709afe25214aa6605177c[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 24 17:04:38 2024 +0200
+
+    fix ajutement placement du check au hover
+
+[33mcommit 5de84388a9d8902de6d673bb4d6c6c194c0f3c97[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 24 16:59:16 2024 +0200
+
+    ajout de media queries sur menu__item:b:before et menu__check--wrap
+
+[33mcommit 72aaca1c2ddec7c8965a4da4ed51449838453c7d[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 24 16:41:55 2024 +0200
+
+    fix border-radius des rectangles vert au hover et au checked
+
+[33mcommit e4ab6c53319f30261b92964571fca0f5ed58b769[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 24 16:36:34 2024 +0200
+
+    feat ajout des petits points quand le texte des cartes est trop long
+
+[33mcommit 9fa83c9223c367e6f2a07abb5dd023a19d11d857[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sun Sep 22 21:27:53 2024 +0200
+
+    fix: correction des soulignement des titres
+
+[33mcommit a8cf8bbfe0b44425abca9fd3c0c0e1a872eec550[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sun Sep 22 21:09:02 2024 +0200
+
+    feat: ajout checkbox + transition du check dans toutes le pages restaurants
+
+[33mcommit 653e7665da80fd1f90d053679ca1dd3c57f140a4[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sun Sep 22 20:05:05 2024 +0200
+
+    fix: déplacement du prix a gauche au hover
+
+[33mcommit 4e2217c7ce538c9ce4a0114d0a48b2af71500dc2[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sun Sep 22 18:24:51 2024 +0200
+
+    feat: ajout checkbox a toutes les cartes (ds delices des sens)
+
+[33mcommit 82a399aa8bcd2808598203ecb8e39b79b3842113[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sun Sep 22 18:13:38 2024 +0200
+
+    feat: ajout checkbox pour que le rectangle vert reste visible au clic et ajout de la transition rotate sur le check au hover
+
+[33mcommit 5ca915c8016bc516bf87df0bf53eabbf510ae9e4[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 21 18:28:19 2024 +0200
+
+    fix: icone check
+
+[33mcommit 6905569a61a6645689f54fdf0d30357c6a8be460[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 21 12:58:06 2024 +0200
+
+    fix: menu__title, ajustement taille des menu__title+coeurs
+
+[33mcommit 22894273a76bd9ed1da91251dc226983b984741b[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 21 10:29:13 2024 +0200
+
+    fix deplacement prix a gauche au hover
+
+[33mcommit 3569d274c03c661a433fa19fa827aa2a779f67df[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 21 09:26:45 2024 +0200
+
+    fix: ajout text loader
+
+[33mcommit fdf2f37da306ee1dc71670b79e9d1ba8313a45e4[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 21 08:58:30 2024 +0200
+
+    feat: loader acceuil
+
+[33mcommit 3e971908ef16a423fee630b7386efd2025dd28db[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 20 14:39:23 2024 +0200
+
+    fix: correction html des cartes page le delice des sens
+
+[33mcommit e3f33b74528235595b20afdc495618ae79f5c71c[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 20 02:44:51 2024 +0200
+
+    animation check(finir de l affiner)
+
+[33mcommit f2c3037a371bcdb296faaeab031ac5ec1b5b9926[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Sep 20 01:40:40 2024 +0200
+
+    fix:ajustement margin container desktop
+
+[33mcommit 1aab62d6a21cbf5574cddc0c8cc2b22237549330[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 19 22:03:10 2024 +0200
+
+    test commit suite reparation et deplacement du dossier
+
+[33mcommit 51676e66b793fd894ba9639bd3f0aaf27a9346ac[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sun Sep 15 15:34:30 2024 +0200
+
+    fix: correction espace sous le container des cartes menus
+
+[33mcommit fb275edab6a5a80ada37324eb40d09f9326dc193[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 12 19:24:57 2024 +0200
+
+    header+flèche ajuster
+
+[33mcommit 4a4bb9992b40d84f279cd5381b0f342e77a9ffa2[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 12 18:53:42 2024 +0200
+
+    finition footers
+
+[33mcommit abb916485a0dd8e976d689fa01312027a05555dd[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 12 10:38:26 2024 +0200
+
+    test affichage
+
+[33mcommit c89f134ceec5b118600ea960017ee70358a37bb3[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Sep 12 09:09:20 2024 +0200
+
+    style pages menus
+
+[33mcommit 96e4c15347c697e6bbfcbe1a3977d551174d5dde[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 10 23:00:32 2024 +0200
+
+    refactorisation code
+
+[33mcommit 75b375f24714bf245c9748eef7887ac2d7b43024[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Mon Sep 9 08:45:39 2024 +0200
+
+    img header pages tt restaurants
+
+[33mcommit 2ecdcbd8f6880dad649446abf6da1f7bd2522ecd[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Mon Sep 9 08:22:45 2024 +0200
+
+    header+img page/restaurants+ supposition
+
+[33mcommit 3e7b1f16991b527728eff27f5ec9bb69ede6426c[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 7 18:56:19 2024 +0200
+
+    ajout mixin buttons order
+
+[33mcommit be974f86a82456d026a13aa603f29766695842a3[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 7 15:49:14 2024 +0200
+
+    add heart
+
+[33mcommit 99a1eed1dec47e8e87c0bec3b165796d2e8d02e7[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 7 13:43:51 2024 +0200
+
+    template des menus
+
+[33mcommit eaa029fbb85924265aef009e25c5a028f1195503[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 7 11:56:05 2024 +0200
+
+    modif link pages resataurants html
+
+[33mcommit c95e24582b53593e54c22de29719ec5103838723[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Sep 7 11:54:04 2024 +0200
+
+    correction des import de fichiers/utilisation de @use et @forward...
+
+[33mcommit 68ad40f32a6a95f2ee55a30bf217d9914b87c5ae[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 3 17:16:13 2024 +0200
+
+    html pages restaurants
+
+[33mcommit 0f11d8d20418dd9e9824c3ffc6af19257bb54767[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 3 17:14:58 2024 +0200
+
+    ajout html pages restaurants
+
+[33mcommit 44e3d1826184745de80a71c9f557ca0dccc86c70[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 3 13:23:08 2024 +0200
+
+    chgt améliorations text-new badge cards eateries
+
+[33mcommit 82e8a540dc4c0e9cab4ea9109426a7ca4aa07807[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Tue Sep 3 11:38:46 2024 +0200
+
+    footer
+
+[33mcommit 616fa70ae2e0cc2a649222e8a45b380789bd64d8[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Mon Sep 2 16:37:06 2024 +0200
+
+    cartes eateries ss animation du coeur
+
+[33mcommit 80a813283d5c728823f212b3d818cc8490c16948[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sun Sep 1 22:00:39 2024 +0200
+
+    ajout fichiers cardsRestaurants cardsMenu
+
+[33mcommit edda792e964bb922913af55cde4e233546856878[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Aug 31 17:03:27 2024 +0200
+
+    correction, function rem +toutes les unités
+
+[33mcommit 05ac082bb9b1ea0fd60f886d6beda38c354c963f[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Aug 29 22:37:29 2024 +0200
+
+    ajustements sectoin info, bg+btn
+
+[33mcommit c71f1f4ad7fd6240da674fa8009c0ac03c1db5a0[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Thu Aug 29 22:15:04 2024 +0200
+
+    section info
+
+[33mcommit 33f9f39d3cf1ed867730655a724b546fe462b5c8[m[33m ([m[1;31morigin/initial-html[m[33m)[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Wed Aug 28 22:03:47 2024 +0200
+
+    scss header
+
+[33mcommit 39081238a3ce06b017cb37a38900a852d819fca5[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Wed Aug 28 01:57:11 2024 +0200
+
+    html page acceuil
+
+[33mcommit 5ccaf0e7d6b848b837beb6b98c8d3fa08f354db3[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Sat Aug 24 02:05:04 2024 +0200
+
+    branch initial-html
+
+[33mcommit 6d81122aa1490b945c2f336125f5fcddd5ab7395[m
+Merge: 0f9b71c e22009f
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Aug 23 03:12:10 2024 +0200
+
+    git commit -m "Merge remote-tracking branch 'origin/main' into main"
+    Merge branch 'main' of https://github.com/adelbonn/Ohmyfood_p4_oc
+
+[33mcommit e22009f37974172eab2c153dad2355d1ec58e66d[m
+Author: adelbonn <ad.bonna@outlook.fr>
+Date:   Fri Aug 23 02:55:20 2024 +0200
+
+    Create README.md
+    
+    readme ohmyfood
+
+[33mcommit 0f9b71cf25b6ce9ec4713fb7ed402cf42b5f3e02[m
+Author: adeline bonnamour <ad.bonna@outlook.fr>
+Date:   Fri Aug 23 02:51:52 2024 +0200
+
+    initial commit avec la structure du projet ohmyfood

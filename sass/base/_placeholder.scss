@@ -1,32 +1,20 @@
-@use '../base/variables' as var; 
-@use 'functions' as func;
-@use 'typo' as typo;
-@use 'base' as base;
-@use 'mixins' as mix;
+@use "../base/variables" as var;
+@use "functions" as func;
+@use "typo" as typo;
+@use "base" as base;
+@use "mixins" as mix;
 
-/*%badge-new {
-    background: var.$primary-color;
-    color: var.$color-white;
-    padding: func.rem(5) func.rem(10);
-    border-radius: base.rem(20);
-    font-size: typo.$font-size-x-small;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-}*/
 
 %cards-menus {
-    background: var.$color-white;
+  background: var.$color-white;
   border-radius: func.rem(15);
-    @include mix.shadow-card;
-   margin-bottom: func.rem(12) ;
+  @include mix.shadow-card;
+  margin-bottom: func.rem(12);
 }
-
-
 
 %badgeNew {
   position: absolute;
-  content:'Nouveau';
+  content: "Nouveau";
   min-height: func.rem(29);
   min-width: func.rem(80);
   background: var.$green-color-bagde;
@@ -38,4 +26,3 @@
   font-size: typo.$font-size-x-small;
   color: var.$green-font-badge;
 }
-

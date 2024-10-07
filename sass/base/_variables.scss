@@ -1,25 +1,23 @@
-@use 'functions' as func;
-//@use '../base/index' as base;
-@debug 'Variables file loaded';
+@use "functions" as func;
+@use "../base/index" as base;
+@debug "Variables file loaded";
 
 //colors
 
 $primary-color: rgb(146, 86, 220);
-$secondary2-color: #FCA311;
 $primary-color2: #c5e2f8;
 $secondary-color: rgb(255, 121, 218);
 
-$green-color-bagde: #99E2D0;
+$green-color-bagde: #99e2d0;
 $green-font-badge: #008766;
 
-$background-color:#f6f6f6;
+$background-color: #f6f6f6;
 $background-color2: #89c8fa;
 $color-black: #101010;
 $color-white: #fff;
-$color-grey2: #EAEAEA;
+$color-grey2: #eaeaea;
 $color-grey: #353535;
-$grey-tint4: #7E7E7E;
-
+$grey-tint4: #7e7e7e;
 
 //main-gradient:  $linear-gradient( $secondary-color, $primary-color 85%)
 
@@ -27,20 +25,19 @@ $grey-tint4: #7E7E7E;
 $size: 1rem;
 
 //soulignement titre
-$underline-color: #99E2D0;
+$underline-color: #99e2d0;
 $underline-thickness: func.rem(3);
 $underline-length: 50%;
-
 
 //variables pour l'animation de la page menu au chargement de la page
 $base-duration: 0.9s;
 $delay-increment: 0.2s;
 
 //variables animation icone cardsMenu
-$icon-size: 20px;
+$icon-size: 22px;
 
 //variables images du hero header
-/****************a reverifier avec ma maquette***************/
+
 $hero-header-height-mobile: 275px;
 $hero-header-height_tablet: 325px;
 $hero-header-heihgt-desktop: 383px;

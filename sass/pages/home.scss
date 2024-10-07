@@ -1,4 +1,4 @@
-@use '../base/index' as base;
+//@use '../base/index' as base;
 @use '../base/variables' as var;
 @use '../base/mixins' as mix;
 @use '../base/functions' as func;
@@ -14,6 +14,8 @@ body {
     padding: 0;
     margin: 0;
 }
+
+
 /***section info**/
 
 .info {

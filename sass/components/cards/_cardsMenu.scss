@@ -26,13 +26,6 @@
   }
 }
 
-/*.menu__section-plats {
-  display: flex;
-  flex-direction: column;
-  gap: func.rem(12);
-  //margin: func.rem(10) 0;
-}*/
-
 .menu__title {
   display: inline-block;
   font-family: typo.$primary-font;
@@ -122,6 +115,7 @@
 }
 
 .menu__label {
+  //z-index:1;
   cursor: pointer;
   display: block;
   position: relative;

@@ -1,279 +1,349 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ohmyfood</title>
-    
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="shortcut icon" href="assets/images/logo/ohmyfood.png" type="image/x-icon"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/main.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-</head>
+      rel="shortcut icon"
+      href="assets/images/logo/ohmyfood.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
   <body>
+    <header>
+      <a href="../index.html">
+        <i class="fas fa-arrow-left"> </i>
+      </a>
+      <a class="logo__container" href="#">
+        <img
+          class="logo__header"
+          src="../assets/images/logo/ohmyfood@2x.svg"
+          alt="logo de l'entreprise ohmyfood"
+        />
+      </a>
+    </header>
+    <img
+      class="img__header"
+      src="../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+      alt="photo du plat du jour du restaurant La note enchantée"
+    />
 
- 
-            <header>
-             
-              <a href="../index.html">
-                <i class="fas fa-arrow-left">
-                </i>
-              </a>
-                <a class="logo__container" href="#">
-                 <img class="logo__header" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo de l'entreprise ohmyfood"/>
-                </a>
-              </header>
-              <img class="img__header" src="../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo du plat du jour du restaurant La note enchantée">
-        
-       <main>
-                <!--section title-menu-->
-            
-          <section class="menu-container">
-             <div class="title-container menu__anim--1">
-                 <h1  id="menu__title">La note enchantée</h1>
-                 
-                  <span class="hearts">
-                    <i class="far fa-heart heart-empty" aria-hidden="true"></i>
-                    <i class="fas fa-heart heart-filled" aria-hidden="true"></i>  
-                  </span>
-                     </div>
+    <main>
+      <!--section title-menu-->
 
-                <!--Entrées-->
-                <div class="menu__cards">
-             
-                  <h2 class="menu__title menu__title-cards">Entrées</h2>
-       
-                  <input type="checkbox" id="toggle-entrée1" class="menu__checkbox">
-                  <label for="toggle-entrée1" class="menu__label" aria-label="Commander les ravioles de foie gras accompagnées de leur crème de truffe, 25 euros">
-                  <div class="menu__items">
-                      <div class="menu__content">
-                        <h3>Ravioles de foie gras</h3>
-                        <div class ="menu__second_row">
-                          <p class="menu__description">Accompagnées de leur crème à la truffe</p>
-                           <p class="menu__price">25<span>€</span></p>
-                         </div>
-                       </div> 
-                      <div class="menu__check">
-                       <i class="fas fa-check-circle"></i>
-                      </div>
-                  </div>
-                  </label>
+      <section class="menu-container">
+        <div class="title-container menu__anim--1">
+          <h1 id="menu__title">La note enchantée</h1>
 
-                  <input type="checkbox" id="toggle-entrée2" class="menu__checkbox">
-                  <label for="toggle-entrée2" class="menu__label" aria-label="commander le caviar Osciètre sur blini à la farine de blé noir, 35 euros">
-                  <div class="menu__items">
-                      <div class="menu__content">
-                        <h3>Caviar osciètre</h3>
-                        <div class="menu__second_row">
-                        <p class="menu__description">Sur blini à la farine de blé noir
-                        </p>
-                          <p class="menu__price">35<span>€</span></p>
-                          </div>
-                        </div>
-                          <div class="menu__check">
-                          <i class="fas fa-check-circle"></i>
-                          </div>
-                   </div>
-                  </label>  
-
-                  <input type="checkbox" id="toggle-entrée3" class="menu__checkbox">
-                  <label for="toggle-entrée3" class="menu__label" aria-label="Commander le hommard et espuma de potiron marinés aux zestes d'orange, 20 euros">
-                  <div class="menu__items">
-                          <div class="menu__content">
-                            <h3>Homard et espuma de potiron
-                            </h3>
-                            <div class="menu__second_row">
-                            <p class="menu__description">Marinés aux zestes d'orange
-                            </p>
-                              <p class="menu__price">20<span>€</span></p>
-                            </div>
-                          </div>
-                            <div class="menu__check">
-                             <i class="fas fa-check-circle"></i>   
-                            </div>
-                  </div>
-                  </label>
-
-                  <input type="checkbox" id="toggle-entrée4" class="menu__checkbox">
-                  <label for="toggle-entrée4" class="menu__label" aria-label="Commander le foie gras de canard cuit entier avec sa confiture de figue et pain toasté, 35 euros">
-                  <div class="menu__items">
-                    <div class="menu__content">
-                       <h3>Foie gras de canard cuit entier
-                       </h3>
-                     <div class="menu__second_row">
-                       <p class="menu__description">Confiture de figue et pain toasté
-                       </p>
-                        <p class="menu__price">35<span>€</span></p>
-                        </div>
-                    </div>
-                        <div class="menu__check">
-                        <i class="fas fa-check-circle"></i>
-                        </div>
-                 </div>
-                  </label>
-
-                <!--Plats-->
-           
-                  <h2 class="menu__title">Plats</h2>
-
-                  <input type="checkbox" id="toggle-plat1" class="menu__checkbox">
-                  <label for="toggle-plat1" class="menu__label" aria-label="Commander les noix de saint jacques sur lit de purée de céleri-rave, 40 euros">
-                  <div class="menu__items">
-                    <div class="menu__content">
-                      <h3>Noix de coquilles Saint-Jacques</h3>
-                      <div class="menu__second_row">
-                      <p class="menu__description">Sur lit de purée de céleri-rave
-                      </p>
-                      <p class="menu__price">40<span>€</span></p>
-                    </div>
-                    </div>
-                        <div class="menu__check">
-                      <i class="fas fa-check-circle"></i>  
-                        </div>
-                    </div>
-                  </label>
-
-                  <input type="checkbox" id="toggle-plat2" class="menu__checkbox">
-                  <label for="toggle-plat2" class="menu__label" aria-label="Commander la langoustine poêlée et sa purée de patate douce, 35 euros">
-                  <div class="menu__items">
-                      <div class="menu__content">
-                        <h3>Langoustine poêlée 
-                        </h3>
-                        <div class="menu__second_row">
-                        <p class="menu__description">
-                          Purée de patate douce                          
-                        </p>
-                          <p class="menu__price">35<span>€</span></p>
-                          </div>
-                      </div>
-                          <div class="menu__check">
-                        <i class="fas fa-check-circle"></i>  
-                      </div>
-                  </div>
-                  </label>
-
-                  <input type="checkbox" id="toggle-plat3" class="menu__checkbox">
-                  <label for="toggle-plat3" class="menu__label" aria-label="Commander le mijoté de queue de boeuf et son riz sauvage aux zestes de citron, 44 euros">
-                  <div class="menu__items">
-                          <div class="menu__content">
-                            <h3>Mijoté de queue de bœuf
-                            </h3>
-                            <div class="menu__second_row">
-                            <p class="menu__description">
-                              Et riz sauvage aux zestes de citron                              
-                            </p>
-                              <p class="menu__price">44<span>€</span></p>
-                              </div>
-                          </div>
-                              <div class="menu__check">
-                           <i class="fas fa-check-circle"></i>    
-                   </div>
-                   </div>
-                  </label>
-
-
-                  <!--Desserts-->
-          
-                    <h2 class="menu__title">Desserts</h2>
-
-                    <input type="checkbox" id="toggle-dessert1" class="menu__checkbox">
-                    <label for="toggle-dessert1" class="menu__label" aria-label="Commander le macaron noisette et chocolat et sa glace au caramel brun et sel de Guérande, 18 euros">
-                      <div class="menu__items">
-                        <div class="menu__content">
-                          <h3>Macaron noisette et chocolat</h3>
-                          <div class="menu__second_row">
-                          <p class="menu__description">Glace au caramel brun et sel de Guérande
-                          </p>
-                            <p class="menu__price">18<span>€</span></p> 
-                         </div>
-                        </div>
-                          <div class="menu__check">
-                         <i class="fas fa-check-circle"></i>                         
-                       </div>
-                      </div>
-                    </label>
-
-                    <input type="checkbox" id="toggle-dessert2" class="menu__checkbox">
-                    <label for="toggle-dessert2" class="menu__label" aria-label="Commander le Baba au rhum revisité avec son coulis de citron, 22 euros">
-                      <div class="menu__items">
-                            <div class="menu__content">
-                              <h3>Baba au rhum revisité
-                              </h3>
-                              <div class="menu__second_row">
-                              <p class="menu__description">Avec son coulis de citron
-                              </p>
-                                <p class="menu__price">22<span>€</span></p>
-                              </div>
-                            </div>
-                              <div class="menu__check">
-                              <i class="fas fa-check-circle"></i>
-                          </div>
-                      </div>
-                    </label>
-                    
-                    <input type="checkbox" id="toggle-dessert3" class="menu__checkbox">
-                    <label for="toggle-dessert3" class="menu__label" aria-label="Commander la tarte au citron meringuée déstructurée, 23 euros">
-                     <div class="menu__items">
-                          <div class="menu__content">
-                            <h3>Tarte au citron meringuée</h3>
-                            <div class="menu__second_row">
-                            <p class="menu__description">Déstructurée
-                            </p>
-                              <p class="menu__price">23<span>€</span></p> 
-                          </div>
-                          </div>
-                          <div class="menu__check">  
-                            <i class="fas fa-check-circle"></i> 
-                     </div>
-                      </div>
-                    </label>
-             </div>
-    
-         </section>  
-              <div class="button-order">
-              <!--button commander-->
-              <button class="btn btn-order">
-                commander
-              </button>
-              </div>
-            
-      </main>
-
-              <!--footer-->
-
-      <footer id="footer">
-        <h2 class="logo-footer">Ohmyfood</h2>
-        <div class="footer-content">
-            <a class="footer-content__link--icon" href="#">
-                <i class="fas fa-utensils footer-content__icon" aria-hidden="true"></i>
-                <p><strong>Proposer un restaurant</strong></p>
-            </a>
-
-            <a class="footer-content__link--icon" href="#">
-                <i class="fas fa-hands-helping footer-content__icon" aria-hidden="true"></i>
-                <p><strong>Devenir partenaire</strong></p>
-            </a>
-
-            <a class="footer-content__link" href="#">
-                <p class="font__footer-light">Mentions légales</p>
-            </a>
-
-            <a class="footer-content__link" href="#">
-                <p class="font__footer-light">Contact</p>
-            </a>
+          <span class="hearts">
+            <i class="far fa-heart heart-empty" aria-hidden="true"></i>
+            <i class="fas fa-heart heart-filled" aria-hidden="true"></i>
+          </span>
         </div>
-      </footer>
 
-    
+        <!--Entrées-->
+        <div class="menu__cards">
+          <h2 class="menu__title">Entrées</h2>
+
+          <div class="menu__item">
+            <input type="checkbox" id="toggle-entrée1" class="menu__checkbox" />
+            <label
+              for="toggle-entrée1"
+              class="menu__label"
+              aria-label="Commander les ravioles de foie gras accompagnées de leur crème de truffe, 25 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Ravioles de foie gras</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">
+                    Accompagnées de leur crème à la truffe
+                  </p>
+                  <p class="menu__price">25<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <input type="checkbox" id="toggle-entrée2" class="menu__checkbox" />
+            <label
+              for="toggle-entrée2"
+              class="menu__label"
+              aria-label="commander le caviar Osciètre sur blini à la farine de blé noir, 35 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Caviar osciètre</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">
+                    Sur blini à la farine de blé noir
+                  </p>
+                  <p class="menu__price">35<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <input type="checkbox" id="toggle-entrée3" class="menu__checkbox" />
+            <label
+              for="toggle-entrée3"
+              class="menu__label"
+              aria-label="Commander le hommard et espuma de potiron marinés aux zestes d'orange, 20 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Homard et espuma de potiron</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">Marinés aux zestes d'orange</p>
+                  <p class="menu__price">20<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <input type="checkbox" id="toggle-entrée4" class="menu__checkbox" />
+            <label
+              for="toggle-entrée4"
+              class="menu__label"
+              aria-label="Commander le foie gras de canard cuit entier avec sa confiture de figue et pain toasté, 35 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Foie gras de canard cuit entier</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">
+                    Confiture de figue et pain toasté
+                  </p>
+                  <p class="menu__price">35<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <!--Plats-->
+
+          <h2 class="menu__title">Plats</h2>
+
+          <div class="menu__item">
+            <input type="checkbox" id="toggle-plat1" class="menu__checkbox" />
+            <label
+              for="toggle-plat1"
+              class="menu__label"
+              aria-label="Commander les noix de saint jacques sur lit de purée de céleri-rave, 40 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Noix de coquilles Saint-Jacques</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">
+                    Sur lit de purée de céleri-rave
+                  </p>
+                  <p class="menu__price">40<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <input type="checkbox" id="toggle-plat2" class="menu__checkbox" />
+            <label
+              for="toggle-plat2"
+              class="menu__label"
+              aria-label="Commander la langoustine poêlée et sa purée de patate douce, 35 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Langoustine poêlée</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">Purée de patate douce</p>
+                  <p class="menu__price">35<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <input type="checkbox" id="toggle-plat3" class="menu__checkbox" />
+            <label
+              for="toggle-plat3"
+              class="menu__label"
+              aria-label="Commander le mijoté de queue de boeuf et son riz sauvage aux zestes de citron, 44 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Mijoté de queue de bœuf</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">
+                    Et riz sauvage aux zestes de citron
+                  </p>
+                  <p class="menu__price">44<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <!--Desserts-->
+
+          <h2 class="menu__title">Desserts</h2>
+
+          <div class="menu__item">
+            <input
+              type="checkbox"
+              id="toggle-dessert1"
+              class="menu__checkbox"
+            />
+            <label
+              for="toggle-dessert1"
+              class="menu__label"
+              aria-label="Commander le macaron noisette et chocolat et sa glace au caramel brun et sel de Guérande, 18 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Macaron noisette et chocolat</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">
+                    Glace au caramel brun et sel de Guérande
+                  </p>
+                  <p class="menu__price">18<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <input
+              type="checkbox"
+              id="toggle-dessert2"
+              class="menu__checkbox"
+            />
+            <label
+              for="toggle-dessert2"
+              class="menu__label"
+              aria-label="Commander le Baba au rhum revisité avec son coulis de citron, 22 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Baba au rhum revisité</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">Avec son coulis de citron</p>
+                  <p class="menu__price">22<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <input
+              type="checkbox"
+              id="toggle-dessert3"
+              class="menu__checkbox"
+            />
+            <label
+              for="toggle-dessert3"
+              class="menu__label"
+              aria-label="Commander la tarte au citron meringuée déstructurée, 23 euros"
+            ></label>
+            <div class="menu__items">
+              <div class="menu__content">
+                <h3>Tarte au citron meringuée</h3>
+                <div class="menu__second_row">
+                  <p class="menu__description">Déstructurée</p>
+                  <p class="menu__price">23<span>€</span></p>
+                </div>
+              </div>
+              <div class="menu__check">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="button-order">
+        <!--button commander-->
+        <button class="btn btn-order">commander</button>
+      </div>
+    </main>
+
+    <!--footer-->
+
+    <footer id="footer">
+      <h2 class="logo-footer">Ohmyfood</h2>
+      <div class="footer-content">
+        <a class="footer-content__link--icon" href="#">
+          <i
+            class="fas fa-utensils footer-content__icon"
+            aria-hidden="true"
+          ></i>
+          <p><strong>Proposer un restaurant</strong></p>
+        </a>
+
+        <a class="footer-content__link--icon" href="#">
+          <i
+            class="fas fa-hands-helping footer-content__icon"
+            aria-hidden="true"
+          ></i>
+          <p><strong>Devenir partenaire</strong></p>
+        </a>
+
+        <a class="footer-content__link" href="#">
+          <p class="font__footer-light">Mentions légales</p>
+        </a>
+
+        <a class="footer-content__link" href="mailto:ad.bonna@gmail.com">
+          <p class="font__footer-light">Contact</p>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

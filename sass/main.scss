@@ -4,10 +4,10 @@
 @use 'layout/index-layout';
 
 
-@use '../sass/base/variables';
+@use '../sass/base/variables' as var;
 @use '../sass/base/reset';
-@use '../sass/base/typo';
-@use '../sass/base/functions';
+@use '../sass/base/typo' as typo;
+@use '../sass/base/functions' as func;
 
 /*mixins*/
 @use 'base/mixins' ;
@@ -33,4 +33,4 @@
 @use 'pages/restaurants.scss';
 
 //media queries
-@use 'base/mediaqueries';
+@use 'base/mediaqueries' as media;

@@ -1,41 +1,38 @@
-@use '../base/index' as base;
-@use '../base/variables' as var;
-@use '../base/mixins' as mix;
-@use '../base/functions' as func;
-
+@use "../base/index" as base;
+@use "../base/variables" as var;
+@use "../base/mixins" as mix;
+@use "../base/functions" as func;
 
 header {
-    @include mix.shadow-primary;
-    background: var.$color-white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    position: sticky;
-    width: 100%;
-    z-index: 1;
-    padding: func.rem(10) func.rem(20);
-
+  @include mix.shadow-primary;
+  background: var.$color-white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+  padding: func.rem(10) func.rem(20);
 }
 
 .logo__container {
-    display: grid;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 .logo__header {
-    display: block;
-    align-self: center;
-    height: auto;
-    min-width: func.rem(192);
-    padding: func.rem(24);
-    background: var.$color-white;
+  display: block;
+  align-self: center;
+  height: auto;
+  min-width: func.rem(192);
+  padding: func.rem(24);
+  background: var.$color-white;
 }
 .fa-arrow-left {
-    font-size: func.rem(24);
-    font-weight:bold;
-    color: var.$color-black;
-    
+  font-size: func.rem(24);
+  font-weight: bold;
+  color: var.$color-black;
 }
 .header-home {
-    @include mix.flex-center(row);
+  @include mix.flex-center(row);
   padding: func.rem(20);
 }

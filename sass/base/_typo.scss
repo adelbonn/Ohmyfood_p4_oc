@@ -1,55 +1,41 @@
-//@use '../base/index' as base;   
-@use '../base/variables' as var;
+//@use '../base/index' as base;
+@use "../base/variables" as var;
 
-@debug 'Typo file loaded';
+@debug "Typo file loaded";
 
-$primary-font: 'Roboto', 'sans-serif';
-$logo-font: 'shrikhand', 'cursive';
+$primary-font: "Roboto", "sans-serif";
+$logo-font: "shrikhand", "cursive";
 
-  //font-weight
+//font-weight
 
-  $font-weight-light: 300;
-  $font-weight-medium: 500;
-  $font-weight-bold: 700;
-
-
-
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
 
 // font-size
-$font-size-title-home-desktop: 2.5rem;  //**40px***h1 home
-$font-size-title-home-tablet: 2rem;  //**32px***h1 home
-$font-size-logo: 1.875rem;  //**30px***logoMenu
-$font-size-xxxlarge: 1.75rem;  //**28px***h1 menu
-$font-size-xxlarge: 1.5rem;  //**24px***h2
-$font-size-xlarge: 1.125rem; //**18px***p home**title plat menu
-$font-size-l: 1.06rem;  //**17px
-$font-size-medium: 1rem;  //*16px
-$font-size-small: 0.93rem;  //*15px*titre carte menu+prix
-$font-size-x-small: 0.875rem;  //**14px
-
-
+$font-size-title-home-desktop: 2.5rem; /*40px*/ //**h1 home
+$font-size-title-home-tablet: 2rem; /*32px*/ //**h1 home
+$font-size-logo: 1.875rem; /*30px*/ //*logoMenu
+$font-size-xxxlarge: 1.75rem; /*28px*/ //*h1 menu
+$font-size-xxlarge: 1.5rem; /*24px*/ //**h2
+$font-size-xlarge: 1.125rem; /*18px*/ //*p home**title plat menu
+$font-size-l: 1.06rem; /*17px*/
+$font-size-medium: 1rem; /*16px*/ //**p footer
+$font-size-small: 0.93rem; /*15px*/ //titre carte menu+prix
+$font-size-x-small: 0.875rem; /*14px*/ //**p cardsRestaurants
 
 //général
 body {
-    font-family: $primary-font;
-    font-size: 1rem;
+  font-family: $primary-font;
+  font-size: 1rem;
 }
 
 //Home Fonts
 h1 {
-    font-family: $primary-font;
-    color: var.$color-black;
-
+  font-family: $primary-font;
+  color: var.$color-black;
 }
 
 h2 {
-    font-family: $primary-font;
-    
+  font-family: $primary-font;
 }
-
-
-
-
-
-
-

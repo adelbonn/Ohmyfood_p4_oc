@@ -1,94 +1,97 @@
-@use '../base/index' as base;
-@use 'variables' as var;
-@use 'functions' as func;
-@use '../base/typo' as typo;
-
-
-
-
-
+//@use "../base/index" as base;
+@use "variables" as var;
+@use "functions" as func;
+@use "../base/typo" as typo;
 
 /*shadows*/
 
-@mixin shadow-primary {box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15); } 
+@mixin shadow-primary {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
 
- //shadow card
-@mixin shadow-card {box-shadow:  0 4px 15px 0 rgba(0, 0, 0, 0.10);}
-
+//shadow card
+@mixin shadow-card {
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
 
 //shadowInstructions
-@mixin shadow-instructions {box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.15);}
-@mixin shadow-instructions-hover {box-shadow:0 4px 15px 0 rgba(0, 0, 0, 0.15);}
+@mixin shadow-instructions {
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+@mixin shadow-instructions-hover {
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
 
 //shadow-location
-@mixin shadow-location {box-shadow:  0 4px 4px rgba(0, 0, 0, 0.25);}
-
-
-
-/*button header*///mixin du button de la page home (btn de base)
-@mixin btn-primary($width: func.rem(218), $min-height: func.rem(50), $padding: func.rem(15) func.rem(20)) {
-    width: $width;
-    min-height: $min-height;
-    padding: $padding;
-    color: var.$color-white;
-    border-radius: func.rem(50);  
-    background: linear-gradient( var.$secondary-color, var.$primary-color 85%);
-    font-size: typo.$font-size-medium;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
- //*buttonshadow-button
- @mixin shadow-button($darken-amount: 1%) 
- {
-    $shadow-color: darken(rgba(0, 0, 0, 0.5), $darken-amount);
-    box-shadow: 0 4px 10px 0 $shadow-color;
+@mixin shadow-location {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/*buttons functioning*///button de la section functionning
+/*button header*/ //mixin du button de la page home (btn de base)
+@mixin btn-primary(
+  $width: func.rem(218),
+  $min-height: func.rem(50),
+  $padding: func.rem(15) func.rem(20)
+) {
+  width: $width;
+  min-height: $min-height;
+  padding: $padding;
+  color: var.$color-white;
+  border-radius: func.rem(50);
+  background: linear-gradient(var.$secondary-color, var.$primary-color 85%);
+  font-size: typo.$font-size-medium;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+//*buttonshadow-button
+@mixin shadow-button($darken-amount: 1%) {
+  $shadow-color: darken(rgba(0, 0, 0, 0.5), $darken-amount);
+  box-shadow: 0 4px 10px 0 $shadow-color;
+}
+
+/*buttons functioning*/ //button de la section functionning
 
 @mixin button-style-functioning {
-    background: var.$background-color;
-    border-radius: func.rem(20);
-    border: none;
-    padding: func.rem(28) func.rem(38);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    text-align: center;
-    font-weight: typo.$font-weight-medium;
+  background: var.$background-color;
+  border-radius: func.rem(20);
+  border: none;
+  padding: func.rem(28) func.rem(38);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+  font-weight: typo.$font-weight-medium;
 }
 
 //mixin pour les cercles des boutons de la section fonctionnement
 @mixin circle-number {
-   background: var.$primary-color;
-   width: func.rem(24);
-   height: func.rem(24);
-   color: var.$color-white;
-   border-radius: 50%;
-   @include flex-center(row);
-   font-size: typo.$font-size-x-small;
-   position: absolute;
-   left: -10px;
-   top: 25%;
-   transform: translateY(40%);
+  background: var.$primary-color;
+  width: func.rem(24);
+  height: func.rem(24);
+  color: var.$color-white;
+  border-radius: 50%;
+  @include flex-center(row);
+  font-size: typo.$font-size-x-small;
+  position: absolute;
+  left: -10px;
+  top: 25%;
+  transform: translateY(40%);
 }
 
 // mixin pour placer les éléments avec flex centrer
 @mixin flex-center($direction: row) {
-    display: flex;
-    justify-content: center;
-    flex-direction: ($direction);
+  display: flex;
+  justify-content: center;
+  flex-direction: ($direction);
 }
-
 
 //mixin des coeurs
 
 @mixin heart-icon($width, $height, $primary-color, $secondary-color) {
-
-
-.heart-empty,
-.heart-filled
- {
+  .heart-empty,
+  .heart-filled {
     position: absolute;
     top: 0;
     left: 0;
@@ -97,38 +100,33 @@
     width: $width;
     height: $height;
     display: inline-block;
-    transition: opacity 0.2s, transform 0.3s ease-in-out;
-    
-    
-}
+    transition: opacity 0.3s ease-in-out;
+  }
 
-.heart-empty {
+  .heart-empty {
     opacity: 1;
-}
+        &:hover {
+        opacity: 0;
+    }
+  }
 
-.heart-empty:hover {
+  /*.heart-empty:hover {
     opacity: 0;
-}
+  }*/
 
-.heart-filled {  
+  .heart-filled {
     opacity: 0;
     background: linear-gradient(var.$primary-color, var.$secondary-color);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: $width;
- 
-    transition: opacity 0.3s;//, transform 0.3s ease;
+
+    //transition: opacity 0.3s, transform 0.3s ease;
+  }
+
+  .heart-filled:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
 }
-
-.heart-filled:hover {
-    opacity:1;
-}
-
-}
-
-
-
-
-
-
