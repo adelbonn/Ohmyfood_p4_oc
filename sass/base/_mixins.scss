@@ -97,22 +97,20 @@
     left: 0;
     right: 0;
     font-size: $width;
-    width: $width;
     height: $height;
     display: inline-block;
     transition: opacity 0.3s ease-in-out;
   }
 
-  .heart-empty {
-    opacity: 1;
-        &:hover {
-        opacity: 0;
-    }
+  
+
+  .eateries .cards-eateries__heart:hover .heart-empty {
+    opacity: 0;
   }
 
-  /*.heart-empty:hover {
-    opacity: 0;
-  }*/
+  .eateries .cards-eateries__heart:hover .heart-filled {
+    opacity: 1;
+  }
 
   .heart-filled {
     opacity: 0;
@@ -121,12 +119,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: $width;
-
-    //transition: opacity 0.3s, transform 0.3s ease;
+    transition: opacity 0.3s, transform 0.3s ease;
   }
 
-  .heart-filled:hover {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-}
+ 

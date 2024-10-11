@@ -361,8 +361,7 @@
 
 @for $i from 1 through 3 {
   .menu__title:nth-of-type(#{$i}) {
-    opacity: 0;
-    transform: translateY(-30px);
+  
     animation: fadeInUp var.$base-duration ease-in-out forwards;
     animation-delay: #{$i * 0.2}s;
   }
@@ -374,8 +373,7 @@ $number-of-cards: 10;
 
 @for $i from 1 through $number-of-cards {
   .menu__item:nth-of-type(#{$i}) {
-    opacity: 0;
-    transform: translateY(-30px);
+
     animation: fadeInUp var.$base-duration ease-in-out forwards;
     animation-delay: #{$i * 0.25s};
   }
