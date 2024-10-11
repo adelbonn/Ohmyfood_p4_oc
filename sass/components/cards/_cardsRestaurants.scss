@@ -1,0 +1,154 @@
+@use "../../base/index" as base;
+@use "../../base/variables" as var;
+@use "../../base/mixins" as mix;
+@use "../../base/functions" as func;
+@use "../../base/typo" as typo;
+@use "../../base/mediaqueries" as media;
+
+//*restaurants (eateries)*/
+
+.eateries {
+  @include mix.flex-center(column);
+  padding: func.rem(50) func.rem(20);
+  background: var.$background-color;
+
+  @include media.respond-to("tablet") {
+    padding: func.rem(30) func.rem(45);
+  }
+
+  @include media.respond-to("laptop") {
+    padding: func.rem(30) func.rem(90);
+  }
+  @include media.respond-to("desktop") {
+    padding: func.rem(50) func.rem(180);
+  }
+
+  & h2 {
+    margin: func.rem(4) 0 func.rem(20) 0;
+    font-weight: typo.$font-weight-bold;
+    font-size: typo.$font-size-xxlarge;
+
+    @include media.respond-to("desktop") {
+      margin: 0 0 func.rem(28) 0;
+    }
+  }
+
+  figure {
+    background: var.$color-white;
+    border-radius: func.rem(15);
+    height: func.rem(251);
+    width: 100%;
+    // margin-bottom: func.rem(18);
+    position: relative;
+    @include mix.shadow-card
+  }
+
+  img {
+    border-top-left-radius: func.rem(15);
+    border-top-right-radius: func.rem(15);
+    object-fit: cover;
+    height: func.rem(175);
+    width: 100%;
+  }
+
+  figcaption {
+    display: flex;
+    justify-content: space-between;
+    padding: func.rem(10) func.rem(15);
+    width: 100%;
+    height: auto;
+  }
+
+  .text-new {
+    position: relative;
+  }
+
+  .text-new::before {
+    position: absolute;
+    content: "Nouveau";
+    min-height: func.rem(29);
+    min-width: func.rem(80);
+    background: var.$green-color-bagde;
+    border-radius: func.rem(3);
+    display: grid;
+    place-content: center;
+    top: 5%;
+    right: 3%;
+    font-size: typo.$font-size-x-small;
+    color: var.$green-font-badge;
+  }
+
+  .cards-eateries__txt {
+    @include mix.flex-center(column);
+    align-items: start;
+
+    & h3 {
+      font-size: typo.$font-size-xlarge;
+      font-weight: typo.$font-weight-bold;
+      margin-bottom: func.rem(7);
+    }
+
+    & p {
+      font-size: typo.$font-size-l;
+      font-weight: typo.$font-weight-light;
+    }
+  }
+}
+
+.eateries-cards {
+  width: 340px;
+  height: 251px;
+  height: auto;
+  @include media.respond-to("desktop") {
+    max-width: 490px;
+  }
+}
+
+.eateries-cards__bg {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: func.rem(18) func.rem(18);
+  justify-content: center;
+  align-items: center;
+  background: var.$background-color;
+
+  @include media.respond-to("tablet") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: func.rem(50) func.rem(50);
+    justify-content: center;
+    width: 100%;
+    //padding: func.rem(30) func.rem(50);
+  }
+
+  @include media.respond-to("desktop") {
+    //padding: func.rem(30) func.rem(180);
+    gap: func.rem(50) func.rem(100);
+  }
+
+  @include media.respond-to("large-desktop") {
+  }
+}
+
+
+.eateries .cards-eateries__heart {
+  position: relative;
+  width: func.rem(25);
+  height: func.rem(24);
+  right: func.rem(8);
+  top: func.rem(18);
+
+  @include mix.heart-icon(
+    func.rem(23),
+    func.rem(22),
+    var.$primary-color,
+    var.$secondary-color
+  )
+}
+
+.cards-eateries {
+   @include mix.shadow-card;
+   border-radius: func.rem(15);
+}

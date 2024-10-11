@@ -1,0 +1,92 @@
+@use '../base/mixins' as mix;
+@use '../base/variables' as var;
+@use '../base/functions' as func;
+@use '../base/typo' as typo;    
+@use '../base/index' as base;
+@use '../base/mediaqueries' as media;
+
+.menu-container {
+    
+    max-width: 1055px;
+    padding: func.rem(32) func.rem(17);
+    background: var.$background-color;
+    border-radius: func.rem(35); 
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    margin: func.rem(-45) auto 0;
+
+   @include media.respond-to('tablet') {
+        padding: func.rem(50);
+    }
+    @include media.respond-to('desktop') {
+        margin: func.rem(-45) auto 0;
+    }
+}
+
+#menu__title {
+    font-family: typo.$logo-font;
+    font-size: typo.$font-size-xxxlarge;
+    font-weight: typo.$font-weight-bold;
+}
+
+.img__header {
+    width: 100%;
+    height: var.$hero-header-height-mobile;
+    object-fit: cover;
+    background: no-repeat  url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"); 
+
+    @include media.respond-to('tablet') {
+        height: var.$hero-header-height_tablet;
+    }
+
+    @include media.respond-to('desktop') {
+        height: var.$hero-header-heihgt-desktop;
+    }
+
+}
+
+.nav__arrow {
+    display: inline-block;
+    width: func.rem(30);
+    height: func.rem(30);
+    font-size: var(--font-size-logo);
+    font-weight: var(--font-weight-medium);
+}
+
+
+.title-container {
+
+    width: 100%;
+    //padding: func.rem(30);
+    position: relative;
+    font-size: typo.$font-size-xxxlarge;
+    letter-spacing: 0.7px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include media.respond-to('tablet') {
+       display: flex;
+       justify-content: center;
+       padding: func.rem(0);
+    }
+}
+
+.hearts {
+   margin-left: 20px;
+   display:flex;
+   position: relative;
+   align-items: center;
+   justify-content: center;
+    padding-bottom: func.rem(20);
+
+
+    font-size: typo.$font-size-xxxlarge;
+     @include mix.heart-icon(func.rem(23), func.rem(22), var.$primary-color, var.$secondary-color);
+
+     @media screen and (max-width: 320px) {
+        margin-right: func.rem(25);
+        margin-left: func.rem(10);
+     }
+}

@@ -1,49 +1,37 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+@use '../base/typo' as typo;
+@use '../base/index' as base;
 
-.location {
-    min-width: 18.75rem;
-    height: 3.9rem;
-    display: flex;
-    justify-content: center;
+.location { 
+    position: relative;
+    min-width: func.rem(300);
+    height: func.rem(62.5);
+   @include mix.flex-center(column);
     align-items: center;
-    box-shadow: $shadow-primary;
-    background: $color-grey2;
-    box-shadow: $shadow-tertiary;
-    gap: 1.25rem;
+    background: var.$color-grey2;
+    @include mix.shadow-location;
 
-    &form {
-        background: $color-grey2;
-        padding: 0.875rem;
+    &_form {
+        padding: func.rem(14);   
         margin: auto;
-        gap: 0.875rem;
+        background: var.$color-grey2;
     }
 }
     .location_icon-search {
-        width: 40px;
+        width: func.rem(37.5);      
         height: auto;
-        font-weight: 700;
-        color: $color-grey;
+        font-weight:  typo.$font-weight-bold;
+        color: lighten(var.$grey-tint4, 15%);
     }
 
     .location_input-search {
         outline: none;
         border: none;
         background: transparent;
-        padding-left: 1rem;
-        font-size: 0.875rem;
-        font-weight: 700;
-
-        &:hover {
-            cursor: pointer;
-        }
-          &::placeholder {
-            color: black;
-            font-size: 1rem;
-            font-weight: 600;
-           }
+        padding-left: func.rem(17);
+        font-size: func.rem(14);
+        font-weight: typo.$font-weight-bold;
     }
 
-
-.location_form {
-    outline: none;
-    background: $color-grey2;
-}

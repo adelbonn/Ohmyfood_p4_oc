@@ -1,0 +1,30 @@
+//Mobile first Approach
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == mini-phone {
+        @media screen and (min-width: 320px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tablet {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @if $breakpoint == laptop {
+        @media screen and (min-width: 1024px) {
+            @content;
+        }
+    }
+    @if $breakpoint == desktop {
+        @media screen and (min-width: 1440px) {
+            @content;
+        }
+    }
+    @if $breakpoint == large-desktop {
+        @media screen and (min-width: 1920px) {
+            @content;
+        }
+    }
+}
+

@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,4 +22,9 @@ ul, ol {
 img {
     max-width: 100%;
     height: auto;
+}
+
+button {
+    border: none;
+    outline: none;
 }

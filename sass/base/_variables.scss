@@ -1,34 +1,43 @@
+@use "functions" as func;
+@use "../base/index" as base;
+@debug "Variables file loaded";
 
 //colors
 
-$primary-color: #9356DC;
-$secondary-color: #FCA311;
+$primary-color: rgb(146, 86, 220);
 $primary-color2: #c5e2f8;
-$secondary-color: #FF79DA;
+$secondary-color: rgb(255, 121, 218);
 
-$green-color-bagde: #99E2D0;
+$green-color-bagde: #99e2d0;
 $green-font-badge: #008766;
 
-$background-color:#f6f6f6;
+$background-color: #f6f6f6;
 $background-color2: #89c8fa;
 $color-black: #101010;
 $color-white: #fff;
-$color-grey2: #EAEAEA;
+$color-grey2: #eaeaea;
 $color-grey: #353535;
-$grey-tint4: #7E7E7E;
+$grey-tint4: #7e7e7e;
 
+//main-gradient:  $linear-gradient( $secondary-color, $primary-color 85%)
 
-//gradient
-//$buttonGradient: //stops: 0% #9356DC  100%FF79DA;
+//size
+$size: 1rem;
 
-/* ***shadows*** */
+//soulignement titre
+$underline-color: #99e2d0;
+$underline-thickness: func.rem(3);
+$underline-length: 50%;
 
-$shadow-primary: 0 2px 4px 0 rgba(0, 0, 0, 0.15); //shadow header +badge
-$shadow-secondary: 0 4 15 0 rgba(0, 0, 0, 0.10);
-$shadow-tertiary: 0 4 10 0 rgba(0, 0, 0, 0.25);
-$shadow-instruction: 0 4 15 0 rgba(0, 0, 0, 0.15);
-$shadow-location: 0 4 4 0 rgba(0, 0, 0, 0.25);
-//shadow-card: x0 y4 blur15 spread0 opacity 10%
-//shadow-button: x0 y4 blur10 spread0 opacity 25%
-//shadow-instruction: x0 y4 blur15 spread0 opacity15%
-//shadow-location: x0 y4 blur4 spread0 opacity 25%
+//variables pour l'animation de la page menu au chargement de la page
+$base-duration: 0.9s;
+$delay-increment: 0.2s;
+
+//variables animation icone cardsMenu
+$icon-size: 22px;
+
+//variables images du hero header
+
+$hero-header-height-mobile: 275px;
+$hero-header-height_tablet: 325px;
+$hero-header-heihgt-desktop: 383px;

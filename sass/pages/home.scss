@@ -1,13 +1,177 @@
+//@use '../base/index' as base;
+@use '../base/variables' as var;
+@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+@use '../base/typo' as typo;
+@use '../base/mediaqueries' as media;
+
+body {
+    height: 100vh;
+}
+
+.main-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/***section info**/
+
 .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    @include mix.flex-center(column);
     align-items: center;
+    background: lighten(var.$color-grey2, 5%);
+    padding-top: func.rem(38);
+    padding: func.rem(38.4) func.rem(30);  
+
+    @include media.respond-to('desktop') {
+        padding: func.rem(30) func.rem(0);
+    }
+
+    h1 {
+        color: var.$color-black;
+        font-family: typo.$primary-font;
+        font-size: typo.$font-size-xxlarge;
+        font-weight: typo.$font-weight-bold;
+        line-height: func.rem(28.13);
+        text-align: center;
+        padding-bottom: func.rem(8); 
+
+        @include media.respond-to('tablet') {
+            font-size: typo.$font-size-title-home-tablet;
+            margin-bottom: func.rem(15);
+        }
+    
+    @include media.respond-to (laptop) {
+        font-size: typo.$font-size-title-home-desktop;
+       margin-bottom: func.rem(18);
+    }
+}
+
+    p {
+        font-family: typo.$primary-font;
+        font-weight: typo.$font-weight-light;
+        font-size: func.rem(18);
+        line-height: func.rem(21.09);
+        margin-bottom: func.rem(27);
+        align-self: center;
+        color: var.$color-grey; 
+
+           
+    @include media.respond-to (laptop) {
+        font-size: typo.$font-size-xlarge;
+       margin-bottom: func.rem(18);
+    }
+    }
+
 }
 
 
 
-h2 {
-        font-family: $primary-font;
-        
-}
+/**section functioning**/
+
+ .functioning {
+   @include mix.flex-center(column);
+    padding: func.rem(48) func.rem(20);
+    background: var.$color-white;
+ 
+
+    @include media.respond-to(tablet)
+    {
+        padding: func.rem(30) func.rem(45);
+    }
+
+    @include media.respond-to(laptop)
+    {
+        padding: func.rem(30) func.rem(90);
+    }
+    @include media.respond-to(desktop)
+    {
+        padding: func.rem(50) func.rem(180);
+    }
+     
+    h2 {
+        align-self: flex-start;
+        margin: 0 0 func.rem(25) 0;
+        font-size: typo.$font-size-xxlarge;
+        font-weight: typo.$font-weight-bold;
+
+    }
+
+    .functioning__item {
+        @include mix.flex-center(row);
+        @include mix.button-style-functioning;      
+        @include mix.shadow-instructions;
+        margin: 0 0 func.rem(25) 0;
+        max-width: func.rem(335);
+        height: auto;
+        transition: transform 0.3s;
+       
+
+            &:hover {
+                cursor: pointer;
+                @include mix.shadow-instructions; 
+                transform: scale(0.95)
+            }
+
+            @include media.respond-to(desktop)
+            {
+                gap: 0 func.rem(25);
+               margin-bottom: 0;
+            }
+ }
+ 
+
+ 
+.functioning-list {
+    @include mix.flex-center(column);
+    align-items: center;
+
+    @include media.respond-to(tablet)
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: func.rem(40);
+    }
+
+   /* @include media.respond-to(desktop)
+    {
+       gap: func.rem(60) func.rem(40);
+    }*/
+
+    .fonctioning-list__circle  {
+        @include mix.circle-number;
+    }
+
+    .functioning-list__number {
+        margin-top: func.rem(4);
+    }
+
+    .functioning-list_icon {
+        color: var.$grey-tint4;
+        margin-right: func.rem(27);
+        transition: transform 0.3s;
+    
+           
+        &:hover {
+              color: var.$primary-color; 
+          }
+    }
+    
+    .functioning-list_links {
+        display: flex;
+    }
+
+    p {
+        font-size: typo.$font-size-medium; 
+        font-weight: typo.$font-weight-medium;
+    }
+}  }  
+
+
+
+
+

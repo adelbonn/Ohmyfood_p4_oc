@@ -1,0 +1,84 @@
+@use '../../sass/base/index' as base;
+@use '../base/variables' as var;
+//@use '../base/mixins' as mix;
+@use '../base/functions' as func;
+@use '../base/typo' as typo;
+@use '../base/mediaqueries' as media;
+
+
+footer {
+    background: var.$color-grey;
+    padding: func.rem(22) func.rem(25);
+    font-size: typo.$font-size-medium;
+    
+    .logo-footer {
+        font-family: typo.$logo-font;
+        color: var.$color-white;
+        font-size: typo.$font-size-xlarge;
+        font-weight: 500;
+        letter-spacing: func.rem(0.4);
+        margin-bottom: func.rem(16);
+    }
+
+
+    p {
+        color: var.$color-white;
+        font-size: typo.$font-size-medium;
+        font-weight: typo.$font-weight-medium;
+        margin-bottom: func.rem(7);
+    }
+    i {
+        color: var.$color-white;
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: func.rem(7);
+
+          &__link {
+            font-weight: typo.$font-weight-light;
+            
+          }
+
+          &__link--icon {
+            display: flex;
+            justify-content: start;
+              
+            .fa-hands-helping, 
+            .fa-utensils {
+                margin-right:func.rem(11);
+            }
+          }
+          .font__footer-light {
+            font-weight: typo.$font-weight-light;
+            margin-left: func.rem(20)
+        } 
+            
+    }
+}
+@include media.respond-to('tablet') {
+    footer {
+        height: func.rem(114);
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        align-items: end;
+        padding: func.rem(22) func.rem(60);
+        font-size: typo.$font-size-medium;
+        .footer-content {
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+            gap: func.rem(7);
+        }
+      
+       .logo-footer {
+            margin:func.rem(0) func.rem(0) func.rem(0) func.rem(100);
+        }
+        p {
+            margin: 0;
+        }
+    }
+}

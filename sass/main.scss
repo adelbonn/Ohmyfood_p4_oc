@@ -1,24 +1,36 @@
-/**variables**/
-@import 'base/variables';
-@import 'base/reset';
-@import 'base/typo';
+
+@use '../sass/base/index' as base;
+@use 'components/index' as components;
+@use 'layout/index-layout';
+
+
+@use '../sass/base/variables' as var;
+@use '../sass/base/reset';
+@use '../sass/base/typo' as typo;
+@use '../sass/base/functions' as func;
+
+/*mixins*/
+@use 'base/mixins' ;
 
 /*components*/
-
-@import 'components/animations';
-@import 'components/buttons';
-@import 'components/location';
-@import 'components/hearts';
-@import 'components/cards/cards.scss';
+@use 'components/index';
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/location';
+@use 'components/cards/cardsMenu';
+@use 'components/cards/cardsRestaurants';
 
 /*layout*/
 
-@import 'layout/header';
-@import 'layout/navigatio';
-@import 'layout/grids';
-@import 'layout/footer';
+@use 'layout/header';
+@use '../sass/layout/navigation';
+
+@use 'layout/footer' ;
 
 /*pages*/
 
-@import 'pages/home.scss';
-@import 'pages/restaurants.scss';
+@use 'pages/home.scss';
+@use 'pages/restaurants.scss';
+
+//media queries
+@use 'base/mediaqueries' as media;
